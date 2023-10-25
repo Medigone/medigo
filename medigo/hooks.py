@@ -219,3 +219,13 @@ app_license = "mit"
 # auth_hooks = [
 #	"medigo.auth.validate"
 # ]
+fixtures = [
+    "Communes",
+    "Objectif Visite",
+    "Titre Prescripteur",
+    "Type Etablissements",
+    "Type Service",
+    "Wilayas",
+    "Zone",
+    "Contrepartie",
+]
