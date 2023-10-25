@@ -36,7 +36,10 @@
   "column_break_utfw",
   "heure_fin_visite",
   "gps_fin_visite",
-  "temps_visite"
+  "temps_visite",
+  "remis_tab",
+  "liste_remis",
+  "amended_from"
  ],
  "fields": [
   {
@@ -210,11 +213,31 @@
    "fieldname": "temps_visite",
    "fieldtype": "Duration",
    "label": "Temps Visite"
+  },
+  {
+   "fieldname": "remis_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remis"
+  },
+  {
+   "fieldname": "liste_remis",
+   "fieldtype": "Table",
+   "label": "Liste Remis",
+   "options": "Remis"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Visites Individuelles",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-25 19:59:21.436277",
+ "modified": "2023-10-25 23:14:26.852889",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visites Individuelles",

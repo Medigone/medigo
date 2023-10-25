@@ -23,7 +23,11 @@
   "service",
   "cabinet_prive_prescripteur",
   "chef_de_service",
+  "infos_tab",
+  "potentiel_column",
+  "status",
   "potentiel",
+  "localisation_tab",
   "tab_2_tab",
   "commune",
   "wilaya",
@@ -141,6 +145,7 @@
    "fetch_from": "commune.zone",
    "fieldname": "zone",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Zone",
    "options": "Zone",
    "read_only": 1
@@ -149,11 +154,41 @@
    "fieldname": "gps_prescripteur",
    "fieldtype": "Data",
    "label": "GPS Prescripteur"
+  },
+  {
+   "fieldname": "infos_tab",
+   "fieldtype": "Tab Break",
+   "label": "Potentiel"
+  },
+  {
+   "fieldname": "localisation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Localisation"
+  },
+  {
+   "fieldname": "potentiel_column",
+   "fieldtype": "Column Break",
+   "label": "Potentiel"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Actif\nInactif"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-10-25 19:59:22.367409",
+ "links": [
+  {
+   "is_child_table": 1,
+   "link_doctype": "Remis",
+   "link_fieldname": "prescripteur",
+   "parent_doctype": "Visites Individuelles",
+   "table_fieldname": "liste_remis"
+  }
+ ],
+ "modified": "2023-10-25 23:09:48.487263",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
@@ -175,7 +210,16 @@
  "show_title_field_in_link": 1,
  "sort_field": "nom_complet_prescripteur",
  "sort_order": "ASC",
- "states": [],
+ "states": [
+  {
+   "color": "Green",
+   "title": "Actif"
+  },
+  {
+   "color": "Red",
+   "title": "Inactif"
+  }
+ ],
  "title_field": "nom_complet_prescripteur",
  "track_changes": 1
 }
