@@ -223,7 +223,7 @@ fixtures = [
     "Communes",
     "Objectif Visite",
     "Titre Prescripteur",
-    "Type Etablissements",
+    "Type Etablissement",
     "Type Service",
     "Wilayas",
     "Zone",
