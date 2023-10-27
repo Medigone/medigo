@@ -1,6 +1,11 @@
 {
- "charts": [],
- "content": "[{\"id\":\"0pGtwvNcdv\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Services\",\"col\":4}},{\"id\":\"Y9GiLvV2ls\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>VISITES SERVICES AUJOURD'HUI</b>\",\"col\":12}},{\"id\":\"2645LOATLY\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Programm\u00e9es\",\"col\":4}},{\"id\":\"-o4Lw-UG1n\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites En Cours\",\"col\":4}},{\"id\":\"PejweWf0k2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Termin\u00e9es\",\"col\":4}}]",
+ "charts": [
+  {
+   "chart_name": "Visites Visites Services Par Objectif",
+   "label": "R\u00e9partition Par Objectif"
+  }
+ ],
+ "content": "[{\"id\":\"0pGtwvNcdv\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Services\",\"col\":4}},{\"id\":\"Y9GiLvV2ls\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>VISITES SERVICES AUJOURD'HUI</b>\",\"col\":12}},{\"id\":\"2645LOATLY\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Programm\u00e9es\",\"col\":4}},{\"id\":\"-o4Lw-UG1n\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites En Cours\",\"col\":4}},{\"id\":\"PejweWf0k2\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Termin\u00e9es\",\"col\":4}},{\"id\":\"YPYlN5acr2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"R\u00e9partition Par Objectif\",\"col\":12}}]",
  "creation": "2023-10-27 22:30:13.046516",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +18,7 @@
  "is_hidden": 0,
  "label": "Menu Visites Services",
  "links": [],
- "modified": "2023-10-27 22:42:14.188597",
+ "modified": "2023-10-27 22:58:53.058834",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu Visites Services",
