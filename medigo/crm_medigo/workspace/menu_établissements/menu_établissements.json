@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"_pd-DOJwrm\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Menu \u00c9tablissements</span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"_pd-DOJwrm\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Menu \u00c9tablissements</span>\",\"col\":12}},{\"id\":\"NDzPUaZNxE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste \u00c9tablissements \",\"col\":3}},{\"id\":\"l4SYkLkT2k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Type \u00c9tablissement\",\"col\":3}},{\"id\":\"og_mWUCwSk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Services\",\"col\":3}},{\"id\":\"f1uE8k863T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Type Service\",\"col\":3}}]",
  "creation": "2023-10-27 21:02:53.425336",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Menu \u00c9tablissements",
  "links": [],
- "modified": "2023-10-27 21:04:48.074602",
+ "modified": "2023-10-27 21:12:22.222283",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu \u00c9tablissements",
@@ -24,6 +24,39 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 21.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Liste \u00c9tablissements ",
+   "link_to": "Etablissements",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Liste Services",
+   "link_to": "Services",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Liste Type Service",
+   "link_to": "Type Service",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Liste Type \u00c9tablissement",
+   "link_to": "Type Etablissement",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
  "title": "Menu \u00c9tablissements"
 }
