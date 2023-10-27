@@ -30,7 +30,7 @@
  "is_hidden": 0,
  "label": "Menu \u00c9tablissements",
  "links": [],
- "modified": "2023-10-27 21:25:46.496159",
+ "modified": "2023-10-27 21:36:22.347539",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu \u00c9tablissements",
@@ -57,7 +57,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 21.0,
+ "sequence_id": 22.0,
  "shortcuts": [
   {
    "color": "Blue",
