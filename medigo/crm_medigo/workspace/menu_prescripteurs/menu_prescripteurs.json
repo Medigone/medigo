@@ -22,7 +22,7 @@
  "is_hidden": 0,
  "label": "Menu Prescripteurs",
  "links": [],
- "modified": "2023-10-27 21:36:22.278866",
+ "modified": "2023-10-27 22:39:41.519525",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu Prescripteurs",
@@ -37,7 +37,7 @@
   }
  ],
  "owner": "Administrator",
- "parent_page": "Medigo CRM",
+ "parent_page": "",
  "public": 1,
  "quick_lists": [],
  "roles": [],
