@@ -14,13 +14,12 @@
   "etablissement",
   "type_service",
   "nom_service",
+  "potentiel",
   "localisation_column",
   "commune",
   "wilaya",
   "zone",
-  "potentiel_tab",
-  "status",
-  "potentiel"
+  "gps_service"
  ],
  "fields": [
   {
@@ -44,7 +43,6 @@
   {
    "fieldname": "type_service",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Type Service",
    "options": "Type Service"
@@ -54,7 +52,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Nom"
+   "label": "Nom",
+   "read_only": 1
   },
   {
    "fieldname": "localisation_column",
@@ -75,7 +74,6 @@
    "fetch_from": "commune.",
    "fieldname": "wilaya",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Wilaya",
    "options": "Wilayas",
@@ -85,33 +83,33 @@
    "fetch_from": "commune.zone",
    "fieldname": "zone",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Zone",
    "options": "Zone",
    "read_only": 1
   },
   {
-   "fieldname": "potentiel_tab",
-   "fieldtype": "Tab Break",
-   "label": "Potentiel"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Staus",
-   "options": "Actif\nInactif"
-  },
-  {
    "fieldname": "potentiel",
    "fieldtype": "Rating",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Potentiel"
+  },
+  {
+   "fetch_from": "etablissement.gps_etablissement",
+   "fieldname": "gps_service",
+   "fieldtype": "Data",
+   "label": "GPS Service"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-10-28 13:16:33.595675",
+ "links": [
+  {
+   "link_doctype": "Visites Services",
+   "link_fieldname": "service"
+  }
+ ],
+ "modified": "2023-10-28 13:27:15.583771",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Services",
@@ -134,18 +132,7 @@
  "show_title_field_in_link": 1,
  "sort_field": "nom_service",
  "sort_order": "ASC",
- "states": [
-  {
-   "color": "Green",
-   "custom": 1,
-   "title": "Actif"
-  },
-  {
-   "color": "Red",
-   "custom": 1,
-   "title": "Inactif"
-  }
- ],
+ "states": [],
  "title_field": "nom_service",
  "track_changes": 1
 }

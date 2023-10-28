@@ -113,8 +113,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-10-25 19:59:22.912037",
+ "links": [
+  {
+   "link_doctype": "Services",
+   "link_fieldname": "etablissement"
+  }
+ ],
+ "modified": "2023-10-28 13:29:02.683861",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Etablissements",
