@@ -181,14 +181,11 @@
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "is_child_table": 1,
-   "link_doctype": "Remis",
-   "link_fieldname": "prescripteur",
-   "parent_doctype": "Visites Individuelles",
-   "table_fieldname": "liste_remis"
+   "link_doctype": "Visites Individuelles",
+   "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2023-10-25 23:09:48.487263",
+ "modified": "2023-10-27 23:41:10.162753",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
