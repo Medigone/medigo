@@ -17,7 +17,10 @@
   "localisation_column",
   "commune",
   "wilaya",
-  "zone"
+  "zone",
+  "potentiel_tab",
+  "status",
+  "potentiel"
  ],
  "fields": [
   {
@@ -80,11 +83,27 @@
    "in_standard_filter": 1,
    "label": "Zone",
    "options": "Zone"
+  },
+  {
+   "fieldname": "potentiel_tab",
+   "fieldtype": "Tab Break",
+   "label": "Potentiel"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Staus",
+   "options": "Actif\nInactif"
+  },
+  {
+   "fieldname": "potentiel",
+   "fieldtype": "Rating",
+   "label": "Potentiel"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-25 19:59:22.207554",
+ "modified": "2023-10-28 13:14:23.968615",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Services",
@@ -107,7 +126,18 @@
  "show_title_field_in_link": 1,
  "sort_field": "nom_service",
  "sort_order": "ASC",
- "states": [],
+ "states": [
+  {
+   "color": "Green",
+   "custom": 1,
+   "title": "Actif"
+  },
+  {
+   "color": "Red",
+   "custom": 1,
+   "title": "Inactif"
+  }
+ ],
  "title_field": "nom_service",
  "track_changes": 1
 }
