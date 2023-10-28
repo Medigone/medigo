@@ -1,7 +1,7 @@
 {
  "charts": [
   {
-   "chart_name": "Visites Visites Services Par Objectif",
+   "chart_name": "Visites Services Par Objectif",
    "label": "R\u00e9partition Par Objectif"
   }
  ],
@@ -12,13 +12,13 @@
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "non-profit",
+ "icon": "liabilities",
  "idx": 0,
  "indicator_color": "green",
  "is_hidden": 0,
  "label": "Menu Visites Services",
  "links": [],
- "modified": "2023-10-27 22:58:53.058834",
+ "modified": "2023-10-28 12:42:44.261617",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu Visites Services",
