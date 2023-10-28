@@ -107,9 +107,13 @@
   {
    "link_doctype": "Visites Services",
    "link_fieldname": "service"
+  },
+  {
+   "link_doctype": "Prescripteurs",
+   "link_fieldname": "service"
   }
  ],
- "modified": "2023-10-28 13:27:15.583771",
+ "modified": "2023-10-28 14:10:23.660214",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Services",

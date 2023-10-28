@@ -94,11 +94,13 @@
    "options": "Etablissements"
   },
   {
+   "fetch_from": ".",
    "fieldname": "service",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Service"
+   "label": "Service",
+   "options": "Services"
   },
   {
    "default": "0",
@@ -185,7 +187,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2023-10-27 23:41:10.162753",
+ "modified": "2023-10-28 14:08:15.444969",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
