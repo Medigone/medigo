@@ -9,7 +9,7 @@
    "label": "Prescripteurs Par Titre"
   }
  ],
- "content": "[{\"id\":\"1iaVfFlka_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Prescripteurs\",\"col\":3}},{\"id\":\"4eF0EhVc0D\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Titres Prescripteur\",\"col\":3}},{\"id\":\"tmdeQEYg3d\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"KdLIGEGYaa\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Prescripteurs\",\"col\":6}},{\"id\":\"19c39KYsjO\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nouveaux Prescripteurs\",\"col\":6}},{\"id\":\"OuBW3pR7nc\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Cr\u00e9ation Prescripteurs\",\"col\":6}},{\"id\":\"CDMkfffTyC\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Prescripteurs Par Titre\",\"col\":6}}]",
+ "content": "[{\"id\":\"1iaVfFlka_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Prescripteurs\",\"col\":3}},{\"id\":\"pgvVzLYIni\",\"type\":\"spacer\",\"data\":{\"col\":3}},{\"id\":\"4eF0EhVc0D\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Titres Prescripteur\",\"col\":3}},{\"id\":\"tmdeQEYg3d\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"KdLIGEGYaa\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Prescripteurs\",\"col\":6}},{\"id\":\"19c39KYsjO\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nouveaux Prescripteurs\",\"col\":6}},{\"id\":\"OuBW3pR7nc\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Cr\u00e9ation Prescripteurs\",\"col\":6}},{\"id\":\"CDMkfffTyC\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Prescripteurs Par Titre\",\"col\":6}}]",
  "creation": "2023-10-27 12:31:38.845752",
  "custom_blocks": [],
  "docstatus": 0,
@@ -22,7 +22,7 @@
  "is_hidden": 0,
  "label": "Menu Prescripteurs",
  "links": [],
- "modified": "2023-10-27 22:39:41.519525",
+ "modified": "2023-10-28 13:20:18.050343",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu Prescripteurs",

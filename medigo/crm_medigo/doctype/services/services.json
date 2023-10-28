@@ -25,7 +25,8 @@
  "fields": [
   {
    "fieldname": "tab_break_urnw",
-   "fieldtype": "Tab Break"
+   "fieldtype": "Tab Break",
+   "label": "D\u00e9tails"
   },
   {
    "fieldname": "d\u00e9tails_service_column",
@@ -61,28 +62,34 @@
    "label": "Localisation"
   },
   {
+   "fetch_from": "etablissement.commune",
    "fieldname": "commune",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Commune",
-   "options": "Communes"
+   "options": "Communes",
+   "read_only": 1
   },
   {
+   "fetch_from": "commune.",
    "fieldname": "wilaya",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Wilaya",
-   "options": "Wilayas"
+   "options": "Wilayas",
+   "read_only": 1
   },
   {
+   "fetch_from": "commune.zone",
    "fieldname": "zone",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Zone",
-   "options": "Zone"
+   "options": "Zone",
+   "read_only": 1
   },
   {
    "fieldname": "potentiel_tab",
@@ -98,12 +105,13 @@
   {
    "fieldname": "potentiel",
    "fieldtype": "Rating",
+   "in_standard_filter": 1,
    "label": "Potentiel"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-28 13:14:23.968615",
+ "modified": "2023-10-28 13:16:33.595675",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Services",
