@@ -56,7 +56,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Secteur",
-   "options": "Secteur Public\nSecteur Priv\u00e9"
+   "options": "Public\nPriv\u00e9"
   },
   {
    "fieldname": "telephone_etablissement",
@@ -101,7 +101,7 @@
   },
   {
    "fieldname": "gps_etablissement",
-   "fieldtype": "Data",
+   "fieldtype": "Geolocation",
    "label": "GPS \u00c9tablissement"
   },
   {
@@ -119,7 +119,7 @@
    "link_fieldname": "etablissement"
   }
  ],
- "modified": "2023-10-28 13:29:02.683861",
+ "modified": "2023-10-28 13:43:17.920657",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Etablissements",
