@@ -64,6 +64,7 @@
    "read_only": 1
   },
   {
+   "default": "+213- ",
    "fieldname": "telephone_prescripteur",
    "fieldtype": "Phone",
    "label": "T\u00e9l\u00e9phone"
@@ -187,7 +188,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2023-10-28 14:08:15.444969",
+ "modified": "2023-10-28 14:17:24.206605",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
