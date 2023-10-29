@@ -34,7 +34,7 @@
  "is_hidden": 0,
  "label": "Menu Visites Services",
  "links": [],
- "modified": "2023-10-29 11:34:22.473959",
+ "modified": "2023-10-29 15:55:03.606716",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu Visites Services",
@@ -61,7 +61,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 20.0,
+ "sequence_id": 2.0,
  "shortcuts": [],
  "title": "Menu Visites Services"
 }
