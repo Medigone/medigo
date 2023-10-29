@@ -38,7 +38,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-25 19:59:20.525171",
+ "modified": "2023-10-29 15:47:01.551484",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Wilayas",
@@ -58,7 +58,6 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "code",
  "sort_order": "ASC",
  "states": [],

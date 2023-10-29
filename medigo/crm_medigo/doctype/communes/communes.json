@@ -41,7 +41,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-25 19:59:23.270382",
+ "modified": "2023-10-29 15:46:44.829657",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Communes",
@@ -61,7 +61,6 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "wilaya",
  "sort_order": "ASC",
  "states": [],

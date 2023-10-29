@@ -6,21 +6,21 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "utilisateur"
+  "nom"
  ],
  "fields": [
   {
-   "fieldname": "utilisateur",
+   "fieldname": "nom",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Utilisateur",
+   "label": "Nom",
    "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-29 15:16:25.645638",
+ "modified": "2023-10-29 15:45:06.702279",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "VM Action",

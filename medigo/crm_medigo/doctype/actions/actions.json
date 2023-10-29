@@ -25,6 +25,8 @@
   "vm_tab",
   "vm",
   "documents",
+  "type_banners",
+  "section_break_dwln",
   "programme_pdf",
   "programme",
   "column_break_pdpt",
@@ -160,11 +162,21 @@
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "type_banners",
+   "fieldtype": "Select",
+   "label": "Type Banners",
+   "options": "Type 1\nType 2"
+  },
+  {
+   "fieldname": "section_break_dwln",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-29 15:22:15.912921",
+ "modified": "2023-10-29 15:43:49.242140",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Actions",
