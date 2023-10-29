@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ACT-{####}",
+ "creation": "2023-10-29 13:46:09.372201",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "d\u00e9tails_tab",
+  "laboratoir",
+  "date_d\u00e9but",
+  "date_fin",
+  "column_break_yavv",
+  "type_action",
+  "type_\u00e9tablissement",
+  "type_service",
+  "localisation_tab",
+  "lieu_d\u00e9v\u00e8nement",
+  "commune",
+  "wilaya",
+  "zone",
+  "tab_2_tab",
+  "formateur__formatrice",
+  "invit\u00e9s_tab",
+  "prescripteurs",
+  "vm_tab",
+  "documents",
+  "programme_pdf",
+  "programme",
+  "column_break_pdpt",
+  "photo_stand",
+  "fiche_poso"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_d\u00e9but",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date D\u00e9but"
+  },
+  {
+   "fieldname": "date_fin",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date Fin"
+  },
+  {
+   "fieldname": "lieu_d\u00e9v\u00e8nement",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Lieu d'\u00e9v\u00e8nement",
+   "options": "Lieux evenements"
+  },
+  {
+   "fieldname": "type_\u00e9tablissement",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Type \u00c9tablissement",
+   "options": "Type Etablissement"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Formateurs"
+  },
+  {
+   "fieldname": "formateur__formatrice",
+   "fieldtype": "Table",
+   "label": "Formateurs / Formatrices",
+   "options": "Formateurs Actions"
+  },
+  {
+   "fieldname": "localisation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Localisation"
+  },
+  {
+   "fieldname": "commune",
+   "fieldtype": "Link",
+   "label": "Commune",
+   "options": "Communes"
+  },
+  {
+   "fetch_from": "commune.wilaya",
+   "fieldname": "wilaya",
+   "fieldtype": "Link",
+   "label": "Wilaya",
+   "options": "Wilayas",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "commune.zone",
+   "fieldname": "zone",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Zone",
+   "options": "Zone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "laboratoir",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Laboratoir",
+   "options": "Laboratoires"
+  },
+  {
+   "fieldname": "column_break_yavv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_service",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type Service",
+   "options": "Type Service"
+  },
+  {
+   "fieldname": "d\u00e9tails_tab",
+   "fieldtype": "Tab Break",
+   "label": "D\u00e9tails"
+  },
+  {
+   "fieldname": "invit\u00e9s_tab",
+   "fieldtype": "Tab Break",
+   "label": "Invit\u00e9s"
+  },
+  {
+   "fieldname": "vm_tab",
+   "fieldtype": "Tab Break",
+   "label": "VM"
+  },
+  {
+   "fieldname": "programme_pdf",
+   "fieldtype": "Attach",
+   "label": "Programme PDF"
+  },
+  {
+   "fieldname": "programme",
+   "fieldtype": "Attach Image",
+   "label": "Programme"
+  },
+  {
+   "fieldname": "photo_stand",
+   "fieldtype": "Attach Image",
+   "label": "Photo Stand"
+  },
+  {
+   "fieldname": "fiche_poso",
+   "fieldtype": "Attach Image",
+   "label": "Fiche Poso"
+  },
+  {
+   "fieldname": "column_break_pdpt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_action",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type Action",
+   "options": "Type Action"
+  },
+  {
+   "fieldname": "prescripteurs",
+   "fieldtype": "Table",
+   "label": "Prescripteurs",
+   "options": "Invites Action"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Tab Break",
+   "label": "Documents"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-29 14:48:33.820742",
+ "modified_by": "Administrator",
+ "module": "CRM Medigo",
+ "name": "Actions",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

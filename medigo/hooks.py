@@ -230,4 +230,7 @@ fixtures = [
     "Contrepartie",
     "Role",
     "Role Profile",
+    "Raisons absence",
+    "Lieux evenements",
+    "Type Action",
 ]

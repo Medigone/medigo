@@ -44,13 +44,6 @@
  {
   "docstatus": 0,
   "doctype": "Type Service",
-  "modified": "2023-10-24 18:53:43.932377",
-  "name": "MATERNITER",
-  "type_service": "MATERNITER"
- },
- {
-  "docstatus": 0,
-  "doctype": "Type Service",
   "modified": "2023-10-24 18:53:43.939983",
   "name": "PEDIATRIE",
   "type_service": "PEDIATRIE"
@@ -96,5 +89,12 @@
   "modified": "2023-10-24 18:53:43.936137",
   "name": "NEONATE",
   "type_service": "NEONATE"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Type Service",
+  "modified": "2023-10-29 14:36:11.384355",
+  "name": "MATERNITÉ",
+  "type_service": "MATERNITÉ"
  }
 ]
