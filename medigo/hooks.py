@@ -229,4 +229,5 @@ fixtures = [
     "Zone",
     "Contrepartie",
     "Role",
+    "Role Profile",
 ]
