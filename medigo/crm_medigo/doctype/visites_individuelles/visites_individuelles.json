@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:VI-{YY}-{MM}-{####}",
  "creation": "2023-10-25 01:01:19.752293",
@@ -237,7 +238,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-25 23:14:26.852889",
+ "modified": "2023-10-28 14:53:08.378602",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visites Individuelles",
@@ -257,6 +258,7 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [
@@ -277,5 +279,6 @@
    "title": "Annul\u00e9e"
   }
  ],
+ "title_field": "prescripteur",
  "track_changes": 1
 }

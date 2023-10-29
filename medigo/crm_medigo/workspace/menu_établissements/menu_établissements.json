@@ -17,7 +17,7 @@
    "label": "Services Par Type"
   }
  ],
- "content": "[{\"id\":\"NDzPUaZNxE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste \u00c9tablissements \",\"col\":3}},{\"id\":\"l4SYkLkT2k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Type \u00c9tablissement\",\"col\":3}},{\"id\":\"og_mWUCwSk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Services\",\"col\":3}},{\"id\":\"f1uE8k863T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Type Service\",\"col\":3}},{\"id\":\"L3bfpcv2K1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u00c9tablissements\",\"col\":3}},{\"id\":\"4-2-l6eEv0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nouveaux \u00c9tablissements\",\"col\":3}},{\"id\":\"dviv6hFXy0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Services\",\"col\":3}},{\"id\":\"nuqQmMnkTI\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nouveaux Services\",\"col\":3}},{\"id\":\"NMOS0bAvaD\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Cr\u00e9ation \u00c9tablissements\",\"col\":6}},{\"id\":\"WjcXK_tpXW\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Cr\u00e9ation Services\",\"col\":6}},{\"id\":\"M2Uy2BR3lY\",\"type\":\"chart\",\"data\":{\"chart_name\":\"\u00c9tablissements Par Type\",\"col\":6}},{\"id\":\"TV58rT_yNL\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Services Par Type\",\"col\":6}}]",
+ "content": "[{\"id\":\"L3bfpcv2K1\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u00c9tablissements\",\"col\":3}},{\"id\":\"4-2-l6eEv0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nouveaux \u00c9tablissements\",\"col\":3}},{\"id\":\"dviv6hFXy0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Services\",\"col\":3}},{\"id\":\"nuqQmMnkTI\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Nouveaux Services\",\"col\":3}},{\"id\":\"NMOS0bAvaD\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Cr\u00e9ation \u00c9tablissements\",\"col\":6}},{\"id\":\"WjcXK_tpXW\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Cr\u00e9ation Services\",\"col\":6}},{\"id\":\"M2Uy2BR3lY\",\"type\":\"chart\",\"data\":{\"chart_name\":\"\u00c9tablissements Par Type\",\"col\":6}},{\"id\":\"TV58rT_yNL\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Services Par Type\",\"col\":6}}]",
  "creation": "2023-10-27 21:02:53.425336",
  "custom_blocks": [],
  "docstatus": 0,
@@ -30,7 +30,7 @@
  "is_hidden": 0,
  "label": "Menu \u00c9tablissements",
  "links": [],
- "modified": "2023-10-27 22:39:41.584066",
+ "modified": "2023-10-28 22:12:21.075592",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu \u00c9tablissements",
@@ -58,39 +58,6 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 22.0,
- "shortcuts": [
-  {
-   "color": "Blue",
-   "doc_view": "List",
-   "label": "Liste \u00c9tablissements ",
-   "link_to": "Etablissements",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "List",
-   "label": "Liste Type \u00c9tablissement",
-   "link_to": "Type Etablissement",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "List",
-   "label": "Liste Services",
-   "link_to": "Services",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Blue",
-   "doc_view": "List",
-   "label": "Liste Type Service",
-   "link_to": "Type Service",
-   "stats_filter": "[]",
-   "type": "DocType"
-  }
- ],
+ "shortcuts": [],
  "title": "Menu \u00c9tablissements"
 }
