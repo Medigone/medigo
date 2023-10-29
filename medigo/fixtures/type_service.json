@@ -2,13 +2,6 @@
  {
   "docstatus": 0,
   "doctype": "Type Service",
-  "modified": "2023-10-24 18:53:43.893311",
-  "name": "ADMINISTRATION",
-  "type_service": "ADMINISTRATION"
- },
- {
-  "docstatus": 0,
-  "doctype": "Type Service",
   "modified": "2023-10-24 18:53:43.906446",
   "name": "DERMATO PEDIATRIE",
   "type_service": "DERMATO PEDIATRIE"
@@ -58,13 +51,6 @@
  {
   "docstatus": 0,
   "doctype": "Type Service",
-  "modified": "2023-10-24 18:53:43.936137",
-  "name": "NEONATE",
-  "type_service": "NEONATE"
- },
- {
-  "docstatus": 0,
-  "doctype": "Type Service",
   "modified": "2023-10-24 18:53:43.939983",
   "name": "PEDIATRIE",
   "type_service": "PEDIATRIE"
@@ -96,5 +82,19 @@
   "modified": "2023-10-24 18:53:43.956525",
   "name": "VACCINATION",
   "type_service": "VACCINATION"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Type Service",
+  "modified": "2023-10-24 18:53:43.893311",
+  "name": "ADMINISTRATION",
+  "type_service": "ADMINISTRATION"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Type Service",
+  "modified": "2023-10-24 18:53:43.936137",
+  "name": "NEONATE",
+  "type_service": "NEONATE"
  }
 ]

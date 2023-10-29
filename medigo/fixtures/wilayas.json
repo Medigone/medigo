@@ -261,15 +261,6 @@
   "zone": "Centre 2"
  },
  {
-  "code": "31",
-  "docstatus": 0,
-  "doctype": "Wilayas",
-  "modified": "2023-10-24 18:17:40.961237",
-  "name": "ORAN",
-  "wilaya": "ORAN",
-  "zone": "Ouest"
- },
- {
   "code": "32",
   "docstatus": 0,
   "doctype": "Wilayas",
@@ -519,6 +510,15 @@
   "modified": "2023-10-24 18:17:40.737538",
   "name": "ADRAR",
   "wilaya": "ADRAR",
+  "zone": "Ouest"
+ },
+ {
+  "code": "31",
+  "docstatus": 0,
+  "doctype": "Wilayas",
+  "modified": "2023-10-24 18:17:40.961237",
+  "name": "ORAN",
+  "wilaya": "ORAN",
   "zone": "Ouest"
  }
 ]

@@ -228,4 +228,5 @@ fixtures = [
     "Wilayas",
     "Zone",
     "Contrepartie",
+    "Role",
 ]

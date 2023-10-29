@@ -86,13 +86,6 @@
  {
   "docstatus": 0,
   "doctype": "Titre Prescripteur",
-  "modified": "2023-10-24 18:46:15.653076",
-  "name": "CHIR",
-  "titre_prescripteur": "CHIR"
- },
- {
-  "docstatus": 0,
-  "doctype": "Titre Prescripteur",
   "modified": "2023-10-24 18:46:15.664228",
   "name": "DIET",
   "titre_prescripteur": "DIET"
@@ -110,20 +103,6 @@
   "modified": "2023-10-24 18:46:15.683925",
   "name": "GYNEC",
   "titre_prescripteur": "GYNEC"
- },
- {
-  "docstatus": 0,
-  "doctype": "Titre Prescripteur",
-  "modified": "2023-10-24 18:46:15.695535",
-  "name": "PED MA",
-  "titre_prescripteur": "PED MA"
- },
- {
-  "docstatus": 0,
-  "doctype": "Titre Prescripteur",
-  "modified": "2023-10-24 18:46:15.707001",
-  "name": "PED PROF",
-  "titre_prescripteur": "PED PROF"
  },
  {
   "docstatus": 0,
@@ -177,8 +156,29 @@
  {
   "docstatus": 0,
   "doctype": "Titre Prescripteur",
+  "modified": "2023-10-24 18:46:15.695535",
+  "name": "PED MA",
+  "titre_prescripteur": "PED MA"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Titre Prescripteur",
+  "modified": "2023-10-24 18:46:15.707001",
+  "name": "PED PROF",
+  "titre_prescripteur": "PED PROF"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Titre Prescripteur",
   "modified": "2023-10-24 18:46:15.804773",
   "name": "CHEF DE SERVICE PROF",
   "titre_prescripteur": "CHEF DE SERVICE PROF"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Titre Prescripteur",
+  "modified": "2023-10-24 18:46:15.653076",
+  "name": "CHIR",
+  "titre_prescripteur": "CHIR"
  }
 ]

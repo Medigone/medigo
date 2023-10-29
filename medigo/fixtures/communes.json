@@ -153,15 +153,6 @@
   "zone": "Ouest"
  },
  {
-  "commune": "AKABLI",
-  "docstatus": 0,
-  "doctype": "Communes",
-  "modified": "2023-10-24 18:33:01.665314",
-  "name": "AKABLI",
-  "wilaya": "ADRAR",
-  "zone": "Ouest"
- },
- {
   "commune": "METARFA",
   "docstatus": 0,
   "doctype": "Communes",
@@ -9972,15 +9963,6 @@
   "zone": "Centre 2"
  },
  {
-  "commune": "ORAN",
-  "docstatus": 0,
-  "doctype": "Communes",
-  "modified": "2023-10-24 18:33:08.214526",
-  "name": "ORAN",
-  "wilaya": "ORAN",
-  "zone": "Ouest"
- },
- {
   "commune": "GDYEL",
   "docstatus": 0,
   "doctype": "Communes",
@@ -14004,12 +13986,30 @@
   "zone": "Sud"
  },
  {
+  "commune": "AKABLI",
+  "docstatus": 0,
+  "doctype": "Communes",
+  "modified": "2023-10-24 18:33:01.665314",
+  "name": "AKABLI",
+  "wilaya": "ADRAR",
+  "zone": "Ouest"
+ },
+ {
   "commune": "ADRAR",
   "docstatus": 0,
   "doctype": "Communes",
   "modified": "2023-10-24 18:33:01.566282",
   "name": "ADRAR",
   "wilaya": "ADRAR",
+  "zone": "Ouest"
+ },
+ {
+  "commune": "ORAN",
+  "docstatus": 0,
+  "doctype": "Communes",
+  "modified": "2023-10-24 18:33:08.214526",
+  "name": "ORAN",
+  "wilaya": "ORAN",
   "zone": "Ouest"
  }
 ]
