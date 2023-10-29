@@ -26,6 +26,7 @@
   "invit\u00e9s_tab",
   "prescripteurs",
   "vm_tab",
+  "vm",
   "documents",
   "programme_pdf",
   "programme",
@@ -179,11 +180,17 @@
    "fieldname": "documents",
    "fieldtype": "Tab Break",
    "label": "Documents"
+  },
+  {
+   "fieldname": "vm",
+   "fieldtype": "Table",
+   "label": "VM's Pr\u00e9sents",
+   "options": "VM Action"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-29 14:48:33.820742",
+ "modified": "2023-10-29 15:17:09.780283",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Actions",
