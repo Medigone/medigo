@@ -9,7 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "d\u00e9tails_tab",
-  "laboratoir",
+  "laboratoire",
   "date_d\u00e9but",
   "date_fin",
   "lieu_d\u00e9v\u00e8nement",
@@ -73,14 +73,6 @@
    "fieldtype": "Table",
    "label": "Formateurs / Formatrices",
    "options": "Formateurs Actions"
-  },
-  {
-   "fieldname": "laboratoir",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Laboratoir",
-   "options": "Laboratoires"
   },
   {
    "fieldname": "column_break_yavv",
@@ -172,11 +164,19 @@
   {
    "fieldname": "section_break_dwln",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "laboratoire",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Laboratoire",
+   "options": "Laboratoires"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-29 16:28:56.111486",
+ "modified": "2023-10-29 18:58:50.777071",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Actions",
@@ -246,6 +246,5 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }
