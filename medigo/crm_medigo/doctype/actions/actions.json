@@ -12,15 +12,12 @@
   "laboratoir",
   "date_d\u00e9but",
   "date_fin",
-  "column_break_yavv",
+  "lieu_d\u00e9v\u00e8nement",
   "type_action",
   "type_\u00e9tablissement",
+  "column_break_yavv",
   "type_service",
-  "localisation_tab",
-  "lieu_d\u00e9v\u00e8nement",
-  "commune",
-  "wilaya",
-  "zone",
+  "description",
   "tab_2_tab",
   "formateur__formatrice",
   "invit\u00e9s_tab",
@@ -74,34 +71,6 @@
    "fieldtype": "Table",
    "label": "Formateurs / Formatrices",
    "options": "Formateurs Actions"
-  },
-  {
-   "fieldname": "localisation_tab",
-   "fieldtype": "Tab Break",
-   "label": "Localisation"
-  },
-  {
-   "fieldname": "commune",
-   "fieldtype": "Link",
-   "label": "Commune",
-   "options": "Communes"
-  },
-  {
-   "fetch_from": "commune.wilaya",
-   "fieldname": "wilaya",
-   "fieldtype": "Link",
-   "label": "Wilaya",
-   "options": "Wilayas",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "commune.zone",
-   "fieldname": "zone",
-   "fieldtype": "Link",
-   "in_standard_filter": 1,
-   "label": "Zone",
-   "options": "Zone",
-   "read_only": 1
   },
   {
    "fieldname": "laboratoir",
@@ -186,11 +155,16 @@
    "fieldtype": "Table",
    "label": "VM's Pr\u00e9sents",
    "options": "VM Action"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-29 15:17:09.780283",
+ "modified": "2023-10-29 15:22:15.912921",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Actions",
