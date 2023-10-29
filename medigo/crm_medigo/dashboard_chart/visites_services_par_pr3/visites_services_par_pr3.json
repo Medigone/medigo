@@ -10,18 +10,31 @@
  "filters_json": "[]",
  "group_by_based_on": "objectif_produit_3",
  "group_by_type": "Count",
- "idx": 0,
+ "idx": 7,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-27 22:43:55.817856",
- "modified": "2023-10-27 22:59:31.344306",
+ "last_synced_on": "2023-10-29 11:42:07.894857",
+ "modified": "2023-10-29 16:06:07.940960",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visites Services Par PR3",
  "number_of_groups": 0,
  "owner": "Administrator",
  "parent_document_type": "",
- "roles": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Administrateur M\u00e9dical"
+  },
+  {
+   "role": "Superviseur M\u00e9dical"
+  },
+  {
+   "role": "D\u00e9l\u00e9gue M\u00e9dical"
+  }
+ ],
  "source": "",
  "time_interval": "Yearly",
  "timeseries": 0,

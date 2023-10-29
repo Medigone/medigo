@@ -11,18 +11,31 @@
  "filters_json": "[[\"Visites Services\",\"status\",\"=\",\"Termin\u00e9e\",false]]",
  "group_by_based_on": "owner",
  "group_by_type": "Count",
- "idx": 0,
+ "idx": 13,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-28 12:56:26.036635",
- "modified": "2023-10-28 12:57:09.392925",
+ "last_synced_on": "2023-10-29 11:42:07.899850",
+ "modified": "2023-10-29 16:08:04.917875",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Heat Map Visites Services",
  "number_of_groups": 0,
  "owner": "Administrator",
  "parent_document_type": "",
- "roles": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Administrateur M\u00e9dical"
+  },
+  {
+   "role": "Superviseur M\u00e9dical"
+  },
+  {
+   "role": "D\u00e9l\u00e9gue M\u00e9dical"
+  }
+ ],
  "source": "",
  "time_interval": "Yearly",
  "timeseries": 1,

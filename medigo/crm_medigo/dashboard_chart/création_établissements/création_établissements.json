@@ -10,18 +10,31 @@
  "dynamic_filters_json": "[]",
  "filters_json": "[]",
  "group_by_type": "Count",
- "idx": 0,
+ "idx": 3,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-27 21:21:21.765729",
- "modified": "2023-10-27 21:21:57.282775",
+ "last_synced_on": "2023-10-28 22:13:14.509942",
+ "modified": "2023-10-29 16:03:25.491515",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Cr\u00e9ation \u00c9tablissements",
  "number_of_groups": 0,
  "owner": "Administrator",
  "parent_document_type": "",
- "roles": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Administrateur M\u00e9dical"
+  },
+  {
+   "role": "Superviseur M\u00e9dical"
+  },
+  {
+   "role": "D\u00e9l\u00e9gue M\u00e9dical"
+  }
+ ],
  "source": "",
  "time_interval": "Daily",
  "timeseries": 1,

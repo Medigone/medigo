@@ -11,18 +11,31 @@
  "filters_json": "[[\"Visites Individuelles\",\"status\",\"=\",\"Termin\u00e9e\",false]]",
  "group_by_based_on": "owner",
  "group_by_type": "Count",
- "idx": 0,
+ "idx": 8,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-27 23:24:36.621055",
- "modified": "2023-10-27 23:24:53.164622",
+ "last_synced_on": "2023-10-29 15:47:53.280275",
+ "modified": "2023-10-29 16:07:43.134321",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Heat Map Visites Individuelles",
  "number_of_groups": 0,
  "owner": "Administrator",
  "parent_document_type": "",
- "roles": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Administrateur M\u00e9dical"
+  },
+  {
+   "role": "Superviseur M\u00e9dical"
+  },
+  {
+   "role": "D\u00e9l\u00e9gue M\u00e9dical"
+  }
+ ],
  "source": "",
  "time_interval": "Yearly",
  "timeseries": 1,

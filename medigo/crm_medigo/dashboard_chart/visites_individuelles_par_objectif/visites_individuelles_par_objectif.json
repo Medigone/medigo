@@ -1,23 +1,23 @@
 {
  "based_on": "",
- "chart_name": "Visites individuelles Par PR3",
+ "chart_name": "Visites Individuelles Par Objectif",
  "chart_type": "Group By",
- "creation": "2023-10-27 23:00:59.352175",
+ "creation": "2023-10-27 22:49:45.902056",
  "docstatus": 0,
  "doctype": "Dashboard Chart",
  "document_type": "Visites Individuelles",
  "dynamic_filters_json": "[]",
  "filters_json": "[]",
- "group_by_based_on": "objectif_produit_3",
+ "group_by_based_on": "objectif_visite",
  "group_by_type": "Count",
  "idx": 11,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-29 15:47:53.299434",
- "modified": "2023-10-29 16:05:43.545490",
+ "last_synced_on": "2023-10-29 15:47:53.282388",
+ "modified": "2023-10-29 16:08:26.344196",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
- "name": "Visites individuelles Par PR3",
+ "name": "Visites Individuelles Par Objectif",
  "number_of_groups": 0,
  "owner": "Administrator",
  "parent_document_type": "",
@@ -30,9 +30,6 @@
   },
   {
    "role": "Superviseur M\u00e9dical"
-  },
-  {
-   "role": "D\u00e9l\u00e9gue M\u00e9dical"
   }
  ],
  "source": "",
