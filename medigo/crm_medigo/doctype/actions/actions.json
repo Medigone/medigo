@@ -12,11 +12,13 @@
   "laboratoire",
   "date_d\u00e9but",
   "date_fin",
-  "lieu_d\u00e9v\u00e8nement",
   "type_action",
-  "type_\u00e9tablissement",
   "column_break_yavv",
+  "type_\u00e9tablissement",
   "type_service",
+  "lieu_d\u00e9v\u00e8nement",
+  "commune",
+  "description_tab",
   "description",
   "tab_2_tab",
   "formateur__formatrice",
@@ -152,7 +154,7 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text",
+   "fieldtype": "Text Editor",
    "label": "Description"
   },
   {
@@ -172,11 +174,22 @@
    "in_standard_filter": 1,
    "label": "Laboratoire",
    "options": "Laboratoires"
+  },
+  {
+   "fieldname": "commune",
+   "fieldtype": "Link",
+   "label": "Commune",
+   "options": "Communes"
+  },
+  {
+   "fieldname": "description_tab",
+   "fieldtype": "Tab Break",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-29 18:58:50.777071",
+ "modified": "2023-10-30 08:44:36.236100",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Actions",
