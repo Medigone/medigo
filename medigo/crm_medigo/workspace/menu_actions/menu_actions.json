@@ -1,6 +1,11 @@
 {
- "charts": [],
- "content": "[{\"id\":\"8j66hsTD6U\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Actions\",\"col\":4}},{\"id\":\"mYDl50iSjS\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Formateurs\",\"col\":4}},{\"id\":\"DHDpF3-khC\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"bcrIWB3tQT\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"y6fFuXfxbn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Formateurs\",\"col\":3}}]",
+ "charts": [
+  {
+   "chart_name": "Heat Map Actions",
+   "label": "Actions"
+  }
+ ],
+ "content": "[{\"id\":\"LdUZcAjoW7\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Actions\",\"col\":12}},{\"id\":\"mwvmiEplTd\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Actions\",\"col\":6}},{\"id\":\"6ExB2T4bNU\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Formateurs\",\"col\":6}},{\"id\":\"dczdGPj7wV\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"-P74nggmok\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Actions\",\"col\":3}},{\"id\":\"_dFZ2ja2nu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ajouter Action\",\"col\":3}},{\"id\":\"kLGbMvwNyw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Formateurs\",\"col\":3}},{\"id\":\"y6fFuXfxbn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ajouter Formateurs\",\"col\":3}}]",
  "creation": "2023-10-29 18:46:47.928668",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,18 +18,18 @@
  "is_hidden": 0,
  "label": "Menu Actions",
  "links": [],
- "modified": "2023-10-30 12:50:32.260397",
+ "modified": "2023-10-30 19:40:47.242320",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu Actions",
  "number_cards": [
   {
-   "label": "Formateurs",
-   "number_card_name": "Formateurs"
-  },
-  {
    "label": "Actions",
    "number_card_name": "Actions"
+  },
+  {
+   "label": "Formateurs",
+   "number_card_name": "Formateurs"
   }
  ],
  "owner": "Administrator",
@@ -36,8 +41,32 @@
  "shortcuts": [
   {
    "color": "Blue",
+   "doc_view": "List",
+   "label": "Liste Actions",
+   "link_to": "Actions",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
    "doc_view": "New",
-   "label": "+ Formateurs",
+   "label": "Ajouter Action",
+   "link_to": "Actions",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "New",
+   "label": "Ajouter Formateurs",
+   "link_to": "Formateurs",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Liste Formateurs",
    "link_to": "Formateurs",
    "stats_filter": "[]",
    "type": "DocType"

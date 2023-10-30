@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:VI-{YY}-{MM}-{####}",
+ "autoname": "format:{prescripteur}-{YY}-{MM}-{DD}",
  "creation": "2023-10-25 01:01:19.752293",
  "default_view": "List",
  "doctype": "DocType",
@@ -74,7 +74,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Prescripteur",
-   "options": "Prescripteurs"
+   "options": "Prescripteurs",
+   "search_index": 1
   },
   {
    "fieldname": "objectifs_produits_column",
@@ -238,7 +239,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-28 14:53:08.378602",
+ "modified": "2023-10-30 20:13:00.249995",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visites Individuelles",
@@ -259,8 +260,8 @@
   }
  ],
  "show_title_field_in_link": 1,
- "sort_field": "modified",
- "sort_order": "DESC",
+ "sort_field": "date_prevue",
+ "sort_order": "ASC",
  "states": [
   {
    "color": "Blue",

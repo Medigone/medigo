@@ -8,23 +8,23 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "projet_tab",
-  "projet",
   "d\u00e9tails_tab",
   "laboratoire",
-  "date_d\u00e9but",
+  "date_debut",
   "date_fin",
   "column_break_yavv",
   "type_action",
-  "lieu_d\u00e9v\u00e8nement",
+  "lieu_devenement",
   "commune",
   "description_tab",
   "description",
-  "\u00e9tablissement_tab",
+  "projet_tab",
+  "projet",
+  "etablissement_tab",
   "etablissement",
   "tab_2_tab",
   "formateur__formatrice",
-  "invit\u00e9s_tab",
+  "invites_tab",
   "prescripteurs",
   "vm_tab",
   "vm",
@@ -40,26 +40,11 @@
  ],
  "fields": [
   {
-   "fieldname": "date_d\u00e9but",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Date D\u00e9but"
-  },
-  {
    "fieldname": "date_fin",
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Date Fin"
-  },
-  {
-   "fieldname": "lieu_d\u00e9v\u00e8nement",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Lieu d'\u00e9v\u00e8nement",
-   "options": "Lieux evenements"
   },
   {
    "fieldname": "tab_2_tab",
@@ -80,11 +65,6 @@
    "fieldname": "d\u00e9tails_tab",
    "fieldtype": "Tab Break",
    "label": "D\u00e9tails"
-  },
-  {
-   "fieldname": "invit\u00e9s_tab",
-   "fieldtype": "Tab Break",
-   "label": "Invit\u00e9s"
   },
   {
    "fieldname": "vm_tab",
@@ -175,20 +155,10 @@
    "label": "Description"
   },
   {
-   "fieldname": "projet_tab",
-   "fieldtype": "Tab Break",
-   "label": "Projet"
-  },
-  {
    "fieldname": "projet",
    "fieldtype": "Link",
    "label": "Projet",
    "options": "Project"
-  },
-  {
-   "fieldname": "\u00e9tablissement_tab",
-   "fieldtype": "Tab Break",
-   "label": "\u00c9tablissement"
   },
   {
    "fieldname": "banners_tab",
@@ -201,11 +171,41 @@
    "in_standard_filter": 1,
    "label": "\u00c9tablissement",
    "options": "Etablissement Action"
+  },
+  {
+   "fieldname": "projet_tab",
+   "fieldtype": "Tab Break",
+   "label": "Projet"
+  },
+  {
+   "fieldname": "date_debut",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date D\u00e9but"
+  },
+  {
+   "fieldname": "lieu_devenement",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Lieu d'\u00e9v\u00e8nement",
+   "options": "Lieux evenements"
+  },
+  {
+   "fieldname": "etablissement_tab",
+   "fieldtype": "Tab Break",
+   "label": "\u00c9tablissement"
+  },
+  {
+   "fieldname": "invites_tab",
+   "fieldtype": "Tab Break",
+   "label": "Invit\u00e9s"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 16:16:59.549790",
+ "modified": "2023-10-30 20:41:43.226548",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Actions",
@@ -272,7 +272,8 @@
    "write": 1
   }
  ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": []
+ "sort_field": "date_debut",
+ "sort_order": "ASC",
+ "states": [],
+ "track_changes": 1
 }

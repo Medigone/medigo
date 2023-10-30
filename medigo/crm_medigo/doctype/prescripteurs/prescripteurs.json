@@ -4,6 +4,7 @@
  "allow_events_in_timeline": 1,
  "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "format:{nom_complet_prescripteur}",
  "creation": "2023-10-24 18:59:08.346405",
  "default_view": "List",
  "doctype": "DocType",
@@ -59,9 +60,10 @@
    "fieldname": "nom_complet_prescripteur",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Nom Complet",
-   "read_only": 1
+   "unique": 1
   },
   {
    "fieldname": "telephone_prescripteur",
@@ -189,10 +191,11 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2023-10-28 14:20:38.897869",
+ "modified": "2023-10-30 20:17:00.516977",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -208,7 +211,7 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
+ "show_preview_popup": 1,
  "sort_field": "nom_complet_prescripteur",
  "sort_order": "ASC",
  "states": [
@@ -221,6 +224,5 @@
    "title": "Inactif"
   }
  ],
- "title_field": "nom_complet_prescripteur",
  "track_changes": 1
 }
