@@ -126,15 +126,6 @@
   "zone": "Centre 2"
  },
  {
-  "code": "16",
-  "docstatus": 0,
-  "doctype": "Wilayas",
-  "modified": "2023-10-24 18:17:40.881416",
-  "name": "ALGER",
-  "wilaya": "ALGER",
-  "zone": "Centre 2"
- },
- {
   "code": "17",
   "docstatus": 0,
   "doctype": "Wilayas",
@@ -502,6 +493,15 @@
   "name": "EL MENIAA",
   "wilaya": "EL MENIAA",
   "zone": "Sud"
+ },
+ {
+  "code": "16",
+  "docstatus": 0,
+  "doctype": "Wilayas",
+  "modified": "2023-10-24 18:17:40.881416",
+  "name": "ALGER",
+  "wilaya": "ALGER",
+  "zone": "Centre 2"
  },
  {
   "code": "31",

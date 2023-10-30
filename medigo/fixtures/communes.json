@@ -4959,15 +4959,6 @@
   "zone": "Centre 2"
  },
  {
-  "commune": "ALGER CENTRE",
-  "docstatus": 0,
-  "doctype": "Communes",
-  "modified": "2023-10-24 18:33:04.620597",
-  "name": "ALGER CENTRE",
-  "wilaya": "ALGER",
-  "zone": "Centre 2"
- },
- {
   "commune": "SIDI M'HAMED - 16",
   "docstatus": 0,
   "doctype": "Communes",
@@ -13993,6 +13984,15 @@
   "name": "AKABLI",
   "wilaya": "ADRAR",
   "zone": "Ouest"
+ },
+ {
+  "commune": "ALGER CENTRE",
+  "docstatus": 0,
+  "doctype": "Communes",
+  "modified": "2023-10-24 18:33:04.620597",
+  "name": "ALGER CENTRE",
+  "wilaya": "ALGER",
+  "zone": "Centre 2"
  },
  {
   "commune": "ORAN",

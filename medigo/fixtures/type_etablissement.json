@@ -37,15 +37,15 @@
  {
   "docstatus": 0,
   "doctype": "Type Etablissement",
-  "modified": "2023-10-24 18:51:41.482555",
-  "name": "CHU",
-  "type_etablissement": "CHU"
+  "modified": "2023-10-24 18:51:41.536466",
+  "name": "EPSP",
+  "type_etablissement": "EPSP"
  },
  {
   "docstatus": 0,
   "doctype": "Type Etablissement",
-  "modified": "2023-10-24 18:51:41.536466",
-  "name": "EPSP",
-  "type_etablissement": "EPSP"
+  "modified": "2023-10-24 18:51:41.482555",
+  "name": "CHU",
+  "type_etablissement": "CHU"
  }
 ]

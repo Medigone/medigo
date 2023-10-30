@@ -121,13 +121,6 @@
  {
   "docstatus": 0,
   "doctype": "Type Action",
-  "modified": "2023-10-29 14:34:06.000572",
-  "name": "JOURNÉE SCIENTIFIQUE (SOCIÉTÉ SAVANTE)",
-  "type_action": "JOURNÉE SCIENTIFIQUE (SOCIÉTÉ SAVANTE)"
- },
- {
-  "docstatus": 0,
-  "doctype": "Type Action",
   "modified": "2023-10-29 14:34:06.004649",
   "name": "BON D'ACHAT",
   "type_action": "BON D'ACHAT"
@@ -138,5 +131,12 @@
   "modified": "2023-10-29 14:34:05.969271",
   "name": "ACTION 8 MARS",
   "type_action": "ACTION 8 MARS"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Type Action",
+  "modified": "2023-10-29 14:34:06.000572",
+  "name": "JOURNÉE SCIENTIFIQUE (SOCIÉTÉ SAVANTE)",
+  "type_action": "JOURNÉE SCIENTIFIQUE (SOCIÉTÉ SAVANTE)"
  }
 ]

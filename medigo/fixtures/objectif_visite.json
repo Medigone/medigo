@@ -37,15 +37,15 @@
  {
   "docstatus": 0,
   "doctype": "Objectif Visite",
-  "modified": "2023-10-24 18:44:06.733750",
-  "name": "Négociation Offre Promo",
-  "objectif_visite": "Négociation Offre Promo"
+  "modified": "2023-10-24 18:44:06.656423",
+  "name": "Prospection",
+  "objectif_visite": "Prospection"
  },
  {
   "docstatus": 0,
   "doctype": "Objectif Visite",
-  "modified": "2023-10-24 18:44:06.656423",
-  "name": "Prospection",
-  "objectif_visite": "Prospection"
+  "modified": "2023-10-24 18:44:06.733750",
+  "name": "Négociation Offre Promo",
+  "objectif_visite": "Négociation Offre Promo"
  }
 ]

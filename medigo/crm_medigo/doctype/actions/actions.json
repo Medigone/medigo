@@ -14,6 +14,7 @@
   "date_fin",
   "column_break_yavv",
   "type_action",
+  "societe_savante",
   "lieu_devenement",
   "commune",
   "description_tab",
@@ -201,11 +202,19 @@
    "fieldname": "invites_tab",
    "fieldtype": "Tab Break",
    "label": "Invit\u00e9s"
+  },
+  {
+   "depends_on": "eval:doc.laboratoire!=\"BIOMIL\" && (doc.type_action==\"JOURN\u00c9E SCIENTIFIQUE (SOCI\u00c9T\u00c9 SAVANTE)\"||doc.type_action==\"JOURN\u00c9E DE LA SAGE-FEMME\")",
+   "fieldname": "societe_savante",
+   "fieldtype": "Link",
+   "label": "Soci\u00e9t\u00e9 Savante",
+   "mandatory_depends_on": "eval:doc.laboratoire!=\"BIOMIL\" && (doc.type_action==\"JOURN\u00c9E SCIENTIFIQUE (SOCI\u00c9T\u00c9 SAVANTE)\"||doc.type_action==\"JOURN\u00c9E DE LA SAGE-FEMME\")",
+   "options": "Societe Savante"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 20:41:43.226548",
+ "modified": "2023-10-30 22:19:04.889249",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Actions",

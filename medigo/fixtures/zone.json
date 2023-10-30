@@ -9,13 +9,6 @@
  {
   "docstatus": 0,
   "doctype": "Zone",
-  "modified": "2023-10-24 18:12:23.462770",
-  "name": "Centre 2",
-  "zone": "Centre 2"
- },
- {
-  "docstatus": 0,
-  "doctype": "Zone",
   "modified": "2023-10-24 18:12:23.481630",
   "name": "Est",
   "zone": "Est"
@@ -26,6 +19,13 @@
   "modified": "2023-10-24 18:12:23.490817",
   "name": "Sud",
   "zone": "Sud"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Zone",
+  "modified": "2023-10-24 18:12:23.462770",
+  "name": "Centre 2",
+  "zone": "Centre 2"
  },
  {
   "docstatus": 0,
