@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"8j66hsTD6U\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Actions\",\"col\":4}},{\"id\":\"mYDl50iSjS\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Formateurs\",\"col\":4}},{\"id\":\"DHDpF3-khC\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "content": "[{\"id\":\"8j66hsTD6U\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Actions\",\"col\":4}},{\"id\":\"mYDl50iSjS\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Formateurs\",\"col\":4}},{\"id\":\"DHDpF3-khC\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"bcrIWB3tQT\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"y6fFuXfxbn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"+ Formateurs\",\"col\":3}}]",
  "creation": "2023-10-29 18:46:47.928668",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Menu Actions",
  "links": [],
- "modified": "2023-10-30 08:49:12.864287",
+ "modified": "2023-10-30 12:50:32.260397",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu Actions",
@@ -33,6 +33,15 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 5.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "New",
+   "label": "+ Formateurs",
+   "link_to": "Formateurs",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
  "title": "Menu Actions"
 }

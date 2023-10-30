@@ -8,34 +8,35 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "projet_tab",
+  "projet",
   "d\u00e9tails_tab",
   "laboratoire",
   "date_d\u00e9but",
   "date_fin",
-  "type_action",
   "column_break_yavv",
-  "type_\u00e9tablissement",
-  "type_service",
+  "type_action",
   "lieu_d\u00e9v\u00e8nement",
   "commune",
   "description_tab",
   "description",
+  "\u00e9tablissement_tab",
+  "etablissement",
   "tab_2_tab",
   "formateur__formatrice",
   "invit\u00e9s_tab",
   "prescripteurs",
   "vm_tab",
   "vm",
-  "documents",
+  "banners_tab",
   "type_banners",
+  "documents",
   "section_break_dwln",
   "programme_pdf",
   "programme",
   "column_break_pdpt",
   "photo_stand",
-  "fiche_poso",
-  "projet_tab",
-  "projet"
+  "fiche_poso"
  ],
  "fields": [
   {
@@ -61,13 +62,6 @@
    "options": "Lieux evenements"
   },
   {
-   "fieldname": "type_\u00e9tablissement",
-   "fieldtype": "Link",
-   "in_standard_filter": 1,
-   "label": "Type \u00c9tablissement",
-   "options": "Type Etablissement"
-  },
-  {
    "fieldname": "tab_2_tab",
    "fieldtype": "Tab Break",
    "label": "Formateurs"
@@ -81,14 +75,6 @@
   {
    "fieldname": "column_break_yavv",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "type_service",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Type Service",
-   "options": "Type Service"
   },
   {
    "fieldname": "d\u00e9tails_tab",
@@ -161,9 +147,9 @@
   },
   {
    "fieldname": "type_banners",
-   "fieldtype": "Select",
+   "fieldtype": "Table",
    "label": "Type Banners",
-   "options": "Type 1\nType 2"
+   "options": "Type Banners Action"
   },
   {
    "fieldname": "section_break_dwln",
@@ -198,11 +184,28 @@
    "fieldtype": "Link",
    "label": "Projet",
    "options": "Project"
+  },
+  {
+   "fieldname": "\u00e9tablissement_tab",
+   "fieldtype": "Tab Break",
+   "label": "\u00c9tablissement"
+  },
+  {
+   "fieldname": "banners_tab",
+   "fieldtype": "Tab Break",
+   "label": "Banners"
+  },
+  {
+   "fieldname": "etablissement",
+   "fieldtype": "Table",
+   "in_standard_filter": 1,
+   "label": "\u00c9tablissement",
+   "options": "Etablissement Action"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 08:56:21.058869",
+ "modified": "2023-10-30 14:41:17.736530",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Actions",
