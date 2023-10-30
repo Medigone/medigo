@@ -205,7 +205,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 14:41:17.736530",
+ "modified": "2023-10-30 16:16:59.549790",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Actions",
@@ -262,7 +262,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
