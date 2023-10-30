@@ -24,6 +24,10 @@
   "service",
   "cabinet_prive_prescripteur",
   "chef_de_service",
+  "informations_personnelles_tab",
+  "sexe",
+  "situation_matrimoniale",
+  "epouse",
   "infos_tab",
   "potentiel_column",
   "status",
@@ -182,6 +186,29 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Actif\nInactif"
+  },
+  {
+   "fieldname": "sexe",
+   "fieldtype": "Select",
+   "label": "Sexe",
+   "options": "Homme\nFemme"
+  },
+  {
+   "fieldname": "situation_matrimoniale",
+   "fieldtype": "Select",
+   "label": "Situation matrimoniale",
+   "options": "C\u00e9libataire\nMari\u00e9(e)"
+  },
+  {
+   "depends_on": "eval:(doc.situation_matrimoniale==\"Mari\u00e9(e)\"&&doc.sexe==\"Femme\")",
+   "fieldname": "epouse",
+   "fieldtype": "Data",
+   "label": "\u00c9pouse"
+  },
+  {
+   "fieldname": "informations_personnelles_tab",
+   "fieldtype": "Tab Break",
+   "label": "Informations personnelles"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -191,7 +218,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2023-10-30 20:17:00.516977",
+ "modified": "2023-10-30 23:26:18.061811",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
