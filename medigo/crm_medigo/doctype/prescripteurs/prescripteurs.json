@@ -63,8 +63,8 @@
   {
    "fieldname": "nom_complet_prescripteur",
    "fieldtype": "Data",
+   "in_global_search": 1,
    "in_list_view": 1,
-   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Nom Complet",
    "unique": 1
@@ -88,6 +88,7 @@
    "fieldname": "titre_prescripteur",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Titre Prescripteur",
    "options": "Titre Prescripteur"
@@ -95,6 +96,7 @@
   {
    "fieldname": "etablissement",
    "fieldtype": "Link",
+   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "\u00c9tablissement",
    "options": "Etablissements",
@@ -218,7 +220,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2023-10-30 23:26:18.061811",
+ "modified": "2023-10-31 01:03:50.476448",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
@@ -238,6 +240,7 @@
    "write": 1
   }
  ],
+ "show_name_in_global_search": 1,
  "show_preview_popup": 1,
  "sort_field": "nom_complet_prescripteur",
  "sort_order": "ASC",

@@ -5,7 +5,7 @@
    "label": "Actions"
   }
  ],
- "content": "[{\"id\":\"LdUZcAjoW7\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Actions\",\"col\":12}},{\"id\":\"mwvmiEplTd\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Actions\",\"col\":6}},{\"id\":\"6ExB2T4bNU\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Formateurs\",\"col\":6}},{\"id\":\"dczdGPj7wV\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"-P74nggmok\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Actions\",\"col\":3}},{\"id\":\"_dFZ2ja2nu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ajouter Action\",\"col\":3}},{\"id\":\"kLGbMvwNyw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Formateurs\",\"col\":3}},{\"id\":\"y6fFuXfxbn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ajouter Formateurs\",\"col\":3}}]",
+ "content": "[{\"id\":\"LdUZcAjoW7\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Actions\",\"col\":12}},{\"id\":\"mwvmiEplTd\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Actions\",\"col\":6}},{\"id\":\"6ExB2T4bNU\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Formateurs\",\"col\":6}},{\"id\":\"-P74nggmok\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Actions\",\"col\":3}},{\"id\":\"_dFZ2ja2nu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ajouter Action\",\"col\":3}},{\"id\":\"kLGbMvwNyw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Liste Formateurs\",\"col\":3}},{\"id\":\"y6fFuXfxbn\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ajouter Formateurs\",\"col\":3}}]",
  "creation": "2023-10-29 18:46:47.928668",
  "custom_blocks": [],
  "docstatus": 0,
@@ -18,7 +18,7 @@
  "is_hidden": 0,
  "label": "Menu Actions",
  "links": [],
- "modified": "2023-10-30 19:40:47.242320",
+ "modified": "2023-10-31 00:28:31.993406",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu Actions",
