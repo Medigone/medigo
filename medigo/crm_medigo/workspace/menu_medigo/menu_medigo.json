@@ -1,0 +1,54 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"9QnCB1-kb7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Menu MEDIGO</span>\",\"col\":12}},{\"id\":\"ST89uhYe3o\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Individuelles\",\"col\":4}},{\"id\":\"Px9H6Ryz51\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Services\",\"col\":4}},{\"id\":\"IWY4Ty1Lhm\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Actions\",\"col\":4}},{\"id\":\"4NevxRrygy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Prescripteurs\",\"col\":4}},{\"id\":\"2ugO3YDR8O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u00c9tablissements\",\"col\":4}},{\"id\":\"Vn1Y9GWdwI\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Services\",\"col\":4}}]",
+ "creation": "2023-10-31 11:34:23.317496",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "retail",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Menu MEDIGO",
+ "links": [],
+ "modified": "2023-10-31 11:39:13.092236",
+ "modified_by": "Administrator",
+ "module": "CRM Medigo",
+ "name": "Menu MEDIGO",
+ "number_cards": [
+  {
+   "label": "Visites Individuelles",
+   "number_card_name": "Visites Individuelles"
+  },
+  {
+   "label": "Visites Services",
+   "number_card_name": "Visites Services"
+  },
+  {
+   "label": "Actions",
+   "number_card_name": "Actions"
+  },
+  {
+   "label": "Prescripteurs",
+   "number_card_name": "Prescripteurs"
+  },
+  {
+   "label": "\u00c9tablissements",
+   "number_card_name": "\u00c9tablissements"
+  },
+  {
+   "label": "Services",
+   "number_card_name": "Services"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "Menu MEDIGO"
+}
