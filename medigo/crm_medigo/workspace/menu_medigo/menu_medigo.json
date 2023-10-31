@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"9QnCB1-kb7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Menu MEDIGO</span>\",\"col\":12}},{\"id\":\"ST89uhYe3o\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Individuelles\",\"col\":4}},{\"id\":\"Px9H6Ryz51\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Services\",\"col\":4}},{\"id\":\"IWY4Ty1Lhm\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Actions\",\"col\":4}},{\"id\":\"4NevxRrygy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Prescripteurs\",\"col\":4}},{\"id\":\"2ugO3YDR8O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u00c9tablissements\",\"col\":4}},{\"id\":\"Vn1Y9GWdwI\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Services\",\"col\":4}}]",
+ "content": "[{\"id\":\"ST89uhYe3o\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Individuelles\",\"col\":4}},{\"id\":\"Px9H6Ryz51\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Visites Services\",\"col\":4}},{\"id\":\"IWY4Ty1Lhm\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Actions\",\"col\":4}},{\"id\":\"4NevxRrygy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Prescripteurs\",\"col\":4}},{\"id\":\"2ugO3YDR8O\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u00c9tablissements\",\"col\":4}},{\"id\":\"Vn1Y9GWdwI\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Services\",\"col\":4}},{\"id\":\"pJx9xLh15l\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\">VISITES INDIVIDUELLES AUJOURD'HUI</span>\",\"col\":12}},{\"id\":\"x_dqoKPTua\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Programm\u00e9es\",\"col\":4}},{\"id\":\"NxE8q_gSbn\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"En Cours\",\"col\":4}},{\"id\":\"iKhTWA4UEL\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Termin\u00e9es\",\"col\":4}},{\"id\":\"4O0ve4xXBe\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b></b></span><span class=\\\"h5\\\">VISITES SERVICES AUJOURD'HUI</span>\",\"col\":12}},{\"id\":\"yU4_x-D4Uy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Programm\u00e9es\",\"col\":4}},{\"id\":\"6VT2LVy0Qn\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"En Cours\",\"col\":4}},{\"id\":\"n4OPqjREwB\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Termin\u00e9es\",\"col\":4}}]",
  "creation": "2023-10-31 11:34:23.317496",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Menu MEDIGO",
  "links": [],
- "modified": "2023-10-31 11:39:13.092236",
+ "modified": "2023-10-31 11:42:32.439751",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu MEDIGO",
@@ -35,8 +35,20 @@
    "number_card_name": "Prescripteurs"
   },
   {
+   "label": "Programm\u00e9es",
+   "number_card_name": "Visites Services Programm\u00e9es"
+  },
+  {
    "label": "\u00c9tablissements",
    "number_card_name": "\u00c9tablissements"
+  },
+  {
+   "label": "En Cours",
+   "number_card_name": "Visites Services En Cours"
+  },
+  {
+   "label": "Termin\u00e9es",
+   "number_card_name": "Visites Services Termin\u00e9es"
   },
   {
    "label": "Services",
