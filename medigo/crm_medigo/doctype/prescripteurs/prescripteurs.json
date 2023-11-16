@@ -28,7 +28,7 @@
   "sexe",
   "situation_matrimoniale",
   "epouse",
-  "infos_tab",
+  "potentiel_tab",
   "potentiel_column",
   "status",
   "potentiel",
@@ -168,11 +168,6 @@
    "label": "GPS Prescripteur"
   },
   {
-   "fieldname": "infos_tab",
-   "fieldtype": "Tab Break",
-   "label": "Potentiel"
-  },
-  {
    "fieldname": "localisation_tab",
    "fieldtype": "Tab Break",
    "label": "Localisation"
@@ -211,6 +206,11 @@
    "fieldname": "informations_personnelles_tab",
    "fieldtype": "Tab Break",
    "label": "Informations personnelles"
+  },
+  {
+   "fieldname": "potentiel_tab",
+   "fieldtype": "Tab Break",
+   "label": "Potentiel"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -220,7 +220,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2023-10-31 01:03:50.476448",
+ "modified": "2023-11-16 21:32:20.407454",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
