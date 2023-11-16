@@ -1,7 +1,10 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "format:{nom_distributeur}",
  "creation": "2023-11-16 21:20:45.002800",
+ "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -99,10 +102,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-16 21:40:06.306434",
+ "modified": "2023-11-16 21:47:35.477780",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Distributeurs",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -118,7 +122,18 @@
    "write": 1
   }
  ],
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": []
+ "show_title_field_in_link": 1,
+ "sort_field": "nom_distributeur",
+ "sort_order": "ASC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Actif"
+  },
+  {
+   "color": "Red",
+   "title": "Inactif"
+  }
+ ],
+ "title_field": "nom_distributeur"
 }
