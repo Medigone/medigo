@@ -2,19 +2,18 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:VMI-{prescripteur}-{YY}-{MM}-{DD}",
- "creation": "2023-10-25 01:01:19.752293",
+ "autoname": "format:VMM-{prescripteur}-{YY}-{MM}-{DD}",
+ "creation": "2023-11-16 15:55:36.353501",
  "default_view": "List",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "tab_break_bv9m",
-  "d\u00eatails_visite_column",
+  "d\u00e9tails_visite_tab",
+  "d\u00e9tails_visite_column",
   "status",
   "date_prevue",
   "prescripteur",
-  "objectifs_produits_column",
+  "objectifs_visite_column",
   "objectif_visite",
   "objectif_produit_1",
   "objectif_produit_2",
@@ -24,17 +23,17 @@
   "contrepartie",
   "objections_produit",
   "traitement_objection",
-  "column_break_zwbv",
+  "column_break_uqdg",
   "requete",
   "localisation_tab",
   "commune",
   "wilaya",
   "zone",
-  "tab_3_tab",
+  "controle_tab",
   "heure_debut_visite",
   "gps_debut_visite",
   "date_visite",
-  "column_break_utfw",
+  "column_break_jqxg",
   "heure_fin_visite",
   "gps_fin_visite",
   "temps_visite",
@@ -43,12 +42,12 @@
  ],
  "fields": [
   {
-   "fieldname": "tab_break_bv9m",
+   "fieldname": "d\u00e9tails_visite_tab",
    "fieldtype": "Tab Break",
    "label": "D\u00e9tails Visite"
   },
   {
-   "fieldname": "d\u00eatails_visite_column",
+   "fieldname": "d\u00e9tails_visite_column",
    "fieldtype": "Column Break",
    "label": "D\u00e9tails Visite"
   },
@@ -73,13 +72,22 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Prescripteur",
-   "options": "Prescripteurs",
-   "search_index": 1
+   "options": "Prescripteurs"
   },
   {
-   "fieldname": "objectifs_produits_column",
+   "fieldname": "objectifs_visite_column",
    "fieldtype": "Column Break",
    "label": "Objectifs Visite"
+  },
+  {
+   "fieldname": "localisation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Localisation"
+  },
+  {
+   "fieldname": "remis_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remis"
   },
   {
    "fieldname": "objectif_visite",
@@ -108,9 +116,18 @@
    "options": "Item"
   },
   {
+   "fieldname": "enquete_visite_tab",
+   "fieldtype": "Tab Break",
+   "label": "Enqu\u00eate Visite"
+  },
+  {
    "fieldname": "partenariat",
    "fieldtype": "Data",
    "label": "Partenariat"
+  },
+  {
+   "fieldname": "column_break_uqdg",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "contrepartie",
@@ -131,47 +148,32 @@
    "options": "Oui\nNon"
   },
   {
-   "fieldname": "column_break_zwbv",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "requete",
    "fieldtype": "Small Text",
    "label": "Requ\u00eate"
   },
   {
-   "fieldname": "localisation_tab",
+   "fieldname": "controle_tab",
    "fieldtype": "Tab Break",
-   "label": "Localisation"
+   "label": "Contr\u00f4le"
   },
   {
-   "fetch_from": "prescripteur.commune",
    "fieldname": "commune",
    "fieldtype": "Link",
-   "in_standard_filter": 1,
    "label": "Commune",
    "options": "Communes"
   },
   {
-   "fetch_from": "commune.",
    "fieldname": "wilaya",
    "fieldtype": "Link",
-   "in_standard_filter": 1,
    "label": "Wilaya",
    "options": "Wilayas"
   },
   {
-   "fetch_from": "commune.zone",
    "fieldname": "zone",
    "fieldtype": "Link",
    "label": "Zone",
    "options": "Zone"
-  },
-  {
-   "depends_on": "eval:doc.status==\"Termin\u00e9e\"",
-   "fieldname": "tab_3_tab",
-   "fieldtype": "Tab Break",
-   "label": "Contr\u00f4le"
   },
   {
    "fieldname": "heure_debut_visite",
@@ -186,12 +188,10 @@
   {
    "fieldname": "date_visite",
    "fieldtype": "Date",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Date Visite"
   },
   {
-   "fieldname": "column_break_utfw",
+   "fieldname": "column_break_jqxg",
    "fieldtype": "Column Break"
   },
   {
@@ -210,29 +210,18 @@
    "label": "Temps Visite"
   },
   {
-   "fieldname": "remis_tab",
-   "fieldtype": "Tab Break",
-   "label": "Remis"
-  },
-  {
    "fieldname": "liste_remis",
    "fieldtype": "Table",
    "label": "Liste Remis",
    "options": "Remis"
-  },
-  {
-   "depends_on": "eval:(doc.status==\"En Cours\" || doc.status==\"Termin\u00e9e\")",
-   "fieldname": "enquete_visite_tab",
-   "fieldtype": "Tab Break",
-   "label": "Enqu\u00eate Visite"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-16 16:01:32.447815",
+ "modified": "2023-11-16 16:11:40.540854",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
- "name": "Visites Individuelles",
+ "name": "Visite Medicale Manager",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:{prescripteur}-{YY}-{MM}-{DD}",
+ "autoname": "format:VMD-{prescripteur}-{YY}-{MM}-{DD}",
  "creation": "2023-11-16 15:08:50.370558",
  "default_view": "List",
  "doctype": "DocType",
@@ -230,7 +230,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-16 15:47:27.995454",
+ "modified": "2023-11-16 15:50:28.122835",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visite Medicale Duo",
@@ -271,5 +271,6 @@
    "title": "Annul\u00e9e"
   }
  ],
- "title_field": "prescripteur"
+ "title_field": "prescripteur",
+ "track_changes": 1
 }
