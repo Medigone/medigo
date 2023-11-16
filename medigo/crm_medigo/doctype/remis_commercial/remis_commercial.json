@@ -1,23 +1,23 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:REM-{YY}-{MM}-{####}",
- "creation": "2023-10-25 22:41:12.313670",
+ "autoname": "format:format:REMC-{YY}-{MM}-{####}",
+ "creation": "2023-11-16 16:37:18.354818",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "prescripteur",
+  "client",
   "article",
   "quantite"
  ],
  "fields": [
   {
-   "fieldname": "prescripteur",
+   "fieldname": "client",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Prescripteur",
-   "options": "Prescripteurs"
+   "label": "Client",
+   "options": "Customer"
   },
   {
    "fieldname": "article",
@@ -37,10 +37,10 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-16 16:38:38.866223",
+ "modified": "2023-11-16 16:40:05.629083",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
- "name": "Remis",
+ "name": "Remis Commercial",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [],
