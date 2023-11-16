@@ -2,8 +2,8 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:VCD-{client}-{YY}-{MM}-{DD}",
- "creation": "2023-11-16 20:06:30.638106",
+ "autoname": "format:VCM-{client}-{YY}-{MM}-{DD}",
+ "creation": "2023-11-16 20:48:07.917286",
  "default_view": "List",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,19 +12,17 @@
   "status",
   "date_prevue",
   "client",
-  "delegue",
-  "notations",
-  "ponctualite",
-  "adaptation_application",
-  "connaissances_commerciales",
-  "connaissances_produits",
-  "autonomie",
-  "column_break_eizv",
-  "remontee_information",
-  "relationnel",
-  "gestion_temps",
-  "preparation_visite",
-  "note_visite",
+  "classement_rotations",
+  "classements_column",
+  "classement_1",
+  "classement_2",
+  "classement_3",
+  "classement_4",
+  "rotations_column",
+  "rotation_c1",
+  "rotation_c2",
+  "rotation_c3",
+  "rotation_c4",
   "localisation_tab",
   "commune",
   "wilaya",
@@ -33,7 +31,7 @@
   "heure_debut_visite",
   "gps_debut_visite",
   "date_visite",
-  "column_break_dizu",
+  "column_break_vrma",
   "heure_fin_visite",
   "gps_fin_visite",
   "temps_visite",
@@ -53,21 +51,6 @@
    "options": "Programm\u00e9e\nEn Cours\nTermin\u00e9e\nAnnul\u00e9e"
   },
   {
-   "fieldname": "localisation_tab",
-   "fieldtype": "Tab Break",
-   "label": "Localisation"
-  },
-  {
-   "fieldname": "controle_tab",
-   "fieldtype": "Tab Break",
-   "label": "Contr\u00f4le"
-  },
-  {
-   "fieldname": "remis_tab",
-   "fieldtype": "Tab Break",
-   "label": "Remis"
-  },
-  {
    "fieldname": "date_prevue",
    "fieldtype": "Date",
    "label": "Date Pr\u00e9vue"
@@ -79,79 +62,64 @@
    "options": "Customer"
   },
   {
-   "fieldname": "delegue",
-   "fieldtype": "Link",
-   "label": "D\u00e9l\u00e9gu\u00e9",
-   "options": "User"
-  },
-  {
-   "fieldname": "notations",
+   "fieldname": "classement_rotations",
    "fieldtype": "Tab Break",
-   "label": "Notations"
+   "label": "Classement & Rotations"
   },
   {
-   "fieldname": "ponctualite",
-   "fieldtype": "Select",
-   "label": "Ponctualit\u00e9",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldname": "classements_column",
+   "fieldtype": "Column Break",
+   "label": "Classements"
   },
   {
-   "fieldname": "adaptation_application",
-   "fieldtype": "Select",
-   "label": "Adaptation Application",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldname": "classement_1",
+   "fieldtype": "Data",
+   "label": "Classement - 1"
   },
   {
-   "fieldname": "connaissances_commerciales",
-   "fieldtype": "Select",
-   "label": "Connaissances Commerciales",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldname": "classement_2",
+   "fieldtype": "Data",
+   "label": "Classement - 2"
   },
   {
-   "fieldname": "connaissances_produits",
-   "fieldtype": "Select",
-   "label": "Connaissances Produits",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldname": "classement_3",
+   "fieldtype": "Data",
+   "label": "Classement - 3"
   },
   {
-   "fieldname": "autonomie",
-   "fieldtype": "Select",
-   "label": "Autonomie",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldname": "classement_4",
+   "fieldtype": "Data",
+   "label": "Classement - 4"
   },
   {
-   "fieldname": "column_break_eizv",
-   "fieldtype": "Column Break"
+   "fieldname": "rotations_column",
+   "fieldtype": "Column Break",
+   "label": "Rotations"
   },
   {
-   "fieldname": "remontee_information",
-   "fieldtype": "Select",
-   "label": "Remont\u00e9e Information",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldname": "rotation_c1",
+   "fieldtype": "Data",
+   "label": "Rotation - C1"
   },
   {
-   "fieldname": "relationnel",
-   "fieldtype": "Select",
-   "label": "Relationnel",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldname": "rotation_c2",
+   "fieldtype": "Data",
+   "label": "Rotation - C2"
   },
   {
-   "fieldname": "gestion_temps",
-   "fieldtype": "Select",
-   "label": "Gestion du temps",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldname": "rotation_c3",
+   "fieldtype": "Data",
+   "label": "Rotation - C3"
   },
   {
-   "fieldname": "preparation_visite",
-   "fieldtype": "Select",
-   "label": "Pr\u00e9paration Visite",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldname": "rotation_c4",
+   "fieldtype": "Data",
+   "label": "Rotation - C4"
   },
   {
-   "fieldname": "note_visite",
-   "fieldtype": "Int",
-   "label": "Note Visite",
-   "non_negative": 1
+   "fieldname": "localisation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Localisation"
   },
   {
    "fieldname": "commune",
@@ -172,10 +140,9 @@
    "options": "Zone"
   },
   {
-   "fieldname": "liste_remis",
-   "fieldtype": "Table",
-   "label": "Liste Remis",
-   "options": "Remis Commercial"
+   "fieldname": "controle_tab",
+   "fieldtype": "Tab Break",
+   "label": "Contr\u00f4le"
   },
   {
    "fieldname": "heure_debut_visite",
@@ -193,7 +160,7 @@
    "label": "Date Visite"
   },
   {
-   "fieldname": "column_break_dizu",
+   "fieldname": "column_break_vrma",
    "fieldtype": "Column Break"
   },
   {
@@ -210,14 +177,25 @@
    "fieldname": "temps_visite",
    "fieldtype": "Duration",
    "label": "Temps Visite"
+  },
+  {
+   "fieldname": "remis_tab",
+   "fieldtype": "Tab Break",
+   "label": "Remis"
+  },
+  {
+   "fieldname": "liste_remis",
+   "fieldtype": "Table",
+   "label": "Liste Remis",
+   "options": "Remis Commercial"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-16 20:46:08.089386",
+ "modified": "2023-11-16 21:11:02.229536",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
- "name": "Visite Commerciale Duo",
+ "name": "Visite Commerciale Manager",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
