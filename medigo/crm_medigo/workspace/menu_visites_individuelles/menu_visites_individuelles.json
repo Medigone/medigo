@@ -38,7 +38,7 @@
  "is_hidden": 0,
  "label": "Menu Visites Individuelles",
  "links": [],
- "modified": "2023-11-09 10:15:35.169936",
+ "modified": "2023-11-17 21:33:51.073136",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Menu Visites Individuelles",
@@ -61,11 +61,11 @@
   }
  ],
  "owner": "Administrator",
- "parent_page": "",
+ "parent_page": "Menu M\u00e9dical",
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 2.0,
+ "sequence_id": 4.0,
  "shortcuts": [],
  "title": "Menu Visites Individuelles"
 }

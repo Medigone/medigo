@@ -166,7 +166,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-11-09 10:15:35.665466",
+ "modified": "2023-11-17 21:33:51.784342",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Configuration",
@@ -176,7 +176,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 8.0,
+ "sequence_id": 10.0,
  "shortcuts": [],
  "title": "Configuration"
 }
