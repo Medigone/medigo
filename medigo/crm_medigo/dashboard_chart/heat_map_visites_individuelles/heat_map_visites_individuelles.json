@@ -14,8 +14,8 @@
  "idx": 8,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-29 15:47:53.280275",
- "modified": "2023-10-29 16:07:43.134321",
+ "last_synced_on": "2023-11-17 22:42:40.892886",
+ "modified": "2023-11-17 22:42:59.099312",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Heat Map Visites Individuelles",
@@ -34,6 +34,9 @@
   },
   {
    "role": "D\u00e9l\u00e9gue M\u00e9dical"
+  },
+  {
+   "role": "Analyste M\u00e9dical"
   }
  ],
  "source": "",

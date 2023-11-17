@@ -14,8 +14,8 @@
  "idx": 1,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-29 18:54:37.127327",
- "modified": "2023-10-30 19:40:11.485188",
+ "last_synced_on": "2023-11-17 22:43:27.144913",
+ "modified": "2023-11-17 22:43:45.916402",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Heat Map Actions",
@@ -34,6 +34,9 @@
   },
   {
    "role": "D\u00e9l\u00e9gue M\u00e9dical"
+  },
+  {
+   "role": "Analyste M\u00e9dical"
   }
  ],
  "source": "",
