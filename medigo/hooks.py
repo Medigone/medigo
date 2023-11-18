@@ -233,5 +233,5 @@ fixtures = [
     "Raisons absence",
     "Lieux evenements",
     "Type Action",
-    "Custom DocPerm",
+    "DocPerm",
 ]
