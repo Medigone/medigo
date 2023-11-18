@@ -153,10 +153,29 @@
  {
   "docstatus": 0,
   "doctype": "Role Profile",
-  "modified": "2023-10-26 13:59:23.434597",
+  "modified": "2023-11-17 22:28:32.100490",
   "name": "Analyste Médical",
   "role_profile": "Analyste Médical",
-  "roles": []
+  "roles": [
+   {
+    "parent": "Analyste Médical",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Analyste Médical"
+   },
+   {
+    "parent": "Analyste Médical",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects Manager"
+   },
+   {
+    "parent": "Analyste Médical",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "role": "Projects User"
+   }
+  ]
  },
  {
   "docstatus": 0,
