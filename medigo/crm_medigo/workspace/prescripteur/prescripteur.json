@@ -20,12 +20,12 @@
  "idx": 0,
  "indicator_color": "green",
  "is_hidden": 0,
- "label": "Menu Prescripteurs",
+ "label": "Prescripteur",
  "links": [],
- "modified": "2023-11-17 21:33:51.355887",
+ "modified": "2023-11-19 12:29:04.963061",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
- "name": "Menu Prescripteurs",
+ "name": "Prescripteur",
  "number_cards": [
   {
    "label": "Prescripteurs",
@@ -37,11 +37,11 @@
   }
  ],
  "owner": "Administrator",
- "parent_page": "Menu M\u00e9dical",
+ "parent_page": "",
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 6.0,
+ "sequence_id": 4.0,
  "shortcuts": [],
- "title": "Menu Prescripteurs"
+ "title": "Prescripteur"
 }

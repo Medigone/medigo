@@ -36,12 +36,12 @@
  "idx": 0,
  "indicator_color": "green",
  "is_hidden": 0,
- "label": "Menu Visites Individuelles",
+ "label": "Visite Individuelle",
  "links": [],
- "modified": "2023-11-17 21:33:51.073136",
+ "modified": "2023-11-19 12:28:43.756725",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
- "name": "Menu Visites Individuelles",
+ "name": "Visite Individuelle",
  "number_cards": [
   {
    "label": "Visites Individuelles",
@@ -61,11 +61,11 @@
   }
  ],
  "owner": "Administrator",
- "parent_page": "Menu M\u00e9dical",
+ "parent_page": "",
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 4.0,
+ "sequence_id": 2.0,
  "shortcuts": [],
- "title": "Menu Visites Individuelles"
+ "title": "Visite Individuelle"
 }
