@@ -13,8 +13,8 @@
  "idx": 7,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-29 11:42:07.894857",
- "modified": "2023-10-29 16:06:07.940960",
+ "last_synced_on": "2023-11-19 12:12:02.665488",
+ "modified": "2023-11-19 12:12:12.443249",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visites Services Par PR3",
@@ -33,6 +33,9 @@
   },
   {
    "role": "D\u00e9l\u00e9gue M\u00e9dical"
+  },
+  {
+   "role": "Analyste M\u00e9dical"
   }
  ],
  "source": "",

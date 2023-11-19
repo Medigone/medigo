@@ -13,8 +13,8 @@
  "idx": 24,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-29 11:42:16.505518",
- "modified": "2023-10-29 16:03:00.545191",
+ "last_synced_on": "2023-11-19 12:13:22.658493",
+ "modified": "2023-11-19 12:13:33.660633",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs Par Titre",
@@ -33,6 +33,9 @@
   },
   {
    "role": "Administrateur M\u00e9dical"
+  },
+  {
+   "role": "Analyste M\u00e9dical"
   }
  ],
  "source": "",

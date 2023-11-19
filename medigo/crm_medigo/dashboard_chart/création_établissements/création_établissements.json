@@ -13,8 +13,8 @@
  "idx": 3,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-28 22:13:14.509942",
- "modified": "2023-10-29 16:03:25.491515",
+ "last_synced_on": "2023-11-19 12:13:36.427402",
+ "modified": "2023-11-19 12:13:44.629515",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Cr\u00e9ation \u00c9tablissements",
@@ -33,6 +33,9 @@
   },
   {
    "role": "D\u00e9l\u00e9gue M\u00e9dical"
+  },
+  {
+   "role": "Analyste M\u00e9dical"
   }
  ],
  "source": "",

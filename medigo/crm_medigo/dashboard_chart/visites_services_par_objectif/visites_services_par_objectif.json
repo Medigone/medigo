@@ -13,8 +13,8 @@
  "idx": 15,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-29 11:42:07.890285",
- "modified": "2023-10-29 16:08:41.537089",
+ "last_synced_on": "2023-11-19 12:11:24.995549",
+ "modified": "2023-11-19 12:11:39.216160",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visites Services Par Objectif",
@@ -30,6 +30,9 @@
   },
   {
    "role": "Superviseur M\u00e9dical"
+  },
+  {
+   "role": "Analyste M\u00e9dical"
   }
  ],
  "source": "",

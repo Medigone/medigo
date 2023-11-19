@@ -13,8 +13,8 @@
  "idx": 22,
  "is_public": 1,
  "is_standard": 1,
- "last_synced_on": "2023-10-29 11:42:16.499965",
- "modified": "2023-10-29 16:02:49.419085",
+ "last_synced_on": "2023-11-19 12:13:12.521718",
+ "modified": "2023-11-19 12:13:21.516760",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Cr\u00e9ation Prescripteurs",
@@ -33,6 +33,9 @@
   },
   {
    "role": "D\u00e9l\u00e9gue M\u00e9dical"
+  },
+  {
+   "role": "Analyste M\u00e9dical"
   }
  ],
  "source": "",
