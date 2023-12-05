@@ -52,7 +52,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-05 12:08:31.832341",
+ "modified": "2023-12-05 12:15:39.576794",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Communes",
@@ -72,8 +72,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "wilaya",
  "sort_order": "ASC",
  "states": [],
- "title_field": "commune"
+ "title_field": "nom_complet_commune"
 }
