@@ -11,9 +11,9 @@
  "field_order": [
   "commune",
   "wilaya",
-  "column_break_jxzh",
+  "zone",
   "nom_complet_commune",
-  "zone"
+  "column_break_jxzh"
  ],
  "fields": [
   {
@@ -52,7 +52,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-05 11:54:14.942001",
+ "modified": "2023-12-05 12:08:31.832341",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Communes",
