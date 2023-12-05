@@ -9,10 +9,10 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "nom_complet_commune",
   "commune",
   "wilaya",
   "zone",
-  "nom_complet_commune",
   "column_break_jxzh"
  ],
  "fields": [
@@ -47,12 +47,13 @@
   {
    "fieldname": "nom_complet_commune",
    "fieldtype": "Data",
-   "label": "Nom Complet"
+   "label": "Nom Complet",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-05 12:15:39.576794",
+ "modified": "2023-12-05 12:37:29.139255",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Communes",
