@@ -10,9 +10,15 @@
  "engine": "InnoDB",
  "field_order": [
   "tab_break_bv9m",
-  "d\u00eatails_visite_column",
   "status",
-  "date_prevue",
+  "column_break_zzqc",
+  "section_break_jxws",
+  "id_delegue",
+  "column_break_vpit",
+  "nom_delegue",
+  "section_break_tcfe",
+  "d\u00eatails_visite_column",
+  "date",
   "prescripteur",
   "objectifs_produits_column",
   "objectif_visite",
@@ -58,14 +64,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Programm\u00e9e\nEn Cours\nTermin\u00e9e\nAnnul\u00e9e"
-  },
-  {
-   "fieldname": "date_prevue",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Date Pr\u00e9vue"
+   "options": "Programm\u00e9e\nEn Cours\nTermin\u00e9e\nValid\u00e9e\nAnnul\u00e9e"
   },
   {
    "fieldname": "prescripteur",
@@ -128,7 +127,7 @@
    "fieldname": "traitement_objection",
    "fieldtype": "Select",
    "label": "Traitement Objection",
-   "options": "Oui\nNon"
+   "options": "\nOui\nNon"
   },
   {
    "fieldname": "column_break_zwbv",
@@ -225,11 +224,46 @@
    "fieldname": "enquete_visite_tab",
    "fieldtype": "Tab Break",
    "label": "Enqu\u00eate Visite"
+  },
+  {
+   "fieldname": "section_break_tcfe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_zzqc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jxws",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "id_delegue",
+   "fieldtype": "Link",
+   "label": "ID D\u00e9l\u00e9gu\u00e9",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_vpit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nom_delegue",
+   "fieldtype": "Data",
+   "label": "Nom D\u00e9l\u00e9gu\u00e9"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-16 16:01:32.447815",
+ "modified": "2024-11-27 17:28:16.642951",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visite Prescripteur",
@@ -250,7 +284,7 @@
   }
  ],
  "show_title_field_in_link": 1,
- "sort_field": "date_prevue",
+ "sort_field": "date",
  "sort_order": "ASC",
  "states": [
   {
