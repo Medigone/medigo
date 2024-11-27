@@ -1,13 +1,13 @@
 // Copyright (c) 2023, Amine Melizi and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Visites Individuelles", {
+// frappe.ui.form.on("Visite Prescripteur", {
 // 	refresh(frm) {
 
 // 	},
 // });
 
-frappe.ui.form.on('Visites Individuelles', {
+frappe.ui.form.on('Visite Prescripteur', {
     refresh: function (frm) {
       frm.add_custom_button(__('Début Visite'), function () {
         if ("geolocation" in navigator) {

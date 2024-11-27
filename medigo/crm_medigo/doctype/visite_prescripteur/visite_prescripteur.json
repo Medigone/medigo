@@ -232,7 +232,7 @@
  "modified": "2023-11-16 16:01:32.447815",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
- "name": "Visites Individuelles",
+ "name": "Visite Prescripteur",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

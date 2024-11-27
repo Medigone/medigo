@@ -46,13 +46,13 @@
    "fieldname": "visite",
    "fieldtype": "Link",
    "label": "Visite",
-   "options": "Visites Individuelles"
+   "options": "Visite Prescripteur"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-19 10:07:22.825394",
+ "modified": "2024-11-27 17:21:09.118749",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Remis",

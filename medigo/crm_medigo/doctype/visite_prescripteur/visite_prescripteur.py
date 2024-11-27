@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class VisitesIndividuelles(Document):
+class VisitePrescripteur(Document):
 	pass

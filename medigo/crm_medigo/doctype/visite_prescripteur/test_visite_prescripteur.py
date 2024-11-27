@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestVisitesIndividuelles(FrappeTestCase):
+class TestVisitePrescripteur(FrappeTestCase):
 	pass
