@@ -39,6 +39,7 @@
   "zone",
   "column_break_vqge",
   "gps_prescripteur",
+  "carte",
   "potentiel_tab",
   "potentiel_column",
   "status",
@@ -70,6 +71,7 @@
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
+   "is_virtual": 1,
    "label": "Nom Complet",
    "unique": 1
   },
@@ -240,6 +242,11 @@
   {
    "fieldname": "column_break_vqge",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "carte",
+   "fieldtype": "HTML",
+   "label": "Carte"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -249,7 +256,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2024-11-27 17:46:48.352194",
+ "modified": "2024-11-27 17:47:55.375700",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
