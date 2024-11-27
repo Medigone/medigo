@@ -12,32 +12,37 @@
  "engine": "InnoDB",
  "field_order": [
   "d\u00e9tails_tab",
+  "d\u00e9tails_prescripteur_section",
   "d\u00e9tails_column",
   "nom_prescripteur",
   "prenom_prescripteur",
   "nom_complet_prescripteur",
+  "column_break_imsw",
   "telephone_prescripteur",
   "email_prescripteur",
+  "infos_professionnels_section",
   "connections_column",
   "titre_prescripteur",
-  "etablissement",
-  "service",
   "cabinet_prive_prescripteur",
   "chef_de_service",
+  "column_break_dmaw",
+  "etablissement",
+  "service",
   "informations_personnelles_tab",
   "sexe",
   "situation_matrimoniale",
   "epouse",
-  "potentiel_tab",
-  "potentiel_column",
-  "status",
-  "potentiel",
   "localisation_tab",
   "tab_2_tab",
   "commune",
   "wilaya",
   "zone",
-  "gps_prescripteur"
+  "column_break_vqge",
+  "gps_prescripteur",
+  "potentiel_tab",
+  "potentiel_column",
+  "status",
+  "potentiel"
  ],
  "fields": [
   {
@@ -47,8 +52,7 @@
   },
   {
    "fieldname": "d\u00e9tails_column",
-   "fieldtype": "Column Break",
-   "label": "D\u00e9tails Prescripteur"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "nom_prescripteur",
@@ -71,18 +75,19 @@
   },
   {
    "fieldname": "telephone_prescripteur",
-   "fieldtype": "Phone",
-   "label": "T\u00e9l\u00e9phone"
+   "fieldtype": "Data",
+   "label": "T\u00e9l\u00e9phone",
+   "options": "Phone"
   },
   {
    "fieldname": "email_prescripteur",
    "fieldtype": "Data",
-   "label": "Email"
+   "label": "Email",
+   "options": "Email"
   },
   {
    "fieldname": "connections_column",
-   "fieldtype": "Column Break",
-   "label": "Infos Profesionnels"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "titre_prescripteur",
@@ -91,7 +96,8 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Titre Prescripteur",
-   "options": "Titre Prescripteur"
+   "options": "Titre Prescripteur",
+   "search_index": 1
   },
   {
    "fieldname": "etablissement",
@@ -148,6 +154,7 @@
    "fetch_from": "commune.wilaya",
    "fieldname": "wilaya",
    "fieldtype": "Link",
+   "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Wilaya",
    "options": "Wilayas",
@@ -188,13 +195,13 @@
    "fieldname": "sexe",
    "fieldtype": "Select",
    "label": "Sexe",
-   "options": "Homme\nFemme"
+   "options": "\nHomme\nFemme"
   },
   {
    "fieldname": "situation_matrimoniale",
    "fieldtype": "Select",
    "label": "Situation matrimoniale",
-   "options": "C\u00e9libataire\nMari\u00e9(e)"
+   "options": "\nC\u00e9libataire\nMari\u00e9(e)"
   },
   {
    "depends_on": "eval:(doc.situation_matrimoniale==\"Mari\u00e9(e)\"&&doc.sexe==\"Femme\")",
@@ -211,16 +218,38 @@
    "fieldname": "potentiel_tab",
    "fieldtype": "Tab Break",
    "label": "Potentiel"
+  },
+  {
+   "fieldname": "d\u00e9tails_prescripteur_section",
+   "fieldtype": "Section Break",
+   "label": "D\u00e9tails Prescripteur"
+  },
+  {
+   "fieldname": "column_break_imsw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "infos_professionnels_section",
+   "fieldtype": "Section Break",
+   "label": "Infos Professionnels"
+  },
+  {
+   "fieldname": "column_break_dmaw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vqge",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "link_doctype": "Visites Individuelles",
+   "link_doctype": "Visite Prescripteur",
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2023-11-16 21:32:20.407454",
+ "modified": "2024-11-27 17:46:48.352194",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
