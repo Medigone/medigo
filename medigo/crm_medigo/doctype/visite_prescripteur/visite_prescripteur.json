@@ -12,17 +12,21 @@
   "tab_break_bv9m",
   "status",
   "column_break_zzqc",
-  "section_break_jxws",
-  "id_delegue",
-  "column_break_vpit",
-  "nom_delegue",
   "section_break_tcfe",
   "d\u00eatails_visite_column",
   "date",
   "prescripteur",
+  "column_break_dsfc",
+  "temps_visite",
+  "section_break_jxws",
+  "id_delegue",
+  "column_break_vpit",
+  "nom_delegue",
+  "section_break_vzag",
   "objectifs_produits_column",
   "objectif_visite",
   "objectif_produit_1",
+  "column_break_ilef",
   "objectif_produit_2",
   "objectif_produit_3",
   "enquete_visite_tab",
@@ -38,12 +42,9 @@
   "zone",
   "tab_3_tab",
   "heure_debut_visite",
-  "gps_debut_visite",
-  "date_visite",
-  "column_break_utfw",
   "heure_fin_visite",
-  "gps_fin_visite",
-  "temps_visite",
+  "column_break_utfw",
+  "gps_visite",
   "remis_tab",
   "liste_remis"
  ],
@@ -55,8 +56,7 @@
   },
   {
    "fieldname": "d\u00eatails_visite_column",
-   "fieldtype": "Column Break",
-   "label": "D\u00e9tails Visite"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "status",
@@ -77,8 +77,7 @@
   },
   {
    "fieldname": "objectifs_produits_column",
-   "fieldtype": "Column Break",
-   "label": "Objectifs Visite"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "objectif_visite",
@@ -178,18 +177,6 @@
    "label": "Heure D\u00e9but Visite"
   },
   {
-   "fieldname": "gps_debut_visite",
-   "fieldtype": "Data",
-   "label": "GPS D\u00e9but Visite"
-  },
-  {
-   "fieldname": "date_visite",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Date Visite"
-  },
-  {
    "fieldname": "column_break_utfw",
    "fieldtype": "Column Break"
   },
@@ -197,11 +184,6 @@
    "fieldname": "heure_fin_visite",
    "fieldtype": "Datetime",
    "label": "Heure Fin Visite"
-  },
-  {
-   "fieldname": "gps_fin_visite",
-   "fieldtype": "Data",
-   "label": "GPS Fin Visite"
   },
   {
    "fieldname": "temps_visite",
@@ -259,11 +241,28 @@
    "fieldname": "nom_delegue",
    "fieldtype": "Data",
    "label": "Nom D\u00e9l\u00e9gu\u00e9"
+  },
+  {
+   "fieldname": "column_break_dsfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vzag",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ilef",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gps_visite",
+   "fieldtype": "Data",
+   "label": "GPS Visite"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-27 17:28:16.642951",
+ "modified": "2024-11-27 17:32:23.767178",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visite Prescripteur",
