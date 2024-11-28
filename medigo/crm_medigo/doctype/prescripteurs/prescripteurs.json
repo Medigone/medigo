@@ -20,7 +20,7 @@
   "column_break_imsw",
   "telephone_prescripteur",
   "email_prescripteur",
-  "canal",
+  "date_derniere_interaction",
   "infos_professionnels_section",
   "connections_column",
   "titre_prescripteur",
@@ -41,10 +41,13 @@
   "column_break_vqge",
   "gps_prescripteur",
   "carte",
-  "potentiel_tab",
+  "segmentation",
   "potentiel_column",
   "status",
-  "potentiel"
+  "potentiel",
+  "pr\u00e9f\u00e9rences_tab",
+  "canal",
+  "horaires_contact"
  ],
  "fields": [
   {
@@ -138,7 +141,7 @@
    "fieldtype": "Rating",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Potentiel"
+   "label": "Potentiel de prescription"
   },
   {
    "fieldname": "tab_2_tab",
@@ -210,11 +213,6 @@
    "label": "Informations personnelles"
   },
   {
-   "fieldname": "potentiel_tab",
-   "fieldtype": "Tab Break",
-   "label": "Potentiel"
-  },
-  {
    "fieldname": "d\u00e9tails_prescripteur_section",
    "fieldtype": "Section Break",
    "label": "D\u00e9tails Prescripteur"
@@ -252,7 +250,28 @@
    "fieldname": "canal",
    "fieldtype": "Select",
    "label": "Canal",
-   "options": "\nPr\u00e9sentiel\nDigital"
+   "options": "\nPr\u00e9sentiel\nDigital\nT\u00e9l\u00e9phonique"
+  },
+  {
+   "fieldname": "pr\u00e9f\u00e9rences_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pr\u00e9f\u00e9rences"
+  },
+  {
+   "fieldname": "horaires_contact",
+   "fieldtype": "Select",
+   "label": "Horaires de contact",
+   "options": "1\n2\n3"
+  },
+  {
+   "fieldname": "segmentation",
+   "fieldtype": "Tab Break",
+   "label": "Segmentation"
+  },
+  {
+   "fieldname": "date_derniere_interaction",
+   "fieldtype": "Data",
+   "label": "Date derni\u00e8re interaction"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -262,7 +281,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2024-11-28 18:22:15.810421",
+ "modified": "2024-11-28 19:33:53.181503",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
