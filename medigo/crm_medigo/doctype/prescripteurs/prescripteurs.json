@@ -20,6 +20,7 @@
   "column_break_imsw",
   "telephone_prescripteur",
   "email_prescripteur",
+  "canal",
   "infos_professionnels_section",
   "connections_column",
   "titre_prescripteur",
@@ -245,6 +246,13 @@
    "fieldtype": "Select",
    "label": "Civilit\u00e9",
    "options": "\nMonsieur\nMadame\nMademoiselle"
+  },
+  {
+   "description": "Canal de communication pr\u00e9f\u00e9r\u00e9",
+   "fieldname": "canal",
+   "fieldtype": "Select",
+   "label": "Canal de communication",
+   "options": "\nPr\u00e9sentiel\nDigital"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -254,7 +262,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2024-11-28 11:42:15.714858",
+ "modified": "2024-11-28 18:21:12.348122",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
