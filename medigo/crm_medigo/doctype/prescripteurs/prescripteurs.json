@@ -45,6 +45,9 @@
   "potentiel_column",
   "status",
   "potentiel",
+  "volume_de_patients_potentiels",
+  "niveau_engagement",
+  "retours_produit",
   "pr\u00e9f\u00e9rences_tab",
   "canal",
   "horaires_contact"
@@ -272,6 +275,24 @@
    "fieldname": "date_derniere_interaction",
    "fieldtype": "Data",
    "label": "Date derni\u00e8re interaction"
+  },
+  {
+   "fieldname": "volume_de_patients_potentiels",
+   "fieldtype": "Select",
+   "label": "Volume de patients potentiels",
+   "options": "Faible (moins de 10 patients/mois)\nMoyen (10-50 patients/mois)\n\u00c9lev\u00e9 (plus de 50 patients/mois)"
+  },
+  {
+   "fieldname": "niveau_engagement",
+   "fieldtype": "Select",
+   "label": "Niveau d\u2019engagement",
+   "options": "R\u00e9gulier\nOccasionnel\nInactif"
+  },
+  {
+   "fieldname": "retours_produit",
+   "fieldtype": "Select",
+   "label": "Retours produits",
+   "options": "Tr\u00e8s satisfait\nSatisfait\nNeutre\nInsatisfait"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -281,7 +302,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2024-11-28 19:33:53.181503",
+ "modified": "2024-11-28 19:40:49.302286",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
