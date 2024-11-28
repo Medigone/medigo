@@ -251,7 +251,7 @@
    "description": "Canal de communication pr\u00e9f\u00e9r\u00e9",
    "fieldname": "canal",
    "fieldtype": "Select",
-   "label": "Canal de communication",
+   "label": "Canal",
    "options": "\nPr\u00e9sentiel\nDigital"
   }
  ],
@@ -262,7 +262,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2024-11-28 18:21:12.348122",
+ "modified": "2024-11-28 18:22:15.810421",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
