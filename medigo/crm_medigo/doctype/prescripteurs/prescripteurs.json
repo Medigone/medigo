@@ -29,7 +29,7 @@
   "etablissement",
   "service",
   "informations_personnelles_tab",
-  "sexe",
+  "civilite",
   "situation_matrimoniale",
   "epouse",
   "localisation_tab",
@@ -192,12 +192,6 @@
    "options": "Actif\nInactif"
   },
   {
-   "fieldname": "sexe",
-   "fieldtype": "Select",
-   "label": "Sexe",
-   "options": "\nHomme\nFemme"
-  },
-  {
    "fieldname": "situation_matrimoniale",
    "fieldtype": "Select",
    "label": "Situation matrimoniale",
@@ -245,6 +239,12 @@
    "fieldname": "carte",
    "fieldtype": "HTML",
    "label": "Carte"
+  },
+  {
+   "fieldname": "civilite",
+   "fieldtype": "Select",
+   "label": "Civilit\u00e9",
+   "options": "\nMonsieur\nMadame\nMademoiselle"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -254,7 +254,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2024-11-27 17:49:38.909756",
+ "modified": "2024-11-28 11:42:15.714858",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
