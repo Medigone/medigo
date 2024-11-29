@@ -12,6 +12,7 @@
  "engine": "InnoDB",
  "field_order": [
   "d\u00e9tails_tab",
+  "status",
   "d\u00e9tails_prescripteur_section",
   "d\u00e9tails_column",
   "nom_prescripteur",
@@ -43,11 +44,12 @@
   "carte",
   "segmentation",
   "potentiel_column",
-  "status",
   "potentiel",
   "volume_de_patients_potentiels",
   "niveau_engagement",
   "retours_produit",
+  "influence",
+  "prioritaire",
   "pr\u00e9f\u00e9rences_tab",
   "canal",
   "horaires_contact"
@@ -195,8 +197,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "in_standard_filter": 1,
-   "label": "Status",
-   "options": "Actif\nInactif"
+   "label": "Statut",
+   "options": "Nouveau\nEngag\u00e9\nNon engag\u00e9\nInactif"
   },
   {
    "fieldname": "situation_matrimoniale",
@@ -261,10 +263,11 @@
    "label": "Pr\u00e9f\u00e9rences"
   },
   {
+   "description": "Horaires de contact pr\u00e9f\u00e9r\u00e9s",
    "fieldname": "horaires_contact",
    "fieldtype": "Select",
    "label": "Horaires de contact",
-   "options": "1\n2\n3"
+   "options": "\n08:00 - 09:00\n09:00 - 10:00\n10:00 - 11:00\n11:00 - 12:00\n12:00 - 13:00\n13:00 - 14:00\n14:00 - 15:00\n15:00 - 16:00\n16:00 - 17:00"
   },
   {
    "fieldname": "segmentation",
@@ -293,6 +296,18 @@
    "fieldtype": "Select",
    "label": "Retours produits",
    "options": "Tr\u00e8s satisfait\nSatisfait\nNeutre\nInsatisfait"
+  },
+  {
+   "fieldname": "influence",
+   "fieldtype": "Select",
+   "label": "Influence",
+   "options": "\nInfluence Locale\nInfluence R\u00e9gionale\nInfluence Nationale"
+  },
+  {
+   "default": "0",
+   "fieldname": "prioritaire",
+   "fieldtype": "Check",
+   "label": "Prioritaire"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -302,7 +317,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2024-11-28 19:40:49.302286",
+ "modified": "2024-11-29 10:52:25.586777",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
