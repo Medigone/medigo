@@ -6,7 +6,8 @@
  "engine": "InnoDB",
  "field_order": [
   "date",
-  "status"
+  "status",
+  "prescripteur"
  ],
  "fields": [
   {
@@ -19,11 +20,17 @@
    "fieldtype": "Select",
    "label": "Statut",
    "options": "\nProgramm\u00e9e\nEn attente\nReport\u00e9e\nCompl\u00e9t\u00e9e\nValid\u00e9e\nAnnul\u00e9e"
+  },
+  {
+   "fieldname": "prescripteur",
+   "fieldtype": "Link",
+   "label": "Prescripteur",
+   "options": "Prescripteurs"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-28 19:28:28.791059",
+ "modified": "2024-11-29 12:26:54.740022",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visite Digitale",

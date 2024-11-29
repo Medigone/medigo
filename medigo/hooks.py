@@ -122,6 +122,25 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
+doc_events = {
+    "Visite Digitale": {
+        "on_update": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
+        "on_submit": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
+        "after_insert": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
+        "on_trash": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
+    },
+    "Visite Prescripteur": {
+        "on_update": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
+        "on_submit": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
+        "after_insert": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
+        "on_trash": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
+    }
+}
+
+
+
+
+
 # doc_events = {
 #	"*": {
 #		"on_update": "method",

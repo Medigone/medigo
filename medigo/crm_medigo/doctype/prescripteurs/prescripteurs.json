@@ -55,7 +55,8 @@
   "influence",
   "pr\u00e9f\u00e9rences_tab",
   "canal",
-  "horaires_contact"
+  "horaires_contact",
+  "interactions_tab"
  ],
  "fields": [
   {
@@ -247,7 +248,7 @@
    "fieldname": "civilite",
    "fieldtype": "Select",
    "label": "Civilit\u00e9",
-   "options": "\nMonsieur\nMadame\nMademoiselle"
+   "options": "\nMonsieur\nMadame"
   },
   {
    "description": "Canal de communication pr\u00e9f\u00e9r\u00e9",
@@ -275,8 +276,9 @@
   },
   {
    "fieldname": "date_derniere_interaction",
-   "fieldtype": "Data",
-   "label": "Date derni\u00e8re interaction"
+   "fieldtype": "Date",
+   "label": "Date derni\u00e8re interaction",
+   "read_only": 1
   },
   {
    "fieldname": "volume_de_patients_potentiels",
@@ -324,16 +326,17 @@
   {
    "fieldname": "column_break_pwdw",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "interactions_tab",
+   "fieldtype": "Tab Break",
+   "label": "Interactions",
+   "show_dashboard": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [
-  {
-   "link_doctype": "Visite Prescripteur",
-   "link_fieldname": "prescripteur"
-  }
- ],
- "modified": "2024-11-29 11:56:25.354259",
+ "links": [],
+ "modified": "2024-11-29 13:09:24.918019",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",

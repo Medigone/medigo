@@ -39,3 +39,28 @@ function updateNomCompletPrescripteur(frm) {
         frm.set_value('nom_complet_prescripteur', nom_complet_prescripteur);
     }
 }
+
+frappe.ui.form.on('Prescripteurs', {
+    onload: function(frm) {
+        // Vérifiez que les données sont disponibles
+        if (frm.doc.__onload && frm.doc.__onload.dashboard_info) {
+            const heatmap_data = frm.doc.__onload.dashboard_info.heatmap;
+
+            if (heatmap_data) {
+                // Ajouter un conteneur pour la heatmap si nécessaire
+                if (!$("#heatmap").length) {
+                    frm.dashboard.add_section('<div id="heatmap" style="height: 200px;"></div>');
+                }
+
+                // Afficher la heatmap
+                frappe.dashboard_utils.render_heatmap({
+                    parent: $("#heatmap")[0],
+                    data: heatmap_data,
+                    date_field: "creation",
+                    heatmap_message: __("Aucune activité trouvée"),
+                    base_date: frappe.datetime.now_date()
+                });
+            }
+        }
+    }
+});
