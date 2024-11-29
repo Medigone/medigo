@@ -13,6 +13,8 @@
  "field_order": [
   "d\u00e9tails_tab",
   "status",
+  "column_break_xacq",
+  "date_derniere_interaction",
   "d\u00e9tails_prescripteur_section",
   "d\u00e9tails_column",
   "nom_prescripteur",
@@ -21,7 +23,6 @@
   "column_break_imsw",
   "telephone_prescripteur",
   "email_prescripteur",
-  "date_derniere_interaction",
   "infos_professionnels_section",
   "connections_column",
   "titre_prescripteur",
@@ -252,7 +253,7 @@
    "fieldname": "canal",
    "fieldtype": "Select",
    "label": "Canal de communication",
-   "options": "\nPr\u00e9sentiel\nDigital\nT\u00e9l\u00e9phonique"
+   "options": "Mixte\nPr\u00e9sentiel\nDigital\nT\u00e9l\u00e9phonique"
   },
   {
    "fieldname": "pr\u00e9f\u00e9rences_tab",
@@ -313,6 +314,10 @@
   {
    "fieldname": "section_break_onvl",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xacq",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -322,7 +327,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2024-11-29 10:57:31.771496",
+ "modified": "2024-11-29 11:50:59.114416",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
@@ -348,8 +353,16 @@
  "sort_order": "ASC",
  "states": [
   {
+   "color": "Blue",
+   "title": "Nouveau"
+  },
+  {
    "color": "Green",
-   "title": "Actif"
+   "title": "Engag\u00e9"
+  },
+  {
+   "color": "Orange",
+   "title": "Non engag\u00e9"
   },
   {
    "color": "Red",
