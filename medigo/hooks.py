@@ -124,21 +124,30 @@ app_license = "mit"
 
 doc_events = {
     "Visite Digitale": {
-        "on_update": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
-        "on_submit": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
-        "after_insert": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
-        "on_trash": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
+        "on_update": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
+        ],
+        "after_insert": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit",
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_visite_activity"
+        ],
+        "on_trash": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
+        ]
     },
     "Visite Prescripteur": {
-        "on_update": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
-        "on_submit": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
-        "after_insert": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
-        "on_trash": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_date_derniere_interaction",
+        "on_update": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
+        ],
+        "after_insert": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit",
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_visite_activity"
+        ],
+        "on_trash": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
+        ]
     }
 }
-
-
-
 
 
 # doc_events = {
@@ -151,6 +160,15 @@ doc_events = {
 
 # Scheduled Tasks
 # ---------------
+scheduler_events = {
+    "cron": {
+        "0 3 */3 * *": [  # Exécute à 3h du matin tous les 3 jours
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteurs_status"
+        ]
+    }
+}
+
+
 
 # scheduler_events = {
 #	"all": [
