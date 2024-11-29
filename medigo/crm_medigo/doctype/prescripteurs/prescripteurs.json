@@ -29,8 +29,8 @@
   "etablissement",
   "service",
   "section_break_onvl",
-  "prioritaire",
   "cabinet_prive_prescripteur",
+  "column_break_pwdw",
   "chef_de_service",
   "informations_personnelles_tab",
   "civilite",
@@ -48,6 +48,7 @@
   "potentiel",
   "section_break_kbtx",
   "potentiel_column",
+  "priorite",
   "volume_de_patients_potentiels",
   "niveau_engagement",
   "retours_produit",
@@ -302,12 +303,6 @@
    "options": "\nInfluence Locale\nInfluence R\u00e9gionale\nInfluence Nationale"
   },
   {
-   "default": "0",
-   "fieldname": "prioritaire",
-   "fieldtype": "Check",
-   "label": "Prioritaire"
-  },
-  {
    "fieldname": "section_break_kbtx",
    "fieldtype": "Section Break"
   },
@@ -318,6 +313,17 @@
   {
    "fieldname": "column_break_xacq",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priorite",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Niveau Priorit\u00e9",
+   "options": "Niveau 1\nNiveau 2\nNiveau 3"
+  },
+  {
+   "fieldname": "column_break_pwdw",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -327,7 +333,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2024-11-29 11:50:59.114416",
+ "modified": "2024-11-29 11:56:25.354259",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
@@ -361,7 +367,7 @@
    "title": "Engag\u00e9"
   },
   {
-   "color": "Orange",
+   "color": "Yellow",
    "title": "Non engag\u00e9"
   },
   {
