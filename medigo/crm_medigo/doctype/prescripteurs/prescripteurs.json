@@ -25,11 +25,12 @@
   "infos_professionnels_section",
   "connections_column",
   "titre_prescripteur",
-  "cabinet_prive_prescripteur",
-  "chef_de_service",
-  "column_break_dmaw",
   "etablissement",
   "service",
+  "section_break_onvl",
+  "prioritaire",
+  "cabinet_prive_prescripteur",
+  "chef_de_service",
   "informations_personnelles_tab",
   "civilite",
   "situation_matrimoniale",
@@ -43,13 +44,13 @@
   "gps_prescripteur",
   "carte",
   "segmentation",
-  "potentiel_column",
   "potentiel",
+  "section_break_kbtx",
+  "potentiel_column",
   "volume_de_patients_potentiels",
   "niveau_engagement",
   "retours_produit",
   "influence",
-  "prioritaire",
   "pr\u00e9f\u00e9rences_tab",
   "canal",
   "horaires_contact"
@@ -232,10 +233,6 @@
    "label": "Infos Professionnels"
   },
   {
-   "fieldname": "column_break_dmaw",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_vqge",
    "fieldtype": "Column Break"
   },
@@ -254,7 +251,7 @@
    "description": "Canal de communication pr\u00e9f\u00e9r\u00e9",
    "fieldname": "canal",
    "fieldtype": "Select",
-   "label": "Canal",
+   "label": "Canal de communication",
    "options": "\nPr\u00e9sentiel\nDigital\nT\u00e9l\u00e9phonique"
   },
   {
@@ -289,13 +286,13 @@
    "fieldname": "niveau_engagement",
    "fieldtype": "Select",
    "label": "Niveau d\u2019engagement",
-   "options": "R\u00e9gulier\nOccasionnel\nInactif"
+   "options": "\nR\u00e9gulier\nOccasionnel\nInactif"
   },
   {
    "fieldname": "retours_produit",
    "fieldtype": "Select",
    "label": "Retours produits",
-   "options": "Tr\u00e8s satisfait\nSatisfait\nNeutre\nInsatisfait"
+   "options": "\nTr\u00e8s satisfait\nSatisfait\nNeutre\nInsatisfait"
   },
   {
    "fieldname": "influence",
@@ -308,6 +305,14 @@
    "fieldname": "prioritaire",
    "fieldtype": "Check",
    "label": "Prioritaire"
+  },
+  {
+   "fieldname": "section_break_kbtx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_onvl",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -317,7 +322,7 @@
    "link_fieldname": "prescripteur"
   }
  ],
- "modified": "2024-11-29 10:52:25.586777",
+ "modified": "2024-11-29 10:57:31.771496",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
