@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-30 22:23:56.582732",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "type",
+  "column_break_umub",
+  "date",
+  "heure",
+  "section_break_eljc",
+  "prescripteur",
+  "nom_prescripteur",
+  "titre_prescripteur",
+  "column_break_zvto",
+  "utilisateur",
+  "nom_utilisateur",
+  "section_break_ujyp",
+  "date_rappel",
+  "notes_tab",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Statut",
+   "options": "Nouveau\nR\u00e9pondu\n\u00c0 Rappeler\nNon R\u00e9pondu"
+  },
+  {
+   "depends_on": "eval: doc.status == '\u00c0 Rappeler'",
+   "fieldname": "date_rappel",
+   "fieldtype": "Datetime",
+   "label": "Date Rappel"
+  },
+  {
+   "fieldname": "column_break_umub",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "utilisateur",
+   "fieldtype": "Link",
+   "label": "Utilisateur",
+   "options": "User"
+  },
+  {
+   "fetch_from": "utilisateur.full_name",
+   "fieldname": "nom_utilisateur",
+   "fieldtype": "Data",
+   "label": "Nom Utilisateur"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Prospection\nPrise de contact\nSuivi Visite\nAppel de satisfaction\nR\u00e9activation\nEnqu\u00eate"
+  },
+  {
+   "fieldname": "section_break_eljc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "prescripteur",
+   "fieldtype": "Link",
+   "label": "Prescripteur",
+   "options": "Prescripteurs"
+  },
+  {
+   "fetch_from": "prescripteur.nom_complet_prescripteur",
+   "fieldname": "nom_prescripteur",
+   "fieldtype": "Data",
+   "label": "Nom Prescripteur"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "heure",
+   "fieldtype": "Datetime",
+   "label": "Heure"
+  },
+  {
+   "fieldname": "column_break_zvto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ujyp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "prescripteur.titre_prescripteur",
+   "fieldname": "titre_prescripteur",
+   "fieldtype": "Data",
+   "label": "Titre Prescripteur"
+  },
+  {
+   "fieldname": "notes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "links": [],
+ "modified": "2024-11-30 22:42:23.244593",
+ "modified_by": "Administrator",
+ "module": "CRM Medigo",
+ "name": "Appel Telephonique",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
