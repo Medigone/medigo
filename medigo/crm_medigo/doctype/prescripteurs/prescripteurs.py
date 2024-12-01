@@ -132,10 +132,9 @@ def log_call_activity(doc, method):
         text=message
     )
 
-def before_insert(self):
+def before_save(self):
         """
-        Convertit 'nom_prescripteur', 'prenom_prescripteur', et 'nom_complet_prescripteur' 
-        en majuscules avant la création du document et définit 'name' comme 'nom_complet_prescripteur' en majuscules.
+        Convertit automatiquement les champs en majuscules avant la sauvegarde.
         """
         if self.nom_prescripteur:
             self.nom_prescripteur = self.nom_prescripteur.upper()
@@ -145,4 +144,3 @@ def before_insert(self):
 
         if self.nom_complet_prescripteur:
             self.nom_complet_prescripteur = self.nom_complet_prescripteur.upper()
-            self.name = self.nom_complet_prescripteur
