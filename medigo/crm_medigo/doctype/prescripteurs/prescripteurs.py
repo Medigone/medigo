@@ -2,7 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
-from frappe.utils import getdate, nowdate, add_days
+from frappe.utils import getdate, nowdate, add_days, format_datetime
 from frappe.model.document import Document
 
 class Prescripteurs(Document):
@@ -97,7 +97,7 @@ def update_prescripteurs_status():
 def log_activity(doc, method):
     """
     Ajoute une ligne dans la section Activité (Timeline) du document Prescripteurs
-    avec un message adapté à l'événement (création ou mise à jour).
+    avec un design adapté et utilisant le système natif de Frappe.
     """
     # Vérifiez si le document est lié à un prescripteur
     if not doc.prescripteur:
@@ -108,9 +108,9 @@ def log_activity(doc, method):
 
     # Déterminer le code couleur en fonction du type d'activité
     color_map = {
-        "Visite Digitale": "#457b9d",  # Bleu doux
-        "Visite Prescripteur": "#2a9d8f",  # Rouge
-        "Appel Telephonique": "#e63946",  # Vert
+        "Visite Digitale": "#118ab2",  # Bleu
+        "Visite Prescripteur": "#2a9d8f",  # Vert
+        "Appel Telephonique": "#ef476f",  # Rouge
     }
     color = color_map.get(doc.doctype, "#000000")  # Par défaut : noir
 
@@ -122,26 +122,28 @@ def log_activity(doc, method):
     else:
         action = "modifiée"
 
+    # Message principal
     message = (
         f"<b><span style='color:{color};'>{doc.doctype}</span></b> {action} : "
-        f"<a href='{link}'>{doc.name}</a>."
+        f"<a href='{link}'><strong>{doc.name}</strong></a>.<br><br>"
     )
 
     # Ajouter des notes si disponibles
     if hasattr(doc, 'notes') and doc.notes:
-        # Créer un conteneur unique avec fond gris clair et bordures arrondies
         notes_box = (
-            f"<div style='border: 1px solid #d3d3d3; border-radius: 10px; padding: 10px; margin-top: 10px; "
-            f"background-color: #f7f7f7; font-size: 14px; color: #333;'>"
-            f"<strong style='display: block; margin-bottom: 5px;'>⚡ Notes :</strong>"
-            f"<div style='background-color: #ffffff; padding: 10px; border-radius: 5px;'>"
-            f"{doc.notes}"
-            f"</div>"
-            f"</div>"
-        )
+        f"<div class='card border-grey mb-3' style='border: 1px solid #d6d6d6; border-radius: 10px; margin-bottom: 10px;'>"
+        f"  <div class='card-header' style='background-color: #f7f7f7; color: #333; font-weight: bold;'>⚡ Note "
+        f"  <span style='font-size: 12px; color: #000;'> | {format_datetime(doc.modified)}</span></div>"
+        f"  <div class='card-body text-dark' style='padding: 10px;'>"
+        f"    <p class='card-text' style='font-size: 14px; color: #555;'>"
+        f"      {doc.notes}"
+        f"    </p>"
+        f"  </div>"
+        f"</div>"
+)
         message += notes_box
 
-    # Ajouter une entrée dans la Timeline
+    # Ajouter une entrée dans la Timeline via `add_comment`
     frappe.get_doc("Prescripteurs", doc.prescripteur).add_comment(
         comment_type="Info",
         text=message
