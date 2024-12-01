@@ -124,35 +124,41 @@ app_license = "mit"
 
 doc_events = {
     "Visite Digitale": {
-        "on_update": [
+        "after_insert": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_activity",
             "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
         ],
-        "after_insert": [
-            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit",
-            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_visite_activity"
+        "on_update": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
         ],
         "on_trash": [
             "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
         ]
     },
     "Visite Prescripteur": {
-        "on_update": [
+        "after_insert": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_activity",
             "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
         ],
-        "after_insert": [
-            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit",
-            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_visite_activity"
+        "on_update": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
         ],
         "on_trash": [
             "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
         ]
     },
     "Appel Telephonique": {
-        "after_insert":  [
-        "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_call_activity"
+        "after_insert": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_activity"
+        ],
+        "on_update": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_activity"
         ]
     }
 }
+
+
+
 
 
 # doc_events = {

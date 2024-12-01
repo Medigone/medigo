@@ -94,10 +94,10 @@ def update_prescripteurs_status():
 
 
 # Ajout automatique d'une ligne dans la Timeline
-def log_visite_activity(doc, method):
+def log_activity(doc, method):
     """
     Ajoute une ligne dans la section Activité (Timeline) du document Prescripteurs
-    lors de la création d'une Visite Digitale ou Prescripteur.
+    avec un message adapté à l'événement (création ou mise à jour).
     """
     # Vérifiez si le document est lié à un prescripteur
     if not doc.prescripteur:
@@ -105,28 +105,43 @@ def log_visite_activity(doc, method):
 
     # Générer un lien HTML pointant vers le document
     link = frappe.utils.get_url_to_form(doc.doctype, doc.name)
-    message = f"Nouvelle <b>{doc.doctype}</b> créée : <a href='{link}'>{doc.name}</a>."
 
-    # Ajoutez un commentaire directement dans la Timeline du Prescripteur
-    frappe.get_doc("Prescripteurs", doc.prescripteur).add_comment(
-        comment_type="Info",
-        text=message
+    # Déterminer le code couleur en fonction du type d'activité
+    color_map = {
+        "Visite Digitale": "#457b9d",  # Bleu doux
+        "Visite Prescripteur": "#2a9d8f",  # Rouge
+        "Appel Telephonique": "#e63946",  # Vert
+    }
+    color = color_map.get(doc.doctype, "#000000")  # Par défaut : noir
+
+    # Construire le message
+    if method == "after_insert":
+        action = "créée"
+    elif method == "on_update":
+        action = "mise à jour"
+    else:
+        action = "modifiée"
+
+    message = (
+        f"<b><span style='color:{color};'>{doc.doctype}</span></b> {action} : "
+        f"<a href='{link}'>{doc.name}</a>."
     )
 
-def log_call_activity(doc, method):
-    """
-    Ajoute une ligne dans la section Activité (Timeline) du document Prescripteurs
-    lors de la création d'un Appel Téléphonique.
-    """
-    # Vérifiez si le document est lié à un prescripteur
-    if not doc.prescripteur:
-        return
+    # Ajouter des notes si disponibles
+    if hasattr(doc, 'notes') and doc.notes:
+        # Créer un conteneur unique avec fond gris clair et bordures arrondies
+        notes_box = (
+            f"<div style='border: 1px solid #d3d3d3; border-radius: 10px; padding: 10px; margin-top: 10px; "
+            f"background-color: #f7f7f7; font-size: 14px; color: #333;'>"
+            f"<strong style='display: block; margin-bottom: 5px;'>⚡ Notes :</strong>"
+            f"<div style='background-color: #ffffff; padding: 10px; border-radius: 5px;'>"
+            f"{doc.notes}"
+            f"</div>"
+            f"</div>"
+        )
+        message += notes_box
 
-    # Générer un lien HTML pointant vers le document
-    link = frappe.utils.get_url_to_form(doc.doctype, doc.name)
-    message = f"Nouvel appel téléphonique (<b>{doc.type}</b>) enregistré : <a href='{link}'>{doc.name}</a>."
-
-    # Ajoutez un commentaire directement dans la Timeline du Prescripteur
+    # Ajouter une entrée dans la Timeline
     frappe.get_doc("Prescripteurs", doc.prescripteur).add_comment(
         comment_type="Info",
         text=message

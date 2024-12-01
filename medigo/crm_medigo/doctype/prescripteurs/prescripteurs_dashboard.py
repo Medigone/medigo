@@ -6,11 +6,12 @@ def get_data():
         "non_standard_fieldnames": {
             "Visite Prescripteur": "prescripteur",
             "Visite Digitale": "prescripteur",
+            "Appel Telephonique": "prescripteur",
         },
         "transactions": [
             {
                 "label": _("Interactions"),
-                "items": ["Visite Prescripteur", "Visite Digitale"],
+                "items": ["Visite Prescripteur", "Visite Digitale", "Appel Telephonique"],
             },
            
         ],
