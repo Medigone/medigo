@@ -113,3 +113,22 @@ def log_visite_activity(doc, method):
         text=message
     )
 
+def log_call_activity(doc, method):
+    """
+    Ajoute une ligne dans la section Activité (Timeline) du document Prescripteurs
+    lors de la création d'un Appel Téléphonique.
+    """
+    # Vérifiez si le document est lié à un prescripteur
+    if not doc.prescripteur:
+        return
+
+    # Générer un lien HTML pointant vers le document
+    link = frappe.utils.get_url_to_form(doc.doctype, doc.name)
+    message = f"Nouvel appel téléphonique (<b>{doc.type}</b>) enregistré : <a href='{link}'>{doc.name}</a>."
+
+    # Ajoutez un commentaire directement dans la Timeline du Prescripteur
+    frappe.get_doc("Prescripteurs", doc.prescripteur).add_comment(
+        comment_type="Info",
+        text=message
+    )
+

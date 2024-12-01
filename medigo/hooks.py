@@ -146,6 +146,11 @@ doc_events = {
         "on_trash": [
             "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
         ]
+    },
+    "Appel Telephonique": {
+        "after_insert":  [
+        "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_call_activity"
+        ]
     }
 }
 

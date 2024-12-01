@@ -27,7 +27,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Statut",
-   "options": "Nouveau\nR\u00e9pondu\n\u00c0 Rappeler\nNon R\u00e9pondu"
+   "options": "Nouveau\nTermin\u00e9\n\u00c0 Rappeler - Urgent\n\u00c0 Rappeler - Relance standard\n\u00c0 Rappeler - En attente d'informations\nNon R\u00e9pondu - Ligne occup\u00e9e\nNon R\u00e9pondu - Aucun contact\nNon R\u00e9pondu - Num\u00e9ro incorrect\nAnnul\u00e9"
   },
   {
    "depends_on": "eval: doc.status == '\u00c0 Rappeler'",
@@ -113,7 +113,7 @@
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-11-30 22:42:23.244593",
+ "modified": "2024-12-01 12:34:33.314815",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Appel Telephonique",
