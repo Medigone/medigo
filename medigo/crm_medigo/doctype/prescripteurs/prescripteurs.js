@@ -70,3 +70,75 @@ function updateNomCompletPrescripteur(frm) {
         frm.set_value("nom_complet_prescripteur", nom_complet);
     }
 }
+
+frappe.ui.form.on('Prescripteurs', {
+    refresh: function (frm) {
+        frm.add_custom_button(__('Récupérer Position GPS'), function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+                        const precision = position.coords.accuracy;
+
+                        // Afficher la précision actuelle
+                        frappe.msgprint({
+                            title: __('Précision actuelle'),
+                            indicator: 'blue',
+                            message: __('La précision actuelle est de ') + `${precision} mètres.`
+                        });
+
+                        if (precision <= 40) { // Tolère jusqu'à 30 mètres
+                            frm.set_value('gps_prescripteur', `${latitude}, ${longitude}`);
+                            frappe.msgprint({
+                                title: __('Succès'),
+                                indicator: 'green',
+                                message: __('Position GPS enregistrée avec précision : ') + `${precision} mètres.`
+                            });
+                            frm.save();
+                        } else {
+                            frappe.msgprint({
+                                title: __('Précision insuffisante'),
+                                indicator: 'red',
+                                message: __('La précision actuelle est de ') + `${precision} mètres. ` +
+                                    __('Essayez de vous déplacer dans un endroit plus dégagé.')
+                            });
+                        }
+                    },
+                    (error) => {
+                        let errorMessage;
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                errorMessage = __('Permission refusée pour accéder à la géolocalisation.');
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                errorMessage = __('La position n\'est pas disponible.');
+                                break;
+                            case error.TIMEOUT:
+                                errorMessage = __('La demande de géolocalisation a expiré.');
+                                break;
+                            default:
+                                errorMessage = __('Une erreur inconnue s\'est produite.');
+                        }
+                        frappe.msgprint({
+                            title: __('Erreur de Géolocalisation'),
+                            indicator: 'red',
+                            message: errorMessage
+                        });
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 20000, // Augmenter le délai pour de meilleurs résultats
+                        maximumAge: 0 // Pas de cache
+                    }
+                );
+            } else {
+                frappe.msgprint({
+                    title: __('Non supporté'),
+                    indicator: 'red',
+                    message: __('Votre navigateur ou appareil ne supporte pas la géolocalisation.')
+                });
+            }
+        });
+    }
+});
