@@ -293,7 +293,7 @@
    "fieldname": "niveau_engagement",
    "fieldtype": "Select",
    "label": "Niveau d\u2019engagement",
-   "options": "\nR\u00e9gulier\nOccasionnel\nInactif"
+   "options": "\nR\u00e9gulier\nOccasionnel\nNon coop\u00e9ratif"
   },
   {
    "fieldname": "retours_produit",
@@ -345,7 +345,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-03 13:35:29.991604",
+ "modified": "2024-12-03 19:13:45.803260",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
