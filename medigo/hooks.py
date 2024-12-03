@@ -123,6 +123,14 @@ app_license = "mit"
 # Hook on document methods and events
 
 doc_events = {
+    "Appel Telephonique": {
+        "before_insert": [
+            "medigo.crm_medigo.doctype.appel_telephonique.appel_telephonique.generer_notes_appel"
+        ],
+        "before_save": [
+            "medigo.crm_medigo.doctype.appel_telephonique.appel_telephonique.generer_notes_appel"
+        ]
+    },
     "Visite Digitale": {
         "after_insert": [
             "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_activity",
@@ -147,12 +155,9 @@ doc_events = {
             "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteur_status_from_visit"
         ]
     },
-    "Appel Telephonique": {
-        "after_insert": [
-            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_activity"
-        ],
-        "on_update": [
-            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.log_activity"
+    "Questionnaire Telephonique": {
+        "before_save": [
+            "medigo.crm_medigo.doctype.questionnaire_telephonique.questionnaire_telephonique.update_questionnaire_date"
         ]
     }
 }

@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-03 10:48:58.753485",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ordre",
+  "question"
+ ],
+ "fields": [
+  {
+   "fieldname": "ordre",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Ordre"
+  },
+  {
+   "fieldname": "question",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-03 10:49:53.015460",
+ "modified_by": "Administrator",
+ "module": "CRM Medigo",
+ "name": "Questions",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

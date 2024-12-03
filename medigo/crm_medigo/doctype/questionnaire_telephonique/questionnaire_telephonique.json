@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-03 10:47:17.755957",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date_creation",
+  "column_break_bpko",
+  "date",
+  "section_break_hpop",
+  "type",
+  "column_break_digv",
+  "titre_prescripteur",
+  "section_break_zikp",
+  "est_defaut",
+  "section_break_odot",
+  "questions"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Prospection\nPrise de contact\nSuivi Visite\nAppel de satisfaction\nR\u00e9activation\nEnqu\u00eate"
+  },
+  {
+   "fieldname": "questions",
+   "fieldtype": "Table",
+   "label": "Questions",
+   "options": "Questions"
+  },
+  {
+   "fieldname": "titre_prescripteur",
+   "fieldtype": "Link",
+   "label": "Titre Prescripteur",
+   "options": "Titre Prescripteur"
+  },
+  {
+   "default": "0",
+   "fieldname": "est_defaut",
+   "fieldtype": "Check",
+   "label": "Est d\u00e9faut"
+  },
+  {
+   "fieldname": "section_break_odot",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date mise \u00e0 jour ",
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "date_creation",
+   "fieldtype": "Datetime",
+   "label": "Date Cr\u00e9ation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bpko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hpop",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_digv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zikp",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-03 11:21:40.905201",
+ "modified_by": "Administrator",
+ "module": "CRM Medigo",
+ "name": "Questionnaire Telephonique",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
