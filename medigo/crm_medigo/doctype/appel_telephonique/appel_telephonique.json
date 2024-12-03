@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "status",
+  "date_rappel",
   "type",
   "column_break_umub",
   "date",
@@ -17,10 +18,9 @@
   "column_break_zvto",
   "utilisateur",
   "nom_utilisateur",
-  "section_break_ujyp",
-  "date_rappel",
-  "notes_tab",
   "section_break_alyr",
+  "html",
+  "section_break_mwqo",
   "notes"
  ],
  "fields": [
@@ -31,9 +31,9 @@
    "options": "Nouveau\nTermin\u00e9\n\u00c0 Rappeler - Urgent\n\u00c0 Rappeler - Relance standard\n\u00c0 Rappeler - En attente d'informations\nNon R\u00e9pondu - Ligne occup\u00e9e\nNon R\u00e9pondu - Aucun contact\nNon R\u00e9pondu - Num\u00e9ro incorrect\nAnnul\u00e9"
   },
   {
-   "depends_on": "eval: doc.status == '\u00c0 Rappeler'",
+   "depends_on": "eval: doc.status == '\u00c0 Rappeler - En attente d\\'informations' || doc.status == '\u00c0 Rappeler - Urgent' || doc.status == '\u00c0 Rappeler - Relance standard' ",
    "fieldname": "date_rappel",
-   "fieldtype": "Datetime",
+   "fieldtype": "Date",
    "label": "Date Rappel"
   },
   {
@@ -91,34 +91,39 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_ujyp",
-   "fieldtype": "Section Break"
-  },
-  {
    "fetch_from": "prescripteur.titre_prescripteur",
    "fieldname": "titre_prescripteur",
    "fieldtype": "Data",
    "label": "Titre Prescripteur"
   },
   {
-   "fieldname": "notes_tab",
-   "fieldtype": "Tab Break",
-   "label": "Questionnaire"
-  },
-  {
    "fieldname": "notes",
    "fieldtype": "Text Editor",
-   "label": "Notes"
+   "label": "R\u00e9ponses/Notes"
   },
   {
+   "collapsible": 1,
    "fieldname": "section_break_alyr",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Script"
+  },
+  {
+   "fieldname": "html",
+   "fieldtype": "HTML",
+   "is_virtual": 1,
+   "label": "html"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_mwqo",
+   "fieldtype": "Section Break",
+   "label": "R\u00e9ponses/Notes"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-12-03 13:39:02.001385",
+ "modified": "2024-12-03 15:16:10.031441",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Appel Telephonique",

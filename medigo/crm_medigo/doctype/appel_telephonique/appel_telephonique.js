@@ -1,75 +1,56 @@
-// Copyright (c) 2024, Amine Melizi and contributors
-// For license information, please see license.txt
-
 frappe.ui.form.on('Appel Telephonique', {
-    refresh: function(frm) {
-        if (!frm.is_new() && !frm.doc.notes) {
-            generer_notes_script(frm);
-        }
+    refresh(frm) {
+        // Générer le contenu HTML quand le formulaire est chargé ou rafraîchi
+        generer_html_script(frm);
     },
-    type: function(frm) {
-        if (!frm.doc.notes) {
-            generer_notes_script(frm);
-        }
+    type(frm) {
+        // Re-générer le HTML quand le type est modifié
+        generer_html_script(frm);
     },
-    titre_prescripteur: function(frm) {
-        if (!frm.doc.notes) {
-            generer_notes_script(frm);
-        }
+    titre_prescripteur(frm) {
+        // Re-générer le HTML quand le titre du prescripteur est modifié
+        generer_html_script(frm);
     }
 });
 
-function generer_notes_script(frm) {
+function generer_html_script(frm) {
+    // Vérifier si le type d'appel est défini
     if (!frm.doc.type) {
-        frm.set_value('notes', 'Aucun type d\'appel défini.');
+        $(frm.fields_dict['html'].wrapper).html('<p>Aucun type d\'appel défini.</p>');
         return;
     }
 
-    let titre = frm.doc.type.toUpperCase();
-    let default_company = frappe.boot.sysdefaults.company || 'IntraPro Medigo';
-    let prescripteur = frm.doc.nom_prescripteur || '[Nom du prescripteur]';
-    let delegue = frm.doc.nom_utilisateur || '[Nom du délégué]';
-
+    // Requête pour obtenir le questionnaire téléphonique correspondant
     frappe.call({
-        method: "frappe.client.get_list",
+        method: "medigo.crm_medigo.doctype.appel_telephonique.appel_telephonique.get_questions_for_html",
         args: {
-            doctype: "Questionnaire Telephonique",
-            filters: {
-                type: frm.doc.type,
-                titre_prescripteur: frm.doc.titre_prescripteur || undefined
-            },
-            fields: ["name"],
-            order_by: "est_defaut desc, date_creation desc",
-            limit: 1
+            type: frm.doc.type,
+            titre_prescripteur: frm.doc.titre_prescripteur || ""
         },
         callback: function(response) {
-            if (response.message && response.message.length > 0) {
-                let questionnaire_name = response.message[0].name;
+            if (response.message) {
+                let questions_html = response.message.map((q, index) => `<li>${index + 1}. ${q}</li>`).join("");
 
-                frappe.call({
-                    method: "frappe.client.get",
-                    args: {
-                        doctype: "Questionnaire Telephonique",
-                        name: questionnaire_name
-                    },
-                    callback: function(res) {
-                        if (res.message) {
-                            let questions = res.message.questions || [];
-                            let questions_text = questions.map((q, index) => `${index + 1}. ${q.question}`).join("\n");
+                let titre = frm.doc.type.toUpperCase();
+                let default_company = frappe.boot.sysdefaults.company || 'IntraPro Medigo';
+                let prescripteur = frm.doc.nom_prescripteur || '[Nom du prescripteur]';
+                let delegue = frm.doc.nom_utilisateur || '[Nom du délégué]';
 
-                            let notes_text = `**${titre}**\n
-Bonjour **${prescripteur}**,\n
-Je suis **${delegue}** de **${default_company}**. Je vous appelle pour vous parler de nos produits et voir si cela pourrait vous intéresser. Est-ce que vous avez un moment pour en discuter ?\n
-Voici quelques questions que je souhaiterais aborder avec vous :\n
-${questions_text}\n
-Merci pour votre temps. Je vous enverrai les informations convenues et nous pourrons, si vous êtes d’accord, programmer un appel de suivi.`;
+                let script_html = `
+                    <div class="appel-telephonique-script">
+                        <p>Bonjour <strong>${prescripteur}</strong>,</p>
+                        <p>Je suis <strong>${delegue}</strong> de <strong>${default_company}</strong>. </br>
+                        Je vous appelle pour vous parler de nos produits et voir si cela pourrait vous intéresser. Est-ce que vous avez un moment pour en discuter ?</p>
+                        <p>Voici quelques questions que je souhaiterais aborder avec vous :</p>
+                        <ul>${questions_html}</ul>
+                        <p>Merci pour votre temps. </br>Je vous enverrai les informations convenues, et nous pourrons, si vous êtes d’accord, programmer un appel de suivi.</p>
+                    </div>
+                `;
 
-                            frm.set_value('notes', notes_text);
-                        }
-                    }
-                });
+                // Injecter le contenu HTML dans le wrapper du champ 'html'
+                $(frm.fields_dict['html'].wrapper).html(script_html);
             } else {
-                frm.set_value('notes', 'Aucun questionnaire correspondant trouvé.');
+                $(frm.fields_dict['html'].wrapper).html('<p>Aucun questionnaire correspondant trouvé.</p>');
             }
         }
     });
