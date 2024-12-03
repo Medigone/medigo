@@ -20,7 +20,7 @@
   "section_break_ujyp",
   "date_rappel",
   "notes_tab",
-  "script",
+  "section_break_alyr",
   "notes"
  ],
  "fields": [
@@ -111,15 +111,14 @@
    "label": "Notes"
   },
   {
-   "fieldname": "script",
-   "fieldtype": "HTML",
-   "label": "Script"
+   "fieldname": "section_break_alyr",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-12-03 11:41:05.509154",
+ "modified": "2024-12-03 13:39:02.001385",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Appel Telephonique",
