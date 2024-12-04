@@ -287,7 +287,7 @@
    "fieldname": "volume_de_patients_potentiels",
    "fieldtype": "Select",
    "label": "Volume de patients potentiels",
-   "options": "Faible (moins de 10 patients/mois)\nMoyen (10-50 patients/mois)\n\u00c9lev\u00e9 (plus de 50 patients/mois)"
+   "options": "Faible (moins de 10 patients/Jour)\nMoyen (10-50 patients/Jour)\n\u00c9lev\u00e9 (plus de 50 patients/Jour)"
   },
   {
    "fieldname": "niveau_engagement",
@@ -345,7 +345,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-03 19:13:45.803260",
+ "modified": "2024-12-04 09:36:06.276851",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
