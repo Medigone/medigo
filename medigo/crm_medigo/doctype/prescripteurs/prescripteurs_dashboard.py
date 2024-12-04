@@ -5,13 +5,13 @@ def get_data():
         "fieldname": "prescripteur",  # Champ utilisé pour relier les transactions
         "non_standard_fieldnames": {
             "Visite Prescripteur": "prescripteur",
-            "e-visite": "prescripteur",
+            "Visite Digitale": "prescripteur",
             "Appel Telephonique": "prescripteur",
         },
         "transactions": [
             {
                 "label": _("Interactions"),
-                "items": ["Visite Prescripteur", "E-Visite", "Appel Telephonique"],
+                "items": ["Visite Prescripteur", "Visite Digitale", "Appel Telephonique"],
             },
            
         ],

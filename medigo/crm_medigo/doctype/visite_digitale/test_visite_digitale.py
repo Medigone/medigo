@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestE-Visite(FrappeTestCase):
+class TestVisiteDigitale(FrappeTestCase):
 	pass

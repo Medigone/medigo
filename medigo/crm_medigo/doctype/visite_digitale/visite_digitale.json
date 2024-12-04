@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-28 19:12:36.829015",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "status",
+  "prescripteur",
+  "produits_tab",
+  "disponibilite",
+  "besoin",
+  "produit_phare",
+  "communication_et_collaboration_tab",
+  "mise_a_jour_produits",
+  "invitation_actions",
+  "marques",
+  "nombre_marques",
+  "suggestions_et_feedback_tab",
+  "remarques",
+  "amelioration"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Statut",
+   "options": "\nProgramm\u00e9e\nEn attente\nReport\u00e9e\nCompl\u00e9t\u00e9e\nValid\u00e9e\nAnnul\u00e9e"
+  },
+  {
+   "fieldname": "prescripteur",
+   "fieldtype": "Link",
+   "label": "Prescripteur",
+   "options": "Prescripteurs"
+  },
+  {
+   "fieldname": "produits_tab",
+   "fieldtype": "Tab Break",
+   "label": "Produits"
+  },
+  {
+   "fieldname": "disponibilite",
+   "fieldtype": "Select",
+   "label": "Dans votre secteur, nos produits sont-ils disponibles et facilement accessibles pour vos patients ?",
+   "options": "\nOui, sans difficult\u00e9\nOui, mais avec des difficult\u00e9s\nNon"
+  },
+  {
+   "fieldname": "produit_phare",
+   "fieldtype": "Link",
+   "label": "Quels produits de notre gamme utilisez-vous le plus fr\u00e9quemment ?",
+   "options": "Item"
+  },
+  {
+   "fieldname": "besoin",
+   "fieldtype": "Select",
+   "label": "Selon vous, nos produits r\u00e9pondent-ils aux besoins des patients ?",
+   "options": "\nOui, totalement\nOui, partiellement\nNon"
+  },
+  {
+   "fieldname": "communication_et_collaboration_tab",
+   "fieldtype": "Tab Break",
+   "label": "Communication et Collaboration"
+  },
+  {
+   "fieldname": "mise_a_jour_produits",
+   "fieldtype": "Select",
+   "label": "Recevez-vous des mises \u00e0 jour r\u00e9guli\u00e8res sur nos produits par le d\u00e9l\u00e9gu\u00e9 m\u00e9dical ?",
+   "options": "\nOui, souvent\nOui, parfois\nNon, jamais"
+  },
+  {
+   "fieldname": "invitation_actions",
+   "fieldtype": "Select",
+   "label": "Avez-vous \u00e9t\u00e9 invit\u00e9 \u00e0 un \u00e9v\u00e9nement ou une action organis\u00e9e par notre \u00e9quipe ces 3 derniers mois ?",
+   "options": "\nOui, j\u2019ai particip\u00e9\nOui, mais je n\u2019ai pas particip\u00e9\nNon"
+  },
+  {
+   "fieldname": "marques",
+   "fieldtype": "Select",
+   "label": "Travaillez-vous uniquement avec notre marque ou d\u2019autres \u00e9galement ?",
+   "options": "\nMono-marque\nMulti-marques"
+  },
+  {
+   "depends_on": "eval:doc.marques ==\"Multi-marques\"",
+   "fieldname": "nombre_marques",
+   "fieldtype": "Int",
+   "label": "Combien de marques ?"
+  },
+  {
+   "fieldname": "suggestions_et_feedback_tab",
+   "fieldtype": "Tab Break",
+   "label": "Suggestions et Feedback"
+  },
+  {
+   "fieldname": "remarques",
+   "fieldtype": "Text Editor",
+   "label": "Remarques particuli\u00e8res"
+  },
+  {
+   "fieldname": "amelioration",
+   "fieldtype": "Text Editor",
+   "label": "Comment peut-on am\u00e9liorer notre relation ?"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-04 10:24:50.369605",
+ "modified_by": "Administrator",
+ "module": "CRM Medigo",
+ "name": "Visite Digitale",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

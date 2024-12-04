@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class E-Visite(Document):
+class VisiteDigitale(Document):
 	pass
