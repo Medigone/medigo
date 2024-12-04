@@ -8,6 +8,10 @@
   "date",
   "status",
   "prescripteur",
+  "section_break_egbl",
+  "commune",
+  "wilaya",
+  "zone",
   "produits_tab",
   "disponibilite",
   "besoin",
@@ -37,7 +41,8 @@
    "fieldname": "prescripteur",
    "fieldtype": "Link",
    "label": "Prescripteur",
-   "options": "Prescripteurs"
+   "options": "Prescripteurs",
+   "search_index": 1
   },
   {
    "fieldname": "produits_tab",
@@ -105,11 +110,39 @@
    "fieldname": "amelioration",
    "fieldtype": "Text Editor",
    "label": "Comment peut-on am\u00e9liorer notre relation ?"
+  },
+  {
+   "fieldname": "section_break_egbl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "prescripteur.commune",
+   "fieldname": "commune",
+   "fieldtype": "Link",
+   "label": "Commune",
+   "options": "Communes",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "prescripteur.wilaya",
+   "fieldname": "wilaya",
+   "fieldtype": "Link",
+   "label": "Wilaya",
+   "options": "Wilayas",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "prescripteur.zone",
+   "fieldname": "zone",
+   "fieldtype": "Link",
+   "label": "Zone",
+   "options": "Zone",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-04 10:24:50.369605",
+ "modified": "2024-12-04 11:13:41.985109",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Visite Digitale",

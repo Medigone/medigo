@@ -175,8 +175,13 @@ doc_events = {
 # ---------------
 scheduler_events = {
     "cron": {
-        "0 3 */3 * *": [  # Exécute à 3h du matin tous les 3 jours
+        # Exécute à 3h du matin tous les 3 jours
+        "0 3 */3 * *": [
             "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.update_prescripteurs_status"
+        ],
+        # Exécute à 4h du matin tous les 3 mois
+        "0 4 1 */3 *": [
+            "medigo.crm_medigo.doctype.visite_digitale.visite_digitale.create_visite_digitale_if_due"
         ]
     }
 }

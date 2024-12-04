@@ -99,7 +99,8 @@
    "fieldname": "email_prescripteur",
    "fieldtype": "Data",
    "label": "Email",
-   "options": "Email"
+   "options": "Email",
+   "search_index": 1
   },
   {
    "fieldname": "connections_column",
@@ -258,7 +259,8 @@
    "fieldname": "canal",
    "fieldtype": "Select",
    "label": "Canal de communication",
-   "options": "Mixte\nPr\u00e9sentiel\nDigital\nT\u00e9l\u00e9phonique"
+   "options": "Mixte\nPr\u00e9sentiel\nDigital\nT\u00e9l\u00e9phonique",
+   "search_index": 1
   },
   {
    "fieldname": "pr\u00e9f\u00e9rences_tab",
@@ -345,7 +347,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-04 09:36:06.276851",
+ "modified": "2024-12-04 11:04:39.340550",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
