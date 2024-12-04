@@ -160,8 +160,14 @@ doc_events = {
         "before_save": [
             "medigo.crm_medigo.doctype.questionnaire_telephonique.questionnaire_telephonique.update_questionnaire_date"
         ]
+    },
+    "Prescripteurs": {
+        "after_insert": [
+            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.after_insert"
+        ]
     }
 }
+
 
 # doc_events = {
 #	"*": {

@@ -23,6 +23,19 @@ class Prescripteurs(Document):
         if not self.date_creation:
             self.date_creation = self.creation
 
+    def before_save(self):
+        """
+        Convertit automatiquement les champs en majuscules avant la sauvegarde.
+        """
+        if self.nom_prescripteur:
+            self.nom_prescripteur = self.nom_prescripteur.upper()
+
+        if self.prenom_prescripteur:
+            self.prenom_prescripteur = self.prenom_prescripteur.upper()
+
+        if self.nom_complet_prescripteur:
+            self.nom_complet_prescripteur = self.nom_complet_prescripteur.upper()
+
     def update_status_and_date(self):
         """
         Met à jour le champ `status` et `date_derniere_interaction` du prescripteur.
@@ -63,6 +76,33 @@ class Prescripteurs(Document):
         return result[0].derniere_date if result else None
 
 
+def after_insert(doc, method):
+    """
+    Automatise la création ou l'association d'un utilisateur lors de la création d'un prescripteur.
+    """
+    if not doc.utilisateur:  # Si aucun utilisateur n'est lié
+        if doc.email_prescripteur:
+            # Vérifie si un utilisateur existe déjà avec cet email
+            existing_user = frappe.db.get_value("User", {"email": doc.email_prescripteur}, "name")
+            if existing_user:
+                doc.utilisateur = existing_user
+            else:
+                # Crée un nouvel utilisateur
+                user = frappe.get_doc({
+                    "doctype": "User",
+                    "first_name": doc.nom_prescripteur,
+                    "last_name": doc.prenom_prescripteur,
+                    "email": doc.email_prescripteur,
+                    "enabled": 1,
+                    "send_welcome_email": 1,
+                    "roles": [{"role": "Prescripteur"}]  # Assigne un rôle spécifique
+                })
+                user.insert(ignore_permissions=True)
+                doc.utilisateur = user.name
+
+            doc.save()  # Enregistre le lien avec l'utilisateur
+
+
 # Hook pour mettre à jour lors d'une modification dans Visite Digitale ou Visite Prescripteur
 def update_prescripteur_status_from_visit(doc, method=None):
     """
@@ -99,14 +139,10 @@ def log_activity(doc, method):
     Ajoute une ligne dans la section Activité (Timeline) du document Prescripteurs
     avec un design adapté et utilisant le système natif de Frappe.
     """
-    # Vérifiez si le document est lié à un prescripteur
     if not doc.prescripteur:
         return
 
-    # Générer un lien HTML pointant vers le document
     link = frappe.utils.get_url_to_form(doc.doctype, doc.name)
-
-    # Déterminer le code couleur en fonction du type d'activité
     color_map = {
         "Visite Digitale": "#118ab2",  # Bleu
         "Visite Prescripteur": "#2a9d8f",  # Vert
@@ -114,7 +150,6 @@ def log_activity(doc, method):
     }
     color = color_map.get(doc.doctype, "#000000")  # Par défaut : noir
 
-    # Construire le message
     if method == "after_insert":
         action = "créée"
     elif method == "on_update":
@@ -122,42 +157,22 @@ def log_activity(doc, method):
     else:
         action = "modifiée"
 
-    # Message principal
     message = (
         f"<b><span style='color:{color};'>{doc.doctype}</span></b> {action} : "
         f"<a href='{link}'><strong>{doc.name}</strong></a>.<br><br>"
     )
-
-    # Ajouter des notes si disponibles
     if hasattr(doc, 'notes') and doc.notes:
         notes_box = (
-        f"<div class='card border-grey mb-3' style='border: 1px solid #d6d6d6; border-radius: 10px; margin-bottom: 10px;'>"
-        f"  <div class='card-header' style='background-color: #f7f7f7; color: #333; font-weight: bold;'>⚡ Note "
-        f"  <span style='font-size: 12px; color: #000;'> | {format_datetime(doc.modified)}</span></div>"
-        f"  <div class='card-body text-dark' style='padding: 10px;'>"
-        f"    <p class='card-text' style='font-size: 14px; color: #555;'>"
-        f"      {doc.notes}"
-        f"    </p>"
-        f"  </div>"
-        f"</div>"
-)
+            f"<div class='card border-grey mb-3' style='border: 1px solid #d6d6d6; border-radius: 10px;'>"
+            f"  <div class='card-header' style='background-color: #f7f7f7; font-weight: bold;'>⚡ Note</div>"
+            f"  <div class='card-body text-dark'>"
+            f"    <p>{doc.notes}</p>"
+            f"  </div>"
+            f"</div>"
+        )
         message += notes_box
 
-    # Ajouter une entrée dans la Timeline via `add_comment`
     frappe.get_doc("Prescripteurs", doc.prescripteur).add_comment(
         comment_type="Info",
         text=message
     )
-
-def before_save(self):
-        """
-        Convertit automatiquement les champs en majuscules avant la sauvegarde.
-        """
-        if self.nom_prescripteur:
-            self.nom_prescripteur = self.nom_prescripteur.upper()
-
-        if self.prenom_prescripteur:
-            self.prenom_prescripteur = self.prenom_prescripteur.upper()
-
-        if self.nom_complet_prescripteur:
-            self.nom_complet_prescripteur = self.nom_complet_prescripteur.upper()
