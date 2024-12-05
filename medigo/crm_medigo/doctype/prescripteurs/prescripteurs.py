@@ -2,7 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
-from frappe.utils import getdate, nowdate, add_days, format_datetime
+from frappe.utils import getdate, nowdate, add_days, format_datetime, now
 from frappe.model.document import Document
 
 class Prescripteurs(Document):
@@ -76,31 +76,40 @@ class Prescripteurs(Document):
         return result[0].derniere_date if result else None
 
 
-def after_insert(doc, method):
+def sync_user_with_email(doc, method):
     """
-    Automatise la création ou l'association d'un utilisateur lors de la création d'un prescripteur.
+    Automatise la création ou l'association d'un utilisateur
+    lors de la création ou de la modification du champ 'email_prescripteur'.
     """
-    if not doc.utilisateur:  # Si aucun utilisateur n'est lié
-        if doc.email_prescripteur:
-            # Vérifie si un utilisateur existe déjà avec cet email
-            existing_user = frappe.db.get_value("User", {"email": doc.email_prescripteur}, "name")
-            if existing_user:
-                doc.utilisateur = existing_user
-            else:
-                # Crée un nouvel utilisateur
-                user = frappe.get_doc({
-                    "doctype": "User",
-                    "first_name": doc.nom_prescripteur,
-                    "last_name": doc.prenom_prescripteur,
-                    "email": doc.email_prescripteur,
-                    "enabled": 1,
-                    "send_welcome_email": 1,
-                    "roles": [{"role": "Prescripteur"}]  # Assigne un rôle spécifique
-                })
-                user.insert(ignore_permissions=True)
-                doc.utilisateur = user.name
+    if not doc.email_prescripteur:
+        # Si l'email est supprimé, aucune action n'est effectuée
+        return
 
-            doc.save()  # Enregistre le lien avec l'utilisateur
+    # Vérifie si un utilisateur existe déjà avec cet email
+    existing_user = frappe.db.get_value("User", {"email": doc.email_prescripteur}, "name")
+
+    if existing_user:
+        # Si un utilisateur existe déjà, associe-le au prescripteur
+        doc.utilisateur = existing_user
+    else:
+        # Sinon, crée un nouvel utilisateur
+        user = frappe.get_doc({
+            "doctype": "User",
+            "first_name": doc.nom_prescripteur,
+            "last_name": doc.prenom_prescripteur,
+            "email": doc.email_prescripteur,
+            "enabled": 1,
+            "send_welcome_email": 1,
+            "roles": [{"role": "Prescripteur"}]  # Assigne un rôle spécifique
+        })
+        user.insert(ignore_permissions=True)
+        doc.utilisateur = user.name
+
+    # Vérifie si le champ 'utilisateur' a changé par rapport à sa valeur dans la base de données
+    previous_utilisateur = frappe.db.get_value("Prescripteurs", doc.name, "utilisateur")
+    if previous_utilisateur != doc.utilisateur:
+        # Met à jour le champ dans la base de données sans déclencher de hooks
+        frappe.db.set_value("Prescripteurs", doc.name, "utilisateur", doc.utilisateur)
 
 
 # Hook pour mettre à jour lors d'une modification dans Visite Digitale ou Visite Prescripteur
@@ -176,3 +185,20 @@ def log_activity(doc, method):
         comment_type="Info",
         text=message
     )
+
+def sync_last_active_with_prescripteur(doc, method):
+    """
+    Synchronise le champ `last_active` du Doctype `User` avec le champ
+    `date_derniere_connexion` du Doctype `Prescripteurs` lorsqu'il est mis à jour.
+    """
+    if not doc.last_active:
+        # Si `last_active` n'est pas défini, aucune action n'est nécessaire
+        return
+
+    # Trouve le prescripteur lié à cet utilisateur
+    prescripteur = frappe.db.get_value("Prescripteurs", {"utilisateur": doc.name}, "name")
+
+    if prescripteur:
+        # Met à jour le champ `date_derniere_connexion` dans le prescripteur
+        frappe.db.set_value("Prescripteurs", prescripteur, "date_derniere_connexion", doc.last_active)
+        frappe.logger().info(f"Date de dernière connexion mise à jour pour le prescripteur : {prescripteur}")

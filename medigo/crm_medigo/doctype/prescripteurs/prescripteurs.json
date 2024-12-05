@@ -56,7 +56,7 @@
   "influence",
   "pr\u00e9f\u00e9rences_tab",
   "utilisateur",
-  "date_derni\u00e8re_connexion",
+  "date_derniere_connexion",
   "column_break_uurr",
   "canal",
   "horaires_contact",
@@ -354,18 +354,19 @@
    "options": "User"
   },
   {
-   "fieldname": "date_derni\u00e8re_connexion",
-   "fieldtype": "Datetime",
-   "label": "Date derni\u00e8re connexion"
-  },
-  {
    "fieldname": "column_break_uurr",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_derniere_connexion",
+   "fieldtype": "Datetime",
+   "label": "Date derni\u00e8re activit\u00e9",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-04 12:13:08.780691",
+ "modified": "2024-12-05 11:36:55.196747",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
