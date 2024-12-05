@@ -95,8 +95,8 @@ def sync_user_with_email(doc, method):
         # Sinon, crée un nouvel utilisateur
         user = frappe.get_doc({
             "doctype": "User",
-            "first_name": doc.nom_prescripteur,
-            "last_name": doc.prenom_prescripteur,
+            "first_name": doc.prenom_prescripteur,
+            "last_name": doc.nom_prescripteur,
             "email": doc.email_prescripteur,
             "enabled": 1,
             "send_welcome_email": 1,
