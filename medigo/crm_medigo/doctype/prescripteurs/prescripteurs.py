@@ -2,20 +2,10 @@
 # For license information, please see license.txt
 
 import frappe
-from frappe.utils import getdate, nowdate, add_days, format_datetime, now
+from frappe.utils import getdate, nowdate, add_days, now
 from frappe.model.document import Document
 
 class Prescripteurs(Document):
-    def on_update(self):
-        """
-        Méthode appelée lors de la mise à jour du document.
-        Met à jour le statut et la date de dernière interaction.
-        """
-        if getattr(self, '_status_updated', False):
-            return
-        self._status_updated = True
-        self.update_status_and_date()
-
     def before_insert(self):
         """
         Assigne automatiquement la date de création au champ 'Date Création'.
@@ -23,7 +13,7 @@ class Prescripteurs(Document):
         if not self.date_creation:
             self.date_creation = self.creation
 
-    def before_save(self):
+    def validate(self):
         """
         Convertit automatiquement les champs en majuscules avant la sauvegarde.
         """
@@ -36,9 +26,21 @@ class Prescripteurs(Document):
         if self.nom_complet_prescripteur:
             self.nom_complet_prescripteur = self.nom_complet_prescripteur.upper()
 
+    def before_save(self):
+        """
+        Synchronise l'utilisateur associé lors de la modification de l'email.
+        """
+        sync_user_with_email(self)
+
+    def on_update(self):
+        """
+        Met à jour le statut et la date de dernière interaction après la sauvegarde.
+        """
+        self.update_status_and_date()
+
     def update_status_and_date(self):
         """
-        Met à jour le champ `status` et `date_derniere_interaction` du prescripteur.
+        Met à jour les champs `status` et `date_derniere_interaction` du prescripteur.
         """
         # Calcul de la date limite à 90 jours
         date_limite_90_jours = getdate(add_days(nowdate(), -90))
@@ -49,20 +51,19 @@ class Prescripteurs(Document):
         status = self.status  # Sauvegarde de l'ancien statut pour comparaison
 
         if derniere_date:
-            frappe.db.set_value("Prescripteurs", self.name, "date_derniere_interaction", derniere_date)
+            self.date_derniere_interaction = derniere_date
             if derniere_date >= date_limite_90_jours:
                 status = "Engagé"
             else:
                 status = "Inactif"
         else:
-            frappe.db.set_value("Prescripteurs", self.name, "date_derniere_interaction", None)
+            self.date_derniere_interaction = None
             if self.status != "Nouveau":
                 status = "Non engagé"
 
         # Met à jour le statut si nécessaire
         if self.status != status:
-            frappe.db.set_value("Prescripteurs", self.name, "status", status)
-
+            self.status = status
 
     def get_last_interaction_date(self):
         """
@@ -79,24 +80,45 @@ class Prescripteurs(Document):
 
         return result[0].derniere_date if result else None
 
+def sync_user_with_email(doc):
+    """
+    Gère la création, l'association et la désactivation des utilisateurs
+    lors de la modification ou suppression du champ 'email_prescripteur'.
+    """
+    if not doc.is_new():
+        previous_doc = doc.get_doc_before_save()
+        previous_email = previous_doc.email_prescripteur
+    else:
+        previous_email = None
 
-def sync_user_with_email(doc, method):
-    """
-    Automatise la création ou l'association d'un utilisateur
-    lors de la création ou de la modification du champ 'email_prescripteur'.
-    """
+    frappe.logger().info(f"Ancien email : {previous_email}, Nouvel email : {doc.email_prescripteur}")
+
     if not doc.email_prescripteur:
-        # Si l'email est supprimé, aucune action n'est effectuée
+        # Si l'email est supprimé, désactive l'utilisateur associé à l'ancienne adresse
+        if previous_email:
+            disable_user_by_email(previous_email)
+        doc.utilisateur = None
         return
 
-    # Vérifie si un utilisateur existe déjà avec cet email
+    # Si l'email a changé, désactive l'utilisateur associé à l'ancienne adresse
+    if previous_email and previous_email != doc.email_prescripteur:
+        disable_user_by_email(previous_email)
+
+    # Vérifier si un utilisateur existe déjà avec le nouvel email
     existing_user = frappe.db.get_value("User", {"email": doc.email_prescripteur}, "name")
 
     if existing_user:
-        # Si un utilisateur existe déjà, associe-le au prescripteur
-        frappe.db.set_value("Prescripteurs", doc.name, "utilisateur", existing_user)
+        # Associer l'utilisateur existant au prescripteur
+        frappe.logger().info(f"Utilisateur existant trouvé : {existing_user}")
+        doc.utilisateur = existing_user
+        # Activer l'utilisateur s'il est désactivé
+        user_doc = frappe.get_doc("User", existing_user)
+        if not user_doc.enabled:
+            user_doc.enabled = 1
+            user_doc.save(ignore_permissions=True)
     else:
-        # Sinon, crée un nouvel utilisateur
+        # Créer un nouvel utilisateur
+        frappe.logger().info(f"Création d'un nouvel utilisateur pour : {doc.email_prescripteur}")
         user = frappe.get_doc({
             "doctype": "User",
             "first_name": doc.prenom_prescripteur,
@@ -107,8 +129,25 @@ def sync_user_with_email(doc, method):
             "roles": [{"role": "Prescripteur"}]
         })
         user.insert(ignore_permissions=True)
-        frappe.db.set_value("Prescripteurs", doc.name, "utilisateur", user.name)
+        doc.utilisateur = user.name
 
+def disable_user_by_email(email):
+    """
+    Désactive un utilisateur basé sur son adresse email.
+    """
+    user_name = frappe.db.get_value("User", {"email": email}, "name")
+    if user_name:
+        try:
+            frappe.logger().info(f"Tentative de désactivation de l'utilisateur : {user_name} (email : {email})")
+            # Désactiver l'utilisateur
+            user_doc = frappe.get_doc("User", user_name)
+            user_doc.enabled = 0
+            user_doc.save(ignore_permissions=True)
+            frappe.logger().info(f"Utilisateur désactivé avec succès : {user_name}")
+        except Exception as e:
+            frappe.log_error(f"Erreur lors de la désactivation de l'utilisateur {user_name}: {str(e)}", "Désactivation Utilisateur")
+    else:
+        frappe.logger().warning(f"Aucun utilisateur trouvé pour l'email : {email}")
 
 # Hook pour mettre à jour lors d'une modification dans Visite Digitale ou Visite Prescripteur
 def update_prescripteur_status_from_visit(doc, method=None):
@@ -120,25 +159,25 @@ def update_prescripteur_status_from_visit(doc, method=None):
 
     prescripteur_doc = frappe.get_doc("Prescripteurs", doc.prescripteur)
     prescripteur_doc.update_status_and_date()
+    prescripteur_doc.save(ignore_permissions=True)
 
-
-# Scheduler pour mettre à jour les statuts des prescripteurs toutes les 2 minutes
+# Scheduler pour mettre à jour les statuts des prescripteurs
 def update_prescripteurs_status():
     """
     Parcourt tous les prescripteurs et met à jour leurs statuts
     et dates de dernière interaction en fonction des visites.
     """
     # Récupérer tous les prescripteurs
-    prescripteurs = frappe.get_all("Prescripteurs", fields=["name", "status", "date_derniere_interaction"])
+    prescripteurs = frappe.get_all("Prescripteurs", fields=["name"])
 
     for prescripteur in prescripteurs:
         prescripteur_doc = frappe.get_doc("Prescripteurs", prescripteur.name)
         try:
             prescripteur_doc.update_status_and_date()
+            prescripteur_doc.save(ignore_permissions=True)
             frappe.db.commit()  # Commit après chaque mise à jour pour éviter les conflits
         except Exception as e:
             frappe.log_error(f"Erreur lors de la mise à jour du prescripteur {prescripteur.name}: {str(e)}", "Prescripteurs Status Update")
-
 
 # Ajout automatique d'une ligne dans la Timeline
 def log_activity(doc, method):
@@ -179,7 +218,8 @@ def log_activity(doc, method):
         )
         message += notes_box
 
-    frappe.get_doc("Prescripteurs", doc.prescripteur).add_comment(
+    prescripteur_doc = frappe.get_doc("Prescripteurs", doc.prescripteur)
+    prescripteur_doc.add_comment(
         comment_type="Info",
         text=message
     )
@@ -198,5 +238,7 @@ def sync_last_active_with_prescripteur(doc, method):
 
     if prescripteur:
         # Met à jour le champ `date_derniere_connexion` dans le prescripteur
-        frappe.db.set_value("Prescripteurs", prescripteur, "date_derniere_connexion", doc.last_active)
+        prescripteur_doc = frappe.get_doc("Prescripteurs", prescripteur)
+        prescripteur_doc.date_derniere_connexion = doc.last_active
+        prescripteur_doc.save(ignore_permissions=True)
         frappe.logger().info(f"Date de dernière connexion mise à jour pour le prescripteur : {prescripteur}")

@@ -351,7 +351,8 @@
    "fieldname": "utilisateur",
    "fieldtype": "Link",
    "label": "Utilisateur",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_uurr",
@@ -366,7 +367,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-05 11:36:55.196747",
+ "modified": "2024-12-05 13:41:11.250143",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",

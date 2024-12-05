@@ -161,18 +161,11 @@ doc_events = {
             "medigo.crm_medigo.doctype.questionnaire_telephonique.questionnaire_telephonique.update_questionnaire_date"
         ]
     },
-    "Prescripteurs": {
-        "after_insert": [
-            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.sync_user_with_email"
-        ],
-        "on_update": [
-            "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.sync_user_with_email"
-        ]
-    },
     "User": {
         "on_update": "medigo.crm_medigo.doctype.prescripteurs.prescripteurs.sync_last_active_with_prescripteur"
     }
 }
+
 
 
 # doc_events = {
