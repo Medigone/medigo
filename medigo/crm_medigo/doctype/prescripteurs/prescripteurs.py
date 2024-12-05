@@ -46,19 +46,23 @@ class Prescripteurs(Document):
         # Récupération de la dernière interaction
         derniere_date = self.get_last_interaction_date()
 
-        if derniere_date:
-            self.date_derniere_interaction = derniere_date
-            if derniere_date >= date_limite_90_jours:
-                self.status = "Engagé"
-            else:
-                self.status = "Inactif"
-        else:
-            self.date_derniere_interaction = None
-            if self.status != "Nouveau":
-                self.status = "Non engagé"
+        status = self.status  # Sauvegarde de l'ancien statut pour comparaison
 
-        # Sauvegarde des changements
-        self.save(ignore_permissions=True)
+        if derniere_date:
+            frappe.db.set_value("Prescripteurs", self.name, "date_derniere_interaction", derniere_date)
+            if derniere_date >= date_limite_90_jours:
+                status = "Engagé"
+            else:
+                status = "Inactif"
+        else:
+            frappe.db.set_value("Prescripteurs", self.name, "date_derniere_interaction", None)
+            if self.status != "Nouveau":
+                status = "Non engagé"
+
+        # Met à jour le statut si nécessaire
+        if self.status != status:
+            frappe.db.set_value("Prescripteurs", self.name, "status", status)
+
 
     def get_last_interaction_date(self):
         """
@@ -90,7 +94,7 @@ def sync_user_with_email(doc, method):
 
     if existing_user:
         # Si un utilisateur existe déjà, associe-le au prescripteur
-        doc.utilisateur = existing_user
+        frappe.db.set_value("Prescripteurs", doc.name, "utilisateur", existing_user)
     else:
         # Sinon, crée un nouvel utilisateur
         user = frappe.get_doc({
@@ -100,16 +104,10 @@ def sync_user_with_email(doc, method):
             "email": doc.email_prescripteur,
             "enabled": 1,
             "send_welcome_email": 1,
-            "roles": [{"role": "Prescripteur"}]  # Assigne un rôle spécifique
+            "roles": [{"role": "Prescripteur"}]
         })
         user.insert(ignore_permissions=True)
-        doc.utilisateur = user.name
-
-    # Vérifie si le champ 'utilisateur' a changé par rapport à sa valeur dans la base de données
-    previous_utilisateur = frappe.db.get_value("Prescripteurs", doc.name, "utilisateur")
-    if previous_utilisateur != doc.utilisateur:
-        # Met à jour le champ dans la base de données sans déclencher de hooks
-        frappe.db.set_value("Prescripteurs", doc.name, "utilisateur", doc.utilisateur)
+        frappe.db.set_value("Prescripteurs", doc.name, "utilisateur", user.name)
 
 
 # Hook pour mettre à jour lors d'une modification dans Visite Digitale ou Visite Prescripteur
