@@ -126,7 +126,10 @@ def sync_user_with_email(doc):
             "email": doc.email_prescripteur,
             "enabled": 1,
             "send_welcome_email": 1,
-            "roles": [{"role": "Prescripteur"}]
+            "roles": [
+                        {"role": "Prescripteur"},
+                        {"role": "Raven User"}
+                    ]
         })
         user.insert(ignore_permissions=True)
         doc.utilisateur = user.name
