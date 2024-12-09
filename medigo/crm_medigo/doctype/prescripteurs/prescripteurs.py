@@ -117,7 +117,16 @@ def sync_user_with_email(doc):
             user_doc.enabled = 1
             user_doc.save(ignore_permissions=True)
     else:
-        # Créer un nouvel utilisateur
+        # Vérifier si le rôle 'Raven User' existe
+        raven_user_role_exists = frappe.db.exists("Role", {"role_name": "Raven User"})
+
+        # Créer un nouvel utilisateur avec les rôles appropriés
+        roles = [{"role": "Prescripteur"}]
+        if raven_user_role_exists:
+            roles.append({"role": "Raven User"})
+        else:
+            frappe.logger().warning("Le rôle 'Raven User' n'existe pas. Il n'a pas été attribué.")
+
         frappe.logger().info(f"Création d'un nouvel utilisateur pour : {doc.email_prescripteur}")
         user = frappe.get_doc({
             "doctype": "User",
@@ -126,13 +135,11 @@ def sync_user_with_email(doc):
             "email": doc.email_prescripteur,
             "enabled": 1,
             "send_welcome_email": 1,
-            "roles": [
-                        {"role": "Prescripteur"},
-                        {"role": "Raven User"}
-                    ]
+            "roles": roles
         })
         user.insert(ignore_permissions=True)
         doc.utilisateur = user.name
+
 
 def disable_user_by_email(email):
     """
