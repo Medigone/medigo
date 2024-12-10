@@ -44,6 +44,11 @@ app_license = "mit"
 # application home page (will override Website Settings)
 # home_page = "login"
 
+role_home_page = {
+    "Prescripteur": "accueil-prescripteurs",
+    "Raven User": "accueil-prescripteurs"
+}
+
 # website user home page (by Role)
 # role_home_page = {
 #	"Role": "home_page"
