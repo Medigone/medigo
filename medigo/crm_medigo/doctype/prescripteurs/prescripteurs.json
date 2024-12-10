@@ -27,12 +27,11 @@
   "infos_professionnels_section",
   "connections_column",
   "titre_prescripteur",
+  "cabinet_prive_prescripteur",
+  "column_break_knxr",
   "etablissement",
   "service",
-  "section_break_onvl",
-  "cabinet_prive_prescripteur",
   "chef_de_service",
-  "column_break_pwdw",
   "informations_personnelles_tab",
   "civilite",
   "situation_matrimoniale",
@@ -317,19 +316,11 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "section_break_onvl",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "priorite",
    "fieldtype": "Select",
    "in_standard_filter": 1,
    "label": "Niveau Priorit\u00e9",
    "options": "Niveau 1\nNiveau 2\nNiveau 3"
-  },
-  {
-   "fieldname": "column_break_pwdw",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "interactions_tab",
@@ -363,11 +354,15 @@
    "fieldtype": "Datetime",
    "label": "Date derni\u00e8re activit\u00e9",
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_knxr",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-10 12:54:35.923426",
+ "modified": "2024-12-10 12:56:32.993562",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
