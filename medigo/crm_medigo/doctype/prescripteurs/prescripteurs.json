@@ -140,7 +140,7 @@
   {
    "fieldname": "cabinet_prive_prescripteur",
    "fieldtype": "Select",
-   "label": "Cabinet Priv\u00e9",
+   "label": "Secteur d'activit\u00e9",
    "options": "\nPriv\u00e9\nPublic\nPriv\u00e9 & Public"
   },
   {
@@ -362,7 +362,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-10 12:56:32.993562",
+ "modified": "2024-12-10 13:04:52.819741",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteurs",
