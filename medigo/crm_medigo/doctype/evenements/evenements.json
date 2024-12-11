@@ -43,11 +43,12 @@
   "photo_stand",
   "fiche_poso",
   "budgets_et_d\u00e9penses_tab",
+  "section_break_wswe",
+  "progression_bar",
+  "section_break_wzwn",
   "budget_prevu",
   "column_break_sixe",
   "total_depenses",
-  "section_break_wswe",
-  "progression_depenses",
   "section_break_ozbs",
   "depenses"
  ],
@@ -280,16 +281,20 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "progression_depenses",
-   "fieldtype": "Percent",
+   "fieldname": "progression_bar",
+   "fieldtype": "HTML",
    "label": "Progression des D\u00e9penses",
    "precision": "0",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wzwn",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 14:38:11.818104",
+ "modified": "2024-12-11 16:22:40.881834",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Evenements",
@@ -358,6 +363,31 @@
  ],
  "sort_field": "date_debut",
  "sort_order": "ASC",
- "states": [],
+ "states": [
+  {
+   "color": "Gray",
+   "title": "Brouillon"
+  },
+  {
+   "color": "Blue",
+   "title": "Programm\u00e9"
+  },
+  {
+   "color": "Orange",
+   "title": "En Cours"
+  },
+  {
+   "color": "Green",
+   "title": "Termin\u00e9"
+  },
+  {
+   "color": "Yellow",
+   "title": "Report\u00e9"
+  },
+  {
+   "color": "Red",
+   "title": "Annul\u00e9"
+  }
+ ],
  "track_changes": 1
 }
