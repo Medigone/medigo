@@ -6,20 +6,37 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "type_depense"
+  "type_depense",
+  "description",
+  "montant"
  ],
  "fields": [
   {
    "fieldname": "type_depense",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Type D\u00e9pense",
    "options": "Type Depense"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "montant",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Montant",
+   "non_negative": 1,
+   "precision": "2"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-12-11 11:27:25.987524",
+ "modified": "2024-12-11 13:56:46.078152",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Depenses Evenement",

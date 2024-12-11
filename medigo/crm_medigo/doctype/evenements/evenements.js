@@ -17,3 +17,24 @@ frappe.ui.form.on("Evenements", "refresh", function(frm) {
         }
     }
 });
+ 
+frappe.ui.form.on("Depenses Evenement", {
+    montant: function(frm, cdt, cdn) {
+        var d = locals[cdt][cdn];
+        var total = 0;
+        frm.doc.depenses.forEach(function(row) { 
+            total += row.montant || 0; // Ajoute 0 si montant est null ou undefined
+        });
+        frm.set_value("total_depenses", total);
+        refresh_field("total_depenses");
+    },
+    depenses_remove: function(frm, cdt, cdn) {
+        var total = 0;
+        frm.doc.depenses.forEach(function(row) { 
+            total += row.montant || 0; // Ajoute 0 si montant est null ou undefined
+        });
+        frm.set_value("total_depenses", total);
+        refresh_field("total_depenses");
+    }
+});
+

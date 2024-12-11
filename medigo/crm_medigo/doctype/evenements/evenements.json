@@ -43,7 +43,11 @@
   "photo_stand",
   "fiche_poso",
   "budgets_et_d\u00e9penses_tab",
-  "budget_prevu"
+  "budget_prevu",
+  "column_break_sixe",
+  "total_depenses",
+  "section_break_ozbs",
+  "depenses"
  ],
  "fields": [
   {
@@ -247,11 +251,32 @@
    "label": "Budget Pr\u00e9vu",
    "non_negative": 1,
    "precision": "2"
+  },
+  {
+   "fieldname": "depenses",
+   "fieldtype": "Table",
+   "label": "D\u00e9penses",
+   "options": "Depenses Evenement"
+  },
+  {
+   "fieldname": "total_depenses",
+   "fieldtype": "Currency",
+   "label": "Total D\u00e9penses",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sixe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ozbs",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 11:14:28.720546",
+ "modified": "2024-12-11 14:24:41.949306",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Evenements",
