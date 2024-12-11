@@ -10,40 +10,41 @@
  "field_order": [
   "d\u00e9tails_tab",
   "status",
-  "column_break_tmum",
+  "section_break_kwwz",
   "type_action",
+  "column_break_tmum",
+  "laboratoire",
+  "column_break_vxkv",
+  "projet",
   "section_break_efho",
   "date_debut",
-  "laboratoire",
   "column_break_yavv",
   "date_fin",
+  "column_break_epgs",
   "societe_savante",
   "section_break_phbn",
   "lieu_devenement",
+  "column_break_oadl",
   "commune",
-  "description_tab",
-  "description",
   "tab_12_tab",
   "objectifs_definis",
   "invites_tab",
   "prescripteurs",
-  "projet_tab",
-  "projet",
-  "etablissement_tab",
+  "section_break_lceo",
   "etablissement",
   "tab_2_tab",
   "formateur__formatrice",
-  "vm_tab",
+  "section_break_ifrz",
   "vm",
   "banners_tab",
-  "type_banners",
-  "documents",
   "section_break_dwln",
   "programme_pdf",
   "programme",
   "column_break_pdpt",
   "photo_stand",
   "fiche_poso",
+  "section_break_ipjz",
+  "type_banners",
   "budgets_et_d\u00e9penses_tab",
   "section_break_wswe",
   "progression_bar",
@@ -80,7 +81,7 @@
   {
    "fieldname": "tab_2_tab",
    "fieldtype": "Tab Break",
-   "label": "Formateurs"
+   "label": "Formateurs & VM"
   },
   {
    "fieldname": "formateur__formatrice",
@@ -96,11 +97,6 @@
    "fieldname": "d\u00e9tails_tab",
    "fieldtype": "Tab Break",
    "label": "D\u00e9tails"
-  },
-  {
-   "fieldname": "vm_tab",
-   "fieldtype": "Tab Break",
-   "label": "VM"
   },
   {
    "fieldname": "programme_pdf",
@@ -141,20 +137,10 @@
    "options": "Invites Evenement"
   },
   {
-   "fieldname": "documents",
-   "fieldtype": "Tab Break",
-   "label": "Documents"
-  },
-  {
    "fieldname": "vm",
    "fieldtype": "Table",
    "label": "VM's Pr\u00e9sents",
    "options": "VM Action"
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Text Editor",
-   "label": "Description"
   },
   {
    "fieldname": "type_banners",
@@ -181,11 +167,6 @@
    "options": "Communes"
   },
   {
-   "fieldname": "description_tab",
-   "fieldtype": "Tab Break",
-   "label": "Description"
-  },
-  {
    "fieldname": "projet",
    "fieldtype": "Link",
    "label": "Projet",
@@ -194,7 +175,7 @@
   {
    "fieldname": "banners_tab",
    "fieldtype": "Tab Break",
-   "label": "Banners"
+   "label": "Supports de Communication"
   },
   {
    "fieldname": "etablissement",
@@ -202,11 +183,6 @@
    "in_standard_filter": 1,
    "label": "\u00c9tablissement",
    "options": "Etablissement Action"
-  },
-  {
-   "fieldname": "projet_tab",
-   "fieldtype": "Tab Break",
-   "label": "Projet"
   },
   {
    "fieldname": "date_debut",
@@ -224,14 +200,9 @@
    "options": "Lieux evenements"
   },
   {
-   "fieldname": "etablissement_tab",
-   "fieldtype": "Tab Break",
-   "label": "\u00c9tablissement"
-  },
-  {
    "fieldname": "invites_tab",
    "fieldtype": "Tab Break",
-   "label": "Invit\u00e9s"
+   "label": "Invit\u00e9s & \u00c9tablissement"
   },
   {
    "depends_on": "eval:doc.laboratoire!=\"BIOMIL\" && (doc.type_action==\"JOURN\u00c9E SCIENTIFIQUE (SOCI\u00c9T\u00c9 SAVANTE)\"||doc.type_action==\"JOURN\u00c9E DE LA SAGE-FEMME\")",
@@ -390,11 +361,39 @@
    "fieldtype": "Select",
    "label": "Objectifs Atteints",
    "options": "\nOui\nNon"
+  },
+  {
+   "fieldname": "section_break_ipjz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vxkv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lceo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ifrz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_epgs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_oadl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kwwz",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 17:31:36.014292",
+ "modified": "2024-12-11 17:58:43.244128",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Evenements",
