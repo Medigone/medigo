@@ -12,15 +12,12 @@
   "status",
   "section_break_kwwz",
   "type_action",
+  "date_debut",
   "column_break_tmum",
   "laboratoire",
+  "date_fin",
   "column_break_vxkv",
   "projet",
-  "section_break_efho",
-  "date_debut",
-  "column_break_yavv",
-  "date_fin",
-  "column_break_epgs",
   "societe_savante",
   "section_break_phbn",
   "lieu_devenement",
@@ -88,10 +85,6 @@
    "fieldtype": "Table",
    "label": "Formateurs / Formatrices",
    "options": "Formateurs Actions"
-  },
-  {
-   "fieldname": "column_break_yavv",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "d\u00e9tails_tab",
@@ -218,10 +211,6 @@
    "fieldtype": "Select",
    "label": "Statut",
    "options": "Brouillon\nProgramm\u00e9\nEn Cours\nTermin\u00e9\nReport\u00e9\nAnnul\u00e9"
-  },
-  {
-   "fieldname": "section_break_efho",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "column_break_tmum",
@@ -379,10 +368,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "column_break_epgs",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "column_break_oadl",
    "fieldtype": "Column Break"
   },
@@ -392,8 +377,9 @@
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2024-12-11 17:58:43.244128",
+ "modified": "2024-12-11 20:28:18.693570",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Evenements",
