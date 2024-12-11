@@ -2,30 +2,40 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:type_action",
  "creation": "2023-10-29 13:53:40.574244",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "type_action"
+  "title",
+  "actif",
+  "description"
  ],
  "fields": [
   {
-   "fieldname": "type_action",
+   "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Type Action",
-   "unique": 1
+   "label": "Titre"
+  },
+  {
+   "default": "1",
+   "fieldname": "actif",
+   "fieldtype": "Check",
+   "label": "Activ\u00e9"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-29 13:55:49.432337",
+ "modified": "2024-12-11 10:27:14.611952",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
- "name": "Type Action",
- "naming_rule": "By fieldname",
+ "name": "Type Evenement",
  "owner": "Administrator",
  "permissions": [
   {

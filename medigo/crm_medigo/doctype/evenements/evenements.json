@@ -9,6 +9,8 @@
  "engine": "InnoDB",
  "field_order": [
   "d\u00e9tails_tab",
+  "status",
+  "section_break_efho",
   "laboratoire",
   "date_debut",
   "date_fin",
@@ -102,7 +104,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Type Action",
-   "options": "Type Action"
+   "options": "Type Evenement"
   },
   {
    "fieldname": "prescripteurs",
@@ -210,14 +212,25 @@
    "label": "Soci\u00e9t\u00e9 Savante",
    "mandatory_depends_on": "eval:doc.laboratoire!=\"BIOMIL\" && (doc.type_action==\"JOURN\u00c9E SCIENTIFIQUE (SOCI\u00c9T\u00c9 SAVANTE)\"||doc.type_action==\"JOURN\u00c9E DE LA SAGE-FEMME\")",
    "options": "Societe Savante"
+  },
+  {
+   "default": "Programm\u00e9",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Statut",
+   "options": "Programm\u00e9\nEn Cours\nTermin\u00e9\nReport\u00e9\nAnnul\u00e9"
+  },
+  {
+   "fieldname": "section_break_efho",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 22:19:04.889249",
+ "modified": "2024-12-11 10:31:24.988200",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
- "name": "Actions",
+ "name": "Evenements",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

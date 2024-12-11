@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class TypeAction(Document):
+class TypeEvenement(Document):
 	pass
