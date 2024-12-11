@@ -46,6 +46,8 @@
   "budget_prevu",
   "column_break_sixe",
   "total_depenses",
+  "section_break_wswe",
+  "progression_depenses",
   "section_break_ozbs",
   "depenses"
  ],
@@ -272,11 +274,22 @@
   {
    "fieldname": "section_break_ozbs",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_wswe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "progression_depenses",
+   "fieldtype": "Percent",
+   "label": "Progression des D\u00e9penses",
+   "precision": "0",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 14:24:41.949306",
+ "modified": "2024-12-11 14:38:11.818104",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Evenements",
