@@ -342,7 +342,8 @@
    "fieldname": "ecart_budget",
    "fieldtype": "Currency",
    "label": "\u00c9cart Budg\u00e9taire",
-   "precision": "2"
+   "precision": "2",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_pvcr",
@@ -393,7 +394,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 17:26:15.923697",
+ "modified": "2024-12-11 17:31:36.014292",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Evenements",
