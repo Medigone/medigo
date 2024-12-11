@@ -10,25 +10,27 @@
  "field_order": [
   "d\u00e9tails_tab",
   "status",
-  "section_break_efho",
-  "laboratoire",
-  "date_debut",
-  "date_fin",
-  "column_break_yavv",
+  "column_break_tmum",
   "type_action",
+  "section_break_efho",
+  "date_debut",
+  "laboratoire",
+  "column_break_yavv",
+  "date_fin",
   "societe_savante",
+  "section_break_phbn",
   "lieu_devenement",
   "commune",
   "description_tab",
   "description",
+  "invites_tab",
+  "prescripteurs",
   "projet_tab",
   "projet",
   "etablissement_tab",
   "etablissement",
   "tab_2_tab",
   "formateur__formatrice",
-  "invites_tab",
-  "prescripteurs",
   "vm_tab",
   "vm",
   "banners_tab",
@@ -39,7 +41,9 @@
   "programme",
   "column_break_pdpt",
   "photo_stand",
-  "fiche_poso"
+  "fiche_poso",
+  "budgets_et_d\u00e9penses_tab",
+  "budget_prevu"
  ],
  "fields": [
   {
@@ -103,14 +107,14 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Type Action",
+   "label": "Type \u00c9v\u00e8nement",
    "options": "Type Evenement"
   },
   {
    "fieldname": "prescripteurs",
    "fieldtype": "Table",
-   "label": "Prescripteurs",
-   "options": "Invites Action"
+   "label": "Liste Prescripteurs",
+   "options": "Invites Evenement"
   },
   {
    "fieldname": "documents",
@@ -214,20 +218,40 @@
    "options": "Societe Savante"
   },
   {
-   "default": "Programm\u00e9",
+   "default": "Brouillon",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Statut",
-   "options": "Programm\u00e9\nEn Cours\nTermin\u00e9\nReport\u00e9\nAnnul\u00e9"
+   "options": "Brouillon\nProgramm\u00e9\nEn Cours\nTermin\u00e9\nReport\u00e9\nAnnul\u00e9"
   },
   {
    "fieldname": "section_break_efho",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_tmum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_phbn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "budgets_et_d\u00e9penses_tab",
+   "fieldtype": "Tab Break",
+   "label": "Budgets et D\u00e9penses"
+  },
+  {
+   "fieldname": "budget_prevu",
+   "fieldtype": "Currency",
+   "label": "Budget Pr\u00e9vu",
+   "non_negative": 1,
+   "precision": "2"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 10:31:24.988200",
+ "modified": "2024-12-11 11:14:28.720546",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Evenements",

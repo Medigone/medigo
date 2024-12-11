@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "prescripteur",
+  "email",
   "hote",
   "invite",
   "absent",
@@ -50,15 +51,23 @@
    "fieldtype": "Check",
    "in_list_view": 1,
    "label": "Absent ?"
+  },
+  {
+   "fetch_from": "prescripteur.email_prescripteur",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-29 15:02:22.409543",
+ "modified": "2024-12-11 11:12:43.457823",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
- "name": "Invites Action",
+ "name": "Invites Evenement",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

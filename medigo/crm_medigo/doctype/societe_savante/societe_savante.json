@@ -10,13 +10,11 @@
   "details_tab",
   "nom",
   "specialite",
-  "phone",
-  "email",
+  "potentiel",
   "column_break_tyzw",
   "commune",
   "wilaya",
   "zone",
-  "potentiel",
   "membres_tab",
   "prescripteurs"
  ],
@@ -31,16 +29,6 @@
    "fieldtype": "Link",
    "label": "Sp\u00e9cialit\u00e9",
    "options": "Spec Soc Sav"
-  },
-  {
-   "fieldname": "phone",
-   "fieldtype": "Phone",
-   "label": "T\u00e9l\u00e9phone"
-  },
-  {
-   "fieldname": "email",
-   "fieldtype": "Data",
-   "label": "Email"
   },
   {
    "fieldname": "membres_tab",
@@ -74,7 +62,7 @@
    "fieldname": "zone",
    "fieldtype": "Link",
    "label": "Zone",
-   "options": "Zone"
+   "options": "Territory"
   },
   {
    "fieldname": "potentiel",
@@ -90,7 +78,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-30 21:35:42.549791",
+ "modified": "2024-12-11 11:06:21.963676",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Societe Savante",
