@@ -23,6 +23,8 @@
   "commune",
   "description_tab",
   "description",
+  "tab_12_tab",
+  "objectifs_definis",
   "invites_tab",
   "prescripteurs",
   "projet_tab",
@@ -49,8 +51,23 @@
   "budget_prevu",
   "column_break_sixe",
   "total_depenses",
+  "column_break_wvvg",
+  "ecart_budget",
   "section_break_ozbs",
-  "depenses"
+  "depenses",
+  "suivi_evenement_tab",
+  "satisfaction",
+  "column_break_rvqp",
+  "objectifs_atteints",
+  "section_break_mcqo",
+  "column_break_cpkz",
+  "participants_presents",
+  "column_break_pvcr",
+  "taux_participation",
+  "section_break_pqfc",
+  "commentaires_gen",
+  "lecons_apprises",
+  "ameliorations_futures"
  ],
  "fields": [
   {
@@ -290,11 +307,93 @@
   {
    "fieldname": "section_break_wzwn",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "suivi_evenement_tab",
+   "fieldtype": "Tab Break",
+   "label": "Suivi Post-\u00c9v\u00e9nement"
+  },
+  {
+   "fieldname": "satisfaction",
+   "fieldtype": "Rating",
+   "label": "Niveau de Satisfaction"
+  },
+  {
+   "fieldname": "commentaires_gen",
+   "fieldtype": "Text Editor",
+   "label": "Commentaires G\u00e9n\u00e9raux"
+  },
+  {
+   "fieldname": "participants_presents",
+   "fieldtype": "Int",
+   "label": "Nombre de Participants Pr\u00e9sents"
+  },
+  {
+   "fieldname": "taux_participation",
+   "fieldtype": "Percent",
+   "label": "Taux de Participation",
+   "precision": "0"
+  },
+  {
+   "fieldname": "column_break_wvvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ecart_budget",
+   "fieldtype": "Currency",
+   "label": "\u00c9cart Budg\u00e9taire",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_pvcr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pqfc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lecons_apprises",
+   "fieldtype": "Text Editor",
+   "label": "Le\u00e7ons Apprises"
+  },
+  {
+   "fieldname": "ameliorations_futures",
+   "fieldtype": "Text Editor",
+   "label": "Am\u00e9liorations Futures"
+  },
+  {
+   "fieldname": "tab_12_tab",
+   "fieldtype": "Tab Break",
+   "label": "Objectifs"
+  },
+  {
+   "fieldname": "objectifs_definis",
+   "fieldtype": "Text Editor",
+   "label": "Objectifs D\u00e9finis"
+  },
+  {
+   "fieldname": "section_break_mcqo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_cpkz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rvqp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "objectifs_atteints",
+   "fieldtype": "Select",
+   "label": "Objectifs Atteints",
+   "options": "\nOui\nNon"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 16:22:40.881834",
+ "modified": "2024-12-11 17:26:15.923697",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Evenements",
