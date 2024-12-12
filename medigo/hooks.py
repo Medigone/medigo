@@ -10,7 +10,7 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/medigo/css/medigo.css"
+app_include_css = "/assets/medigo/css/styles.css"
 # app_include_js = "/assets/medigo/js/medigo.js"
 
 # include js, css files in header of web template
