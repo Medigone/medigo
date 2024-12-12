@@ -22,7 +22,7 @@
  "is_hidden": 0,
  "label": "Prescripteur",
  "links": [],
- "modified": "2023-11-19 12:29:04.963061",
+ "modified": "2024-12-12 09:49:57.562532",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Prescripteur",
@@ -41,7 +41,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 4.0,
+ "sequence_id": 8.0,
  "shortcuts": [],
  "title": "Prescripteur"
 }

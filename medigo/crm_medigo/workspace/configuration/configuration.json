@@ -140,7 +140,7 @@
    "is_query_report": 0,
    "label": "Type Action",
    "link_count": 0,
-   "link_to": "Type Action",
+   "link_to": "Type Evenement",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -166,7 +166,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-11-19 12:28:02.551020",
+ "modified": "2024-12-12 09:49:58.633001",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Configuration",
@@ -176,7 +176,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 9.0,
+ "sequence_id": 18.0,
  "shortcuts": [],
  "title": "Configuration"
 }

@@ -18,7 +18,7 @@
  "is_hidden": 0,
  "label": "Action",
  "links": [],
- "modified": "2023-11-19 12:29:19.583155",
+ "modified": "2024-12-12 09:49:57.898098",
  "modified_by": "Administrator",
  "module": "CRM Medigo",
  "name": "Action",
@@ -37,13 +37,13 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 6.0,
+ "sequence_id": 12.0,
  "shortcuts": [
   {
    "color": "Blue",
    "doc_view": "List",
    "label": "Liste Actions",
-   "link_to": "Actions",
+   "link_to": "Evenements",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -51,7 +51,7 @@
    "color": "Blue",
    "doc_view": "New",
    "label": "Ajouter Action",
-   "link_to": "Actions",
+   "link_to": "Evenements",
    "stats_filter": "[]",
    "type": "DocType"
   },
